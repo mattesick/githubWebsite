@@ -48,7 +48,7 @@ app.route("/getTeamById/:id").get((req, res) => { console.log("Tried!")
       if(team.id == req.params.id) res.send(JSON.stringify(team));
    });
   });
-  res.send(404);
+  res.send(204);
 });
 
 app.get("/getAllDepartments", (req, res) => {
