@@ -1,0 +1,244 @@
+[
+    {
+      "id": "1",
+      "name": "DXC department",
+      "desc": "Very efficent department",
+      "teams": [
+        {
+          "id": "1",
+          "name": "Swedish boys",
+          "desc": "Three swedish boys working in ireland",
+          "employees": [
+            {
+              "id": "1",
+              "name": "Mattias",
+              "lastName": "Sjonell",
+              "role": "Intern",
+              "skills": "Webdevelopment, React",
+              "projects": "none"
+            },
+             {
+              "id": "23",
+              "name": "Mattias",
+              "lastName": "Sjonell",
+              "role": "Intern",
+              "skills": "Webdevelopment, React",
+              "projects": "none"
+            },
+             {
+              "id": "55",
+              "name": "Mattias",
+              "lastName": "Sjonell",
+              "role": "Intern",
+              "skills": "Webdevelopment, React",
+              "projects": "none"
+            },
+             {
+              "id": "89",
+              "name": "Mattias",
+              "lastName": "Sjonell",
+              "role": "Intern",
+              "skills": "Webdevelopment, React",
+              "projects": "none"
+            },
+            {
+              "id": "2",
+              "name": "Linus",
+              "lastName": "Svensson",
+              "role": "Webdeveloper",
+              "skills": "Webdevelopment",
+              "projects": "Big website"
+            },
+            {
+              "id": "3",
+              "name": "Alex",
+              "lastName": "Andersson",
+              "role": "Intern",
+              "skills": "Webdevelopment",
+              "projects": "none"
+            }     
+          ]
+        },
+         {
+          "id": "44",
+          "name": "English boys",
+          "desc": "Three swedish boys working in ireland",
+          "employees": [
+            {
+              "id": "1",
+              "name": "Mattias",
+              "lastName": "Sjonell",
+              "role": "Intern",
+              "skills": "Webdevelopment, React",
+              "projects": "none"
+            },
+            {
+              "id": "2",
+              "name": "Linus",
+              "lastName": "Svensson",
+              "role": "Webdeveloper",
+              "skills": "Webdevelopment",
+              "projects": "Big website"
+            },
+            {
+              "id": "3",
+              "name": "Alex",
+              "lastName": "Andersson",
+              "role": "Intern",
+              "skills": "Webdevelopment",
+              "projects": "none"
+            }     
+          ]
+        },
+         {
+          "id": "52",
+          "name": "Danish boys",
+          "desc": "Three swedish boys working in ireland",
+          "employees": [
+            {
+              "id": "1",
+              "name": "Mattias",
+              "lastName": "Sjonell",
+              "role": "Intern",
+              "skills": "Webdevelopment, React",
+              "projects": "none"
+            },
+            {
+              "id": "2",
+              "name": "Linus",
+              "lastName": "Svensson",
+              "role": "Webdeveloper",
+              "skills": "Webdevelopment",
+              "projects": "Big website"
+            },
+            {
+              "id": "3",
+              "name": "Alex",
+              "lastName": "Andersson",
+              "role": "Intern",
+              "skills": "Webdevelopment",
+              "projects": "none"
+            }     
+          ]
+        },
+         {
+          "id": "123",
+          "name": "German boys",
+          "desc": "Three swedish boys working in ireland",
+          "employees": [
+            {
+              "id": "1",
+              "name": "Mattias",
+              "lastName": "Sjonell",
+              "role": "Intern",
+              "skills": "Webdevelopment, React",
+              "projects": "none"
+            },
+            {
+              "id": "2",
+              "name": "Linus",
+              "lastName": "Svensson",
+              "role": "Webdeveloper",
+              "skills": "Webdevelopment",
+              "projects": "Big website"
+            },
+            {
+              "id": "3",
+              "name": "Alex",
+              "lastName": "Andersson",
+              "role": "Intern",
+              "skills": "Webdevelopment",
+              "projects": "none"
+            }     
+          ]
+        },
+        {
+          "id": "256",
+          "name": "Irish boys",
+          "desc": "Three Irish boys working in ireland",
+          "employees": [
+            {
+              "id": "aheraghty",
+              "name": "Aiden",
+              "lastName": "Heraghty",
+              "role": "Graduate",
+              "skills": "Nothing",
+              "projects": "Big stuff happening"
+            },
+            {
+              "id": "conor.tuffy",
+              "name": "Conor",
+              "lastName": "Tuffy",
+              "role": "Developer",
+              "skills": "C#, .NET",
+              "projects": "Big application"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "DXC department two",
+      "desc": "Very nice code in this department",
+      "teams": [
+        {
+          "id": "3",
+          "name": "English Girls",
+          "desc": "Three English Girls working in ireland",
+          "employees": [
+            {
+              "id": "6",
+              "name": "Mohammed",
+              "lastName": "Ali",
+              "role": "Intern",
+              "skills": "Webdevelopment, React",
+              "projects": "none"
+            },
+            {
+              "id": "7",
+              "name": "Linus",
+              "lastName": "Svensson",
+              "role": "Webdeveloper",
+              "skills": "Webdevelopment",
+              "projects": "Big website"
+            },
+            {
+              "id": "8",
+              "name": "Alex",
+              "lastName": "Andersson",
+              "role": "Intern",
+              "skills": "Webdevelopment",
+              "projects": "none"
+            }
+  
+  
+          ]
+        },
+        {
+          "id": "Team1",
+          "name": "Irish boys",
+          "desc": "Three Irish boys working in ireland",
+          "employees": [
+            {
+              "id": "9",
+              "name": "Aiden",
+              "lastName": "Heraghty",
+              "role": "Graduate",
+              "skills": "Webdevelopment, React",
+              "projects": "none"
+            },
+            {
+              "id": "10",
+              "name": "Conor",
+              "lastName": "",
+              "role": "Developer",
+              "skills": "C#, .NET",
+              "projects": "Big application"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  
