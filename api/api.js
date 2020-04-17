@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 const cors = require('cors')
 
 var corsOptions = {
-  origin: 'http://example.com',
+  origin: 'http://localhost:4200',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204 
 }
 
@@ -42,7 +42,7 @@ app.get("/getDepartmentById/:id", (req, res) => {
     res.send(404);
 });
 
-app.get("/getTeamById/:id", (req, res) => {
+app.route("/getTeamById/:id").get((req, res) => {
   json.forEach(department => {
    department.teams.forEach(team => {
       if(team.id == req.params.id) res.send(JSON.stringify(team));
