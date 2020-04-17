@@ -14,6 +14,15 @@ app.use(cookieSession({
 }));
 app.use(bodyParser.urlencoded({ extended: true }))
 
+const cors = require('cors')
+
+var corsOptions = {
+  origin: 'http://example.com',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204 
+}
+
+app.use(cors(corsOptions))
+
 app.get("/AllProjects", (req, res) => {
     console.log("hello");
 });
@@ -30,6 +39,7 @@ app.get("/getDepartmentById/:id", (req, res) => {
     json.forEach(department => {
       if(department.id == req.params.id) res.send(department);
     });
+    res.send(404);
 });
 
 app.get("/getTeamById/:id", (req, res) => {
@@ -38,6 +48,7 @@ app.get("/getTeamById/:id", (req, res) => {
       if(team.id == req.params.id) res.send(team);
    });
   });
+  res.send(404);
 });
 
 app.get("/getAllDepartments", (req, res) => {
