@@ -35,7 +35,7 @@ app.get("/getDepartmentById/:id", (req, res) => {
 app.get("/getTeamById/:id", (req, res) => {
   json.forEach(department => {
    department.teams.forEach(team => {
-      if(team.id == req.params.id) res.send(team);
+      if(team.id == req.params.id) res.send(JSON.stringify(team));
    });
   });
 });

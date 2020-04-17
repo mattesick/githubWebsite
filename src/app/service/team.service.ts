@@ -15,6 +15,7 @@ export class TeamService {
   constructor(private http: HttpClient) { }
   
   getTeam(): Observable<Team> {
+    console.log("Tried getting team by id")
     return this.http.get<Team>('http://localhost:3000/getTeamById/1');
   }
 }
