@@ -1,21 +1,27 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable'
 import { HttpClient } from '@angular/common/http'
+import { async } from '@angular/core/testing';
+import 'rxjs/add/operator/map'
 
 export interface Team {
   name: string,
   desc: string
 }
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class TeamService {
 
-  constructor(private http: HttpClient) { }
-  
-  getTeam(): Observable<Team> {
-    console.log("Tried getting team by id")
-    return this.http.get<Team>('http://localhost:3000/getTeamById/1');
+  constructor(private http: HttpClient) { 
+
+    
   }
+  
+  getTeam(id:string){
+    return this.http.get('http://localhost:8000/getTeamById/' + id);
+  }
+
 }
