@@ -1,0 +1,39 @@
+.Container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.image{
+    width: 100%;
+    margin: auto;
+}
+#team{
+    width: 10%;
+    order: 1;
+    text-align: center;
+}
+#person{
+    order: 2;
+    width: 40%;
+}
+img{
+    max-width: 100%;
+}
+#focus{
+    width: 85%;
+    margin: auto;
+    text-align: center;
+}
+#description{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#list{
+    order: 1;
+}
+#about{
+    order: 2;
+    width: 70%;
+}

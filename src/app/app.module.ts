@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { TeamComponent } from './team/team.component';
 import { HomeComponent } from './home/home.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { PersonComponent } from './person/person.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TeamComponent,
     HomeComponent,
-    NavBarComponent
+    NavBarComponent,
+    PersonComponent
   ],
   imports: [
     BrowserModule,
