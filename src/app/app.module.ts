@@ -10,6 +10,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { PersonComponent } from './person/person.component';
 import { GoBackComponent } from './go-back/go-back.component';
 import { ProjectComponent } from './project/project.component';
+import { AllTeamsComponent } from './all-teams/all-teams.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ProjectComponent } from './project/project.component';
     NavBarComponent,
     PersonComponent,
     GoBackComponent,
-    ProjectComponent
+    ProjectComponent,
+    AllTeamsComponent
   ],
   imports: [
     BrowserModule,

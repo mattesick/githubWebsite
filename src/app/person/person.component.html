@@ -3,12 +3,14 @@
 <h2>Person page works!</h2>
 <div class="Container">
     <div id="team">
-        <p>Members in team: {{team.name}}</p>
-        <figure *ngFor="let employee of team.employees" class="image" routerLink="/Person/{{employee.id}}" (click)="getEmployee()">
+        <p routerLink="/Teams/{{team.id}}">Members in team: {{team.name}}</p>
+        <div *ngFor="let emp of team.employees">
+        <figure   *ngIf="emp.id != employee.id" class="image" routerLink="/Person/{{emp.id}}" (click)="ngOnInit()">
             <img src="../../assets/images/profile.jpg" alt="employee">
-            <figcaption>{{employee.name}}</figcaption>
-            <figcaption>{{employee.role}}</figcaption>
+            <figcaption>{{emp.name}}</figcaption>
+            <figcaption>{{emp.role}}</figcaption>
         </figure>
+    </div>
     </div>
     <div id="person">
         <figure id="focus">

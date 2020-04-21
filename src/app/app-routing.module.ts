@@ -6,8 +6,8 @@ import { PersonComponent } from './person/person.component'
 const routes: Routes = [
   { path: '', redirectTo: '/Home', pathMatch: 'full' },
   { path: 'Home', component: HomeComponent },
-  { path: 'Teams', component: TeamComponent },
-  { path: 'Projects', component: HomeComponent },
+  { path: 'Teams/:id', component: TeamComponent },
+  { path: 'Projects/:id', component: HomeComponent },
   { path: 'MobilityApps', component: HomeComponent },
   { path: 'Person/:id', component: PersonComponent}
 ];

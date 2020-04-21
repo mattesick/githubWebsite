@@ -1,0 +1,10 @@
+<tr ngFor="let team of teams">
+    <td>{{team.name}}</td>
+    <td>{{team.id}}</td>
+    <td>{{team.desc}}</td>
+</tr>
+<tr *ngFor="let employee of team.employees" routerLink="/Person/{{employee.id}}">
+    <td>{{employee.id}}</td>
+    <td>{{employee.name}}</td>
+    
+</tr>
