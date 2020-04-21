@@ -16,10 +16,9 @@ export class AllTeamsComponent implements OnInit {
   constructor(private teamService: TeamService, private route: ActivatedRoute) {
 
   }
-  team: Team = new Team({});
+  Teams = [];
   ngOnInit(): void {
-    const teamId = this.route.snapshot.paramMap.get('id');
-    this.teamService.getTeam(teamId).subscribe(data => { this.team = new Team(data); console.log(this.team) });
+    this.teamService.getAllTeams().subscribe(data => { this.allTeams = [(data)]; console.log(this.Teams) });
   }
 
 }

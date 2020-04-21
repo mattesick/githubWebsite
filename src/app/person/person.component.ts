@@ -22,16 +22,13 @@ export class PersonComponent implements OnInit {
 
   ngOnInit(): void {
     this.getEmployee();
-    
   }
   getEmployee(){
     const employeeId = this.route.snapshot.paramMap.get('id');
-    
     this.teamService.getTeamByEmployeeId(employeeId).subscribe(data => { this.team = new Team(data);});
     this.employeeService.getEmployeeById(employeeId).subscribe(data => { 
       this.employee = new Employee(data);
       this.skills = this.employee.skills.split(",");
-      console.log(this.skills)
     });
   }
 }
