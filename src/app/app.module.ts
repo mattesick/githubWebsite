@@ -8,6 +8,7 @@ import { TeamComponent } from './team/team.component';
 import { HomeComponent } from './home/home.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { PersonComponent } from './person/person.component';
+import { GoBackComponent } from './go-back/go-back.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PersonComponent } from './person/person.component';
     TeamComponent,
     HomeComponent,
     NavBarComponent,
-    PersonComponent
+    PersonComponent,
+    GoBackComponent
   ],
   imports: [
     BrowserModule,
