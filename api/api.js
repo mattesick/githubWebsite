@@ -53,7 +53,7 @@ app.get("/getTeamById/:id", (req, res) => {
   });
 });
 
-app.get("/getTeamEmployeeById/:id", (req, res) => {
+app.get("/getTeamByEmployeeId/:id", (req, res) => {
   json.forEach(department => {
     department.teams.forEach(team => {
       team.employees.forEach(employee => {

@@ -19,26 +19,26 @@
             },
              {
               "id": "23",
-              "name": "Mattias",
-              "lastName": "Sjonell",
-              "role": "Intern",
+              "name": "Markus",
+              "lastName": "Knutsson",
+              "role": "Student",
               "skills": "Webdevelopment, React",
               "projects":  ["1","31", "12"]
             },
              {
               "id": "55",
-              "name": "Mattias",
-              "lastName": "Sjonell",
-              "role": "Intern",
-              "skills": "Webdevelopment, React",
+              "name": "Andre",
+              "lastName": "Holm",
+              "role": "Developer",
+              "skills": "React",
               "projects": "none"
             },
              {
               "id": "89",
-              "name": "Mattias",
-              "lastName": "Sjonell",
-              "role": "Intern",
-              "skills": "Webdevelopment, React",
+              "name": "Linnea",
+              "lastName": "Himmelberg",
+              "role": "Developer",
+              "skills": "Java",
               "projects": "none"
             },
             {

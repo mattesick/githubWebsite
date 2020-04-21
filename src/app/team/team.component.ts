@@ -14,18 +14,20 @@ import { EmployeeService } from '../service/employee.service';
 })
 export class TeamComponent implements OnInit {
 
-  constructor(private teamService: TeamService, private employeeService:EmployeeService) {
+  constructor(private teamService: TeamService, private employeeService: EmployeeService) {
 
   }
   team: Team = new Team({});
-  employee:Employee;
+  employee: Employee;
 
-  employeesWithSkills:Employee[] = [];
+  employeesWithSkills: Employee[] = [];
   //team:any = {};
 
   ngOnInit(): void {
-    this.teamService.getTeam("1").subscribe(data => { this.team = new Team(data);console.log(this.team) });
-    this.employeeService.getEmployeeById("1").subscribe(data => { this.employee = new Employee(data);console.log(this.employee)});
+    this.teamService.getTeam("1").subscribe(data => { this.team = new Team(data); console.log(this.team) });
+    this.employeeService.getEmployeeById("1").subscribe(data => {
+    this.employee = new Employee(data); console.log(this.employee)
+    });
   }
 
 }

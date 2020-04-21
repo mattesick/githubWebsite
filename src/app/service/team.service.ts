@@ -26,5 +26,8 @@ export class TeamService {
   getEmployeesWithSkill(skill:string){
     return this.http.get('http://localhost:8000/getEmployeesBySkill/' + skill)
   }
+  getTeamByEmployeeId(id:string){
+    return this.http.get('http://localhost:8000/getTeamByEmployeeId/' + id);
+  }
 
 }

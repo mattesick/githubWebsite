@@ -5,15 +5,25 @@
     justify-content: space-evenly;
 }
 .image{
-    width: 100%;
+    width: 90%;
+    margin-right: 15px;
     margin: auto;
+    padding: 5px;
+    border: 2px solid grey;
+    transition: 200ms all ease-in-out;
+    cursor: pointer;
+}
+.image:hover{
+    background-color: rgba(150, 150, 150, .5);
 }
 #team{
-    width: 10%;
+    width: 15%;
     order: 1;
     text-align: center;
-    max-height: 80vh;
-    overflow-y: scroll;
+    max-height: 85vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 2px solid grey;
 }
 #person{
     order: 2;
