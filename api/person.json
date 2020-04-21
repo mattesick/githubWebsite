@@ -15,7 +15,7 @@
               "lastName": "Sjonell",
               "role": "Intern",
               "skills": "Webdevelopment, React",
-              "projects": "none"
+              "projects": ["1","65"]
             },
              {
               "id": "23",
@@ -23,7 +23,7 @@
               "lastName": "Sjonell",
               "role": "Intern",
               "skills": "Webdevelopment, React",
-              "projects": "none"
+              "projects":  ["1","31", "12"]
             },
              {
               "id": "55",
@@ -47,7 +47,7 @@
               "lastName": "Svensson",
               "role": "Webdeveloper",
               "skills": "Webdevelopment",
-              "projects": "Big website"
+              "projects": "Dcane"
             },
             {
               "id": "3",
