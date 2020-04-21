@@ -32,11 +32,15 @@ app.get("/AllProjects", (req, res) => {
 });
 
 let json;
+let projects;
 
 fs.readFile('person.json', (err, data) => {
   if (err) throw err;
-  person = JSON.parse(data);
-  json = person;
+  json = JSON.parse(data);
+});
+fs.readFile('projects.json', (err, data) => {
+  if (err) throw err;
+  projects = JSON.parse(data);
 });
 
 app.get("/getDepartmentById/:id", (req, res) => {
@@ -45,7 +49,23 @@ app.get("/getDepartmentById/:id", (req, res) => {
   });
 });
 
+app.get("/getEmployeesWithArrayOfIds/:array", (req, res) => {
+  req.params.array = JSON.parse(req.params.array);
+  let employees = [];
+  json.forEach(department => {
+    department.teams.forEach(team => {
+      team.employees.forEach(employee => {
+        req.params.array.forEach(employeeId => {
+          if (employee.id == employeeId) employees.push(employee);
+        });
+      });
+    });
+  });
+  res.send(employees);
+});
+
 app.get("/getTeamById/:id", (req, res) => {
+  console.log(req.params.id);
   json.forEach(department => {
     department.teams.forEach(team => {
       if (team.id == req.params.id) res.send(team);
@@ -82,11 +102,43 @@ app.get("/getEmployeesBySkill/:skill", (req, res) => {
       });
     });
   });
-  res.send(result)
+  res.send(result);
 });
 
 app.get("/getAllDepartments", (req, res) => {
   return res.send(json);
+});
+
+//Project api
+
+app.get("/getProjectsByUserId/:id", (req, res) => {
+  //Gets person
+  let emp;
+  json.forEach(department => {
+    department.teams.forEach(team => {
+      team.employees.forEach(employee => {
+        if (employee.id == req.params.id) emp = employee;
+      });
+    });
+  });
+  //gets projects from person
+  let empProjects = [];
+  projects.forEach(project => {
+    emp.projects.forEach(projectId => {
+      if (projectId == project.id) empProjects.push(project);
+    });
+  });
+  //Sends projects
+  res.send(empProjects);
+});
+
+app.get("/getProjectById/:id", (req, res) => {
+  projects.forEach(project => {
+    if (project.id == req.params.id) res.send(project);
+  });
+});
+app.get("/getAllProjects", (req, res) => {
+  res.send(projects);
 });
 
 //Config things

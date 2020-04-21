@@ -7,6 +7,13 @@
 .image{
     width: 100%;
     margin: auto;
+    border:2px solid grey;
+    padding:5px;
+    transition: 200ms all ease-in-out;
+    cursor:pointer;
+}
+.image:hover{
+    background-color:rgba(150, 150, 150, .5);
 }
 #team{
     width: 10%;
