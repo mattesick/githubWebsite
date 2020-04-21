@@ -15,7 +15,7 @@
               "lastName": "Sjonell",
               "role": "Intern",
               "skills": "Webdevelopment, React",
-              "projects": ["1","65"]
+              "projects": ["1","2"]
             },
              {
               "id": "23",
@@ -31,7 +31,7 @@
               "lastName": "Holm",
               "role": "Developer",
               "skills": "React",
-              "projects": "none"
+              "projects": ["1","31", "12"]
             },
              {
               "id": "89",
@@ -39,7 +39,7 @@
               "lastName": "Himmelberg",
               "role": "Developer",
               "skills": "Java",
-              "projects": "none"
+              "projects": ["1","31", "12"]
             },
             {
               "id": "2",
@@ -47,7 +47,7 @@
               "lastName": "Svensson",
               "role": "Webdeveloper",
               "skills": "Webdevelopment",
-              "projects": "Dcane"
+              "projects": ["1","31", "12"]
             },
             {
               "id": "3",
@@ -55,7 +55,7 @@
               "lastName": "Andersson",
               "role": "Intern",
               "skills": "Webdevelopment",
-              "projects": "none"
+              "projects": ["1","31", "12"]
             }     
           ]
         },
@@ -65,12 +65,12 @@
           "desc": "Three swedish boys working in ireland",
           "employees": [
             {
-              "id": "1",
+              "id": "44",
               "name": "Mattias",
               "lastName": "Sjonell",
               "role": "Intern",
               "skills": "Webdevelopment, React",
-              "projects": "none"
+              "projects": ["1","31", "12"]
             },
             {
               "id": "2",
@@ -78,7 +78,7 @@
               "lastName": "Svensson",
               "role": "Webdeveloper",
               "skills": "Webdevelopment",
-              "projects": "Big website"
+              "projects": ["1","31", "12"]
             },
             {
               "id": "3",
@@ -86,7 +86,7 @@
               "lastName": "Andersson",
               "role": "Intern",
               "skills": "Webdevelopment",
-              "projects": "none"
+              "projects": ["1","31", "12"]
             }     
           ]
         },
@@ -96,12 +96,12 @@
           "desc": "Three swedish boys working in ireland",
           "employees": [
             {
-              "id": "1",
+              "id": "424",
               "name": "Mattias",
               "lastName": "Sjonell",
               "role": "Intern",
               "skills": "Webdevelopment, React",
-              "projects": "none"
+              "projects": ["1","31", "12"]
             },
             {
               "id": "2",
@@ -109,7 +109,7 @@
               "lastName": "Svensson",
               "role": "Webdeveloper",
               "skills": "Webdevelopment",
-              "projects": "Big website"
+              "projects": ["1","31", "12"]
             },
             {
               "id": "3",
@@ -117,7 +117,7 @@
               "lastName": "Andersson",
               "role": "Intern",
               "skills": "Webdevelopment",
-              "projects": "none"
+              "projects": ["1","31", "12"]
             }     
           ]
         },
@@ -127,12 +127,12 @@
           "desc": "Three swedish boys working in ireland",
           "employees": [
             {
-              "id": "1",
+              "id": "23",
               "name": "Mattias",
               "lastName": "Sjonell",
               "role": "Intern",
               "skills": "Webdevelopment, React",
-              "projects": "none"
+              "projects": ["1","31", "12"]
             },
             {
               "id": "2",
@@ -140,7 +140,7 @@
               "lastName": "Svensson",
               "role": "Webdeveloper",
               "skills": "Webdevelopment",
-              "projects": "Big website"
+              "projects": ["1","31", "12"]
             },
             {
               "id": "3",
@@ -148,7 +148,7 @@
               "lastName": "Andersson",
               "role": "Intern",
               "skills": "Webdevelopment",
-              "projects": "none"
+              "projects": ["1","31", "12"]
             }     
           ]
         },
@@ -163,7 +163,7 @@
               "lastName": "Heraghty",
               "role": "Graduate",
               "skills": "Nothing",
-              "projects": "Big stuff happening"
+              "projects": ["1","31", "12"]
             },
             {
               "id": "conor.tuffy",
@@ -171,7 +171,7 @@
               "lastName": "Tuffy",
               "role": "Developer",
               "skills": "C#, .NET",
-              "projects": "Big application"
+              "projects":["1","31", "12"]
             }
           ]
         }
@@ -193,7 +193,7 @@
               "lastName": "Ali",
               "role": "Intern",
               "skills": "Webdevelopment, React",
-              "projects": "none"
+              "projects":["1","31", "12"]
             },
             {
               "id": "7",
@@ -201,7 +201,7 @@
               "lastName": "Svensson",
               "role": "Webdeveloper",
               "skills": "Webdevelopment",
-              "projects": "Big website"
+              "projects": ["1","31", "12"]
             },
             {
               "id": "8",
@@ -209,7 +209,7 @@
               "lastName": "Andersson",
               "role": "Intern",
               "skills": "Webdevelopment",
-              "projects": "none"
+              "projects": ["1","31", "12"]
             }
   
   
@@ -226,7 +226,7 @@
               "lastName": "Heraghty",
               "role": "Graduate",
               "skills": "Webdevelopment, React",
-              "projects": "none"
+              "projects": ["1","31", "12"]
             },
             {
               "id": "10",
@@ -234,7 +234,7 @@
               "lastName": "",
               "role": "Developer",
               "skills": "C#, .NET",
-              "projects": "Big application"
+              "projects": ["1","31", "12"]
             }
           ]
         }
