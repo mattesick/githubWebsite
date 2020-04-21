@@ -2,36 +2,25 @@
 <h2>Person page works!</h2>
 <div class="Container">
     <div id="team">
-        <p>Teammates</p>
-        <figure class="image">
-            <img src="../../assets/images/profile.jpg" alt="">
-            <figcaption>Mattias</figcaption>
-            <figcaption>Developer</figcaption>
-        </figure>
-        <figure class="image">
-            <img src="../../assets/images/profile.jpg" alt="">
-            <figcaption>Alex</figcaption>
-            <figcaption>Developer</figcaption>
-        </figure>
-        <figure class="image">
-            <img src="../../assets/images/profile.jpg" alt="">
-            <figcaption>Aiden</figcaption>
-            <figcaption>Project Owner</figcaption>
+        <p>Members in team: {{team.name}}</p>
+        <figure *ngFor="let employee of team.employees" class="image" routerLink="/Person/{{employee.id}}" (click)="getEmployee()">
+            <img src="../../assets/images/profile.jpg" alt="employee">
+            <figcaption>{{employee.name}}</figcaption>
+            <figcaption>{{employee.role}}</figcaption>
         </figure>
     </div>
     <div id="person">
         <figure id="focus">
-            <img src="../../assets/images/profile.jpg" alt="">
-            <figcaption>Conor</figcaption>
-            <figcaption>Project Manager</figcaption>
+            <img src="../../assets/images/profile.jpg" alt="focusedEmployee">
+            <figcaption>{{employee.name}}</figcaption>
+            <figcaption>{{employee.role}}</figcaption>
         </figure>
         <div id="description">
-            <ul id="list">
-                Skills:
-                <li>c#</li>
-                <li>Angular</li>
-                <li>Node.js</li>
+            Skills:
+            <ul *ngFor="let skill of skills" id="list">
+                <li >{{skill}}</li>
             </ul>
+            <p></p>
             <p id="about">basic filler text to make up space on the page where the description should be when the site is done.</p>
         </div>
     </div>

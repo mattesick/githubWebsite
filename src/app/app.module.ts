@@ -8,7 +8,7 @@ import { TeamComponent } from './team/team.component';
 import { HomeComponent } from './home/home.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { PersonComponent } from './person/person.component';
-import { ProjectComponent } from './project/project/project.component';
+import { ProjectComponent } from './project/project.component';
 
 @NgModule({
   declarations: [
