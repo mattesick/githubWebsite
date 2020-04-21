@@ -3,10 +3,10 @@
 <div class="Container">
     <div id="team">
         <p>Members in team: {{team.name}}</p>
-        <figure *ngFor="let employee of team.employees" class="image" routerLink="/Person/{{employee.id}}" (click)="getEmployee()">
+        <figure *ngFor="let emp of team.employees" class="image" routerLink="/Person/{{emp.id}}" (click)="getEmployee()">
             <img src="../../assets/images/profile.jpg" alt="employee">
-            <figcaption>{{employee.name}}</figcaption>
-            <figcaption>{{employee.role}}</figcaption>
+            <figcaption>{{emp.name}}</figcaption>
+            <figcaption>{{emp.role}}</figcaption>
         </figure>
     </div>
     <div id="person">

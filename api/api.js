@@ -44,65 +44,65 @@ fs.readFile('projects.json', (err, data) => {
 });
 
 app.get("/getDepartmentById/:id", (req, res) => {
-  json.forEach(department => {
-    if (department.id == req.params.id) res.send(department);
-  });
+  for (const department of json) {
+    if (department.id == req.params.id) return res.send(department);
+  }
 });
 
 app.get("/getEmployeesWithArrayOfIds/:array", (req, res) => {
   req.params.array = JSON.parse(req.params.array);
   let employees = [];
-  json.forEach(department => {
-    department.teams.forEach(team => {
-      team.employees.forEach(employee => {
-        req.params.array.forEach(employeeId => {
+  for (const department of json) {
+    for (const team of department.teams) {
+      for (const employee of team.employees) {
+        for (const employeeId of req.params.array) {
           if (employee.id == employeeId) employees.push(employee);
-        });
-      });
-    });
-  });
-  res.send(employees);
+        }
+      }
+    }
+  }
+  return res.send(employees);
 });
 
 app.get("/getTeamById/:id", (req, res) => {
-  console.log(req.params.id);
-  json.forEach(department => {
-    department.teams.forEach(team => {
-      if (team.id == req.params.id) res.send(team);
-    });
-  });
+  for (const department of json) {
+    for (const team of department.teams) {
+      if (team.id == req.params.id) return res.send(team);
+    }
+  }
 });
 
 app.get("/getTeamByEmployeeId/:id", (req, res) => {
-  json.forEach(department => {
-    department.teams.forEach(team => {
-      team.employees.forEach(employee => {
-        if (employee.id == req.params.id) res.send(team);
-      });
-    });
-  });
+  for (const department of json) {
+    for (const team of department.teams) {
+      for (const employee of team.employees) {
+        if (employee.id == req.params.id) return res.send(team);
+      }
+    }
+  }
 });
 
 app.get("/getEmployeeById/:id", (req, res) => {
-  json.forEach(department => {
-    department.teams.forEach(team => {
-      team.employees.forEach(employee => {
-        if (employee.id == req.params.id) res.send(employee);
-      });
-    });
-  });
+  for (const department of json) {
+    for (const team of department.teams) {
+      for (const employee of team.employees) {
+        if (employee.id == req.params.id) return res.send(employee);
+      }
+    }
+  }
 });
 
 app.get("/getEmployeesBySkill/:skill", (req, res) => {
   let result = [];
-  json.forEach(department => {
-    department.teams.forEach(team => {
-      team.employees.forEach(employee => {
+  for (const department of json) {
+    for (const team of department.teams) {
+      for (const employee of team.employees) {
         if (employee.skills == req.params.skill) result.push(employee);
-      });
-    });
-  });
-  res.send(result);
+      }
+     
+    }
+  }
+  return res.send(result);
 });
 
 app.get("/getAllDepartments", (req, res) => {
@@ -114,32 +114,42 @@ app.get("/getAllDepartments", (req, res) => {
 app.get("/getProjectsByUserId/:id", (req, res) => {
   //Gets person
   let emp;
-  json.forEach(department => {
-    department.teams.forEach(team => {
-      team.employees.forEach(employee => {
-        if (employee.id == req.params.id) emp = employee;
-      });
-    });
-  });
+  for (const department of json) {
+    for (const team of department.teams) {
+      for (const employee of team.employees) {
+        if (employee.id == req.params.id) { emp = employee; break; };
+      }
+    }
+  }
   //gets projects from person
   let empProjects = [];
-  projects.forEach(project => {
-    emp.projects.forEach(projectId => {
+  for (const project of projects) {
+    for (const projectId of emp.projects) {
       if (projectId == project.id) empProjects.push(project);
-    });
-  });
+    }
+    
+  }
   //Sends projects
-  res.send(empProjects);
+  return res.send(empProjects);
 });
 
 app.get("/getProjectById/:id", (req, res) => {
-  projects.forEach(project => {
-    if (project.id == req.params.id) res.send(project);
-  });
+  for (const project of projects) {
+    if (project.id == req.params.id) return res.send(project);
+  }
 });
 app.get("/getAllProjects", (req, res) => {
-  res.send(projects);
+  return res.send(projects);
 });
+app.get("/getAllTeams", (req, res) => {
+  let allTeams = [];
+  for (const department of json) {
+    for (const team of department.teams) {
+      allTeams.push(team);
+    }
+  }
+  return res.send(allTeams);
+})
 
 //Config things
 const port = 8000;
