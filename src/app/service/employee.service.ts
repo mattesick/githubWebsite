@@ -13,17 +13,17 @@ export interface Team {
 @Injectable({
   providedIn: 'root'
 })
-export class TeamService {
+export class EmployeeService {
 
   constructor(private http: HttpClient) { 
 
     
   }
   
-  getTeam(id:string){
-    return this.http.get('http://localhost:8000/getTeamById/' + id);
+  getEmployeeById(id:string){
+    return this.http.get('http://localhost:8000/getEmployeeById/' + id);
   }
-  getEmployeesWithSkill(skill:string){
+  getEmployeesBySkill(skill:string){
     return this.http.get('http://localhost:8000/getEmployeesBySkill/' + skill)
   }
 

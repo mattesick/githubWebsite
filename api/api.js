@@ -22,13 +22,13 @@ var corsOptions = {
 }
 
 app.use(cors(corsOptions))
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
 app.get("/AllProjects", (req, res) => {
-    console.log("hello");
+  console.log("hello");
 });
 
 let json;
@@ -38,28 +38,51 @@ fs.readFile('person.json', (err, data) => {
   person = JSON.parse(data);
   json = person;
 });
-app.route('/api/cats/:name').get((req, res) => {
-  console.log("getting cat");
-  const requestedCatName = req.params['name']
-  res.send({ name: requestedCatName })
-})
 
 app.get("/getDepartmentById/:id", (req, res) => {
-    json.forEach(department => {
-      if(department.id == req.params.id) res.send(department);
-    });
-    res.send(404);
+  json.forEach(department => {
+    if (department.id == req.params.id) res.send(department);
+  });
 });
 
 app.get("/getTeamById/:id", (req, res) => {
-  let responseTeam = {};
-  console.log("got called");
   json.forEach(department => {
-   department.teams.forEach(team => {
-      if(team.id == req.params.id) responseTeam = team;
-   });
+    department.teams.forEach(team => {
+      if (team.id == req.params.id) res.send(team);
+    });
   });
-  res.send(responseTeam);
+});
+
+app.get("/getTeamEmployeeById/:id", (req, res) => {
+  json.forEach(department => {
+    department.teams.forEach(team => {
+      team.employees.forEach(employee => {
+        if (employee.id == req.params.id) res.send(team);
+      });
+    });
+  });
+});
+
+app.get("/getEmployeeById/:id", (req, res) => {
+  json.forEach(department => {
+    department.teams.forEach(team => {
+      team.employees.forEach(employee => {
+        if (employee.id == req.params.id) res.send(employee);
+      });
+    });
+  });
+});
+
+app.get("/getEmployeesBySkill/:skill", (req, res) => {
+  let result = [];
+  json.forEach(department => {
+    department.teams.forEach(team => {
+      team.employees.forEach(employee => {
+        if (employee.skills == req.params.skill) result.push(employee);
+      });
+    });
+  });
+  res.send(result)
 });
 
 app.get("/getAllDepartments", (req, res) => {
