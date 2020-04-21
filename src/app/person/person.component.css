@@ -8,15 +8,6 @@
     width: 85%;
     margin-right: 15px;
     margin: auto;
-<<<<<<< HEAD
-    border:2px solid grey;
-    padding:5px;
-    transition: 200ms all ease-in-out;
-    cursor:pointer;
-}
-.image:hover{
-    background-color:rgba(150, 150, 150, .5);
-=======
     padding: 5px;
     border: 2px solid grey;
     transition: 200ms all ease-in-out;
@@ -24,7 +15,6 @@
 }
 .image:hover{
     background-color: rgba(150, 150, 150, .5);
->>>>>>> acb56f6597afe078073d3d9688039f9ed46c1b6f
 }
 #team{
     width: 15%;

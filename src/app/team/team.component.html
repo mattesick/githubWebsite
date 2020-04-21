@@ -1,12 +1,14 @@
 <app-nav-bar></app-nav-bar>
 <app-go-back></app-go-back>
+<div routerLink="/allTeams">
+    <h2>All teams</h2>
+</div>
 <tr>
     <td>{{team.name}}</td>
-    <td>{{team.id}}</td>
     <td>{{team.desc}}</td>
 </tr>
 <tr *ngFor="let employee of team.employees" routerLink="/Person/{{employee.id}}">
-    <td>{{employee.id}}</td>
-    <td>{{employee.name}}</td>
+    <td>{{employee.fullName()}}</td>
+    
     
 </tr>

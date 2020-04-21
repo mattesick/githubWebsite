@@ -3,7 +3,7 @@
 <h2>Person page works!</h2>
 <div class="Container">
     <div id="team">
-        <p routerLink="/Teams/{{team.id}}">Members in team: {{team.name}}</p>
+        <p routerLink="/Team/{{team.id}}">Members in team: {{team.name}}</p>
         <div *ngFor="let emp of team.employees">
         <figure   *ngIf="emp.id != employee.id" class="image" routerLink="/Person/{{emp.id}}" (click)="ngOnInit()">
             <img src="../../assets/images/profile.jpg" alt="employee">

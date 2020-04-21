@@ -16,9 +16,15 @@ export class AllTeamsComponent implements OnInit {
   constructor(private teamService: TeamService, private route: ActivatedRoute) {
 
   }
-  Teams = [];
+  allTeams: Team[] = [];
+
   ngOnInit(): void {
-    this.teamService.getAllTeams().subscribe(data => { this.allTeams = [(data)]; console.log(this.Teams) });
+    this.teamService.getAllTeams().subscribe((data:any) => {
+      data.forEach(team => {
+        this.allTeams.push(new Team(team))
+      });
+      console.log(this.allTeams)
+    });
   }
 
 }
