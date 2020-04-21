@@ -2,21 +2,11 @@
 <h2>Person page works!</h2>
 <div class="Container">
     <div id="team">
-        <p>Teammates</p>
-        <figure class="image">
+        <p>Members in team: {{team.name}}</p>
+        <figure *ngFor="let employee of team.employees" class="image" routerLink="/Person/:{{employee.id}}">
             <img src="../../assets/images/profile.jpg" alt="">
-            <figcaption>Mattias</figcaption>
-            <figcaption>Developer</figcaption>
-        </figure>
-        <figure class="image">
-            <img src="../../assets/images/profile.jpg" alt="">
-            <figcaption>Alex</figcaption>
-            <figcaption>Developer</figcaption>
-        </figure>
-        <figure class="image">
-            <img src="../../assets/images/profile.jpg" alt="">
-            <figcaption>Aiden</figcaption>
-            <figcaption>Project Owner</figcaption>
+            <figcaption>{{employee.name}}</figcaption>
+            <figcaption>{{employee.role}}</figcaption>
         </figure>
     </div>
     <div id="person">

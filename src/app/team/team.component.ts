@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TeamService } from "../service/team.service";
+import { ActivatedRoute } from '@angular/router';
 class Employee {
   id:string;
   name: string;
@@ -52,15 +53,16 @@ class Team {
 })
 export class TeamComponent implements OnInit {
 
-  constructor(private teamService: TeamService) {
-
-  }
+  constructor(private teamService: TeamService, private route: ActivatedRoute, private location: Location) 
+  {}
   //team: Team = new Team({});
   team:any = {};
 
   ngOnInit(): void {
     //this.teamService.getTeam("1").subscribe(data => { this.team = new Team(data) });
-    this.teamService.getTeam("1").subscribe(data => { this.team = data });
+    const id = +this.route.snapshot.paramMap.get('id');
+    //this.teamService.getEmployeeById(id);
+    //this.teamService.getTeamEmployeeById(id).subscribe(data => { this.team = data });
   }
 
 }

@@ -12,6 +12,8 @@
     width: 10%;
     order: 1;
     text-align: center;
+    max-height: 80vh;
+    overflow-y: scroll;
 }
 #person{
     order: 2;
