@@ -10,7 +10,7 @@ import { Project } from '../models/projects.model';
 })
 export class ProjectComponent implements OnInit {
 
-  constructor(private projectService: ProjectService) { }
+  constructor(private projectService: ProjectService, private route: ActivatedRoute) { }
 
   project : Project = new Project({});
 
@@ -18,7 +18,8 @@ export class ProjectComponent implements OnInit {
     this.getProject();
   }
   getProject():void{
-    this.projectService.getProjectById("2").subscribe((data:any) => {
+    const projectId = this.route.snapshot.paramMap.get('id');
+    this.projectService.getProjectById(projectId).subscribe((data:any) => {
       this.project = new Project(data);
     })
   }

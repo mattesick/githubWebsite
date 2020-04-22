@@ -12,7 +12,7 @@
     },
     {
         "id": "2",
-        "name": "Test",
+        "name": "Project 2",
         "desc": "Description",
         "productOwners": [
             "1"
@@ -23,7 +23,7 @@
     },
     {
         "id": "3",
-        "name": "Test",
+        "name": "Project 3",
         "desc": "Description",
         "productOwners": [
             "1"
@@ -33,7 +33,7 @@
     },
     {
         "id": "4",
-        "name": "Test",
+        "name": "Project 4",
         "desc": "Description",
         "productOwners": [
             "1"
@@ -43,7 +43,7 @@
     },
     {
         "id": "5",
-        "name": "Test",
+        "name": "Project 5",
         "desc": "Description",
         "productOwners": [
             "1"
