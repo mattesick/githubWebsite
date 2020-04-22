@@ -22,49 +22,134 @@ var corsOptions = {
 }
 
 app.use(cors(corsOptions))
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
 app.get("/AllProjects", (req, res) => {
-    console.log("hello");
+  console.log("hello");
 });
 
 let json;
+let projects;
 
 fs.readFile('person.json', (err, data) => {
   if (err) throw err;
-  person = JSON.parse(data);
-  json = person;
+  json = JSON.parse(data);
 });
-app.route('/api/cats/:name').get((req, res) => {
-  console.log("getting cat");
-  const requestedCatName = req.params['name']
-  res.send({ name: requestedCatName })
-})
+fs.readFile('projects.json', (err, data) => {
+  if (err) throw err;
+  projects = JSON.parse(data);
+});
 
 app.get("/getDepartmentById/:id", (req, res) => {
-    json.forEach(department => {
-      if(department.id == req.params.id) res.send(department);
-    });
-    res.send(404);
+  for (const department of json) {
+    if (department.id == req.params.id) return res.send(department);
+  }
+});
+
+app.get("/getEmployeesWithArrayOfIds/:array", (req, res) => {
+  req.params.array = JSON.parse(req.params.array);
+  let employees = [];
+  for (const department of json) {
+    for (const team of department.teams) {
+      for (const employee of team.employees) {
+        for (const employeeId of req.params.array) {
+          if (employee.id == employeeId) employees.push(employee);
+        }
+      }
+    }
+  }
+  return res.send(employees);
 });
 
 app.get("/getTeamById/:id", (req, res) => {
-  let responseTeam = {};
-  console.log("got called");
-  json.forEach(department => {
-   department.teams.forEach(team => {
-      if(team.id == req.params.id) responseTeam = team;
-   });
-  });
-  res.send(responseTeam);
+  for (const department of json) {
+    for (const team of department.teams) {
+      if (team.id == req.params.id) return res.send(team);
+    }
+  }
+});
+
+app.get("/getTeamByEmployeeId/:id", (req, res) => {
+  for (const department of json) {
+    for (const team of department.teams) {
+      for (const employee of team.employees) {
+        if (employee.id == req.params.id) return res.send(team);
+      }
+    }
+  }
+});
+
+app.get("/getEmployeeById/:id", (req, res) => {
+  for (const department of json) {
+    for (const team of department.teams) {
+      for (const employee of team.employees) {
+        if (employee.id == req.params.id) return res.send(employee);
+      }
+    }
+  }
+});
+
+app.get("/getEmployeesBySkill/:skill", (req, res) => {
+  let result = [];
+  for (const department of json) {
+    for (const team of department.teams) {
+      for (const employee of team.employees) {
+        if (employee.skills == req.params.skill) result.push(employee);
+      }
+     
+    }
+  }
+  return res.send(result);
 });
 
 app.get("/getAllDepartments", (req, res) => {
   return res.send(json);
 });
+
+//Project api
+
+app.get("/getProjectsByUserId/:id", (req, res) => {
+  //Gets person
+  let emp;
+  for (const department of json) {
+    for (const team of department.teams) {
+      for (const employee of team.employees) {
+        if (employee.id == req.params.id) { emp = employee; break; };
+      }
+    }
+  }
+  //gets projects from person
+  let empProjects = [];
+  for (const project of projects) {
+    for (const projectId of emp.projects) {
+      if (projectId == project.id) empProjects.push(project);
+    }
+    
+  }
+  //Sends projects
+  return res.send(empProjects);
+});
+
+app.get("/getProjectById/:id", (req, res) => {
+  for (const project of projects) {
+    if (project.id == req.params.id) return res.send(project);
+  }
+});
+app.get("/getAllProjects", (req, res) => {
+  return res.send(projects);
+});
+app.get("/getAllTeams", (req, res) => {
+  let allTeams = [];
+  for (const department of json) {
+    for (const team of department.teams) {
+      allTeams.push(team);
+    }
+  }
+  return res.send(allTeams);
+})
 
 //Config things
 const port = 8000;

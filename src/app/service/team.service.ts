@@ -1,14 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable'
 import { HttpClient } from '@angular/common/http'
-import { async } from '@angular/core/testing';
 import 'rxjs/add/operator/map'
-
-export interface Team {
-  name: string,
-  desc: string
-}
-
 
 @Injectable({
   providedIn: 'root'
@@ -23,5 +15,13 @@ export class TeamService {
   getTeam(id:string){
     return this.http.get('http://localhost:8000/getTeamById/' + id);
   }
-
+  getEmployeesWithSkill(skill:string){
+    return this.http.get('http://localhost:8000/getEmployeesBySkill/' + skill)
+  }
+  getTeamByEmployeeId(id:string){
+    return this.http.get('http://localhost:8000/getTeamByEmployeeId/' + id);
+  }
+  getAllTeams(){
+    return this.http.get('http://localhost:8000/getAllTeams/');
+  }
 }

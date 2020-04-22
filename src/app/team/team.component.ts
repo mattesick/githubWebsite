@@ -1,50 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { TeamService } from "../service/team.service";
-class Employee {
-  id:string;
-  name: string;
-  lastName: string;
-  skills: string;
-  role: string;
-  projects: string;
-  constructor(data:any){
-    this.name = data.name;
-    this.lastName = data.lastName;
-    this.skills = data.skills;
-    this.role = data.role;
-    this.projects = data.projects;
-    this.id = data.id;
-  }
+import { DepartmentService } from "../service/department.service";
+import { Team } from '../models/team.model';
+import { Department } from '../models/department.model';
+import { Employee } from '../models/employee.model';
+import { ActivatedRoute } from '@angular/router';
 
-  fullName() {
-    return this.name + " " + this.lastName;
-  }
-}
-class Team {
-  initEmployees: Function
-  name: string;
-  desc: string;
-  id: string;
-  employees: Employee[];
-  constructor(data: any) {
-    this.name = data.name;
-    this.initEmployees = () => {
-      this.employees = [];
-      if(data.employees){
-        data.employees.forEach(employee => {
-          this.employees.push(new Employee(employee))
-        });
-      }
-    }
-    this.initEmployees();
-   
 
-  }
-
-  fullName() {
-    return this.name;
-  }
-}
 @Component({
   selector: 'app-team',
   templateUrl: './team.component.html',
@@ -52,15 +14,17 @@ class Team {
 })
 export class TeamComponent implements OnInit {
 
-  constructor(private teamService: TeamService) {
+  constructor(private teamService: TeamService, private route: ActivatedRoute) {
 
   }
-  //team: Team = new Team({});
-  team:any = {};
+  team: Team = new Team({});
+  employee: Employee;
+
+  employeesWithSkills: Employee[] = [];
+  //team:any = {};
 
   ngOnInit(): void {
-    //this.teamService.getTeam("1").subscribe(data => { this.team = new Team(data) });
-    this.teamService.getTeam("1").subscribe(data => { this.team = data });
+    const teamId = this.route.snapshot.paramMap.get('id');
+    this.teamService.getTeam(teamId).subscribe(data => { this.team = new Team(data); console.log(this.team) });
   }
-
 }
