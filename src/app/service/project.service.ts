@@ -8,16 +8,18 @@ import 'rxjs/add/operator/map'
 })
 export class ProjectService {
 
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient) {
 
-    
+
   }
-  
-  getProjectsByUserId(id:string){
+
+  getProjectsByUserId(id: string) {
     return this.http.get('http://localhost:8000/getProjectsByUserId/' + id);
   }
-  getProjectById(id:string){
+  getProjectById(id: string) {
     return this.http.get('http://localhost:8000/getProjectById/' + id)
   }
-
+  getAllProjects() {
+    return this.http.get('http://localhost:8000/getAllProjects/')
+  }
 }

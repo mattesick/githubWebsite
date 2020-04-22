@@ -11,6 +11,7 @@ import { PersonComponent } from './person/person.component';
 import { GoBackComponent } from './go-back/go-back.component';
 import { ProjectComponent } from './project/project.component';
 import { AllTeamsComponent } from './all-teams/all-teams.component';
+import { AllProjectsComponent } from './all-projects/all-projects.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AllTeamsComponent } from './all-teams/all-teams.component';
     PersonComponent,
     GoBackComponent,
     ProjectComponent,
-    AllTeamsComponent
+    AllTeamsComponent,
+    AllProjectsComponent
   ],
   imports: [
     BrowserModule,
