@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProjectService } from '../service/project.service';
 import { Project } from '../models/projects.model';
+import { Employee } from '../models/employee.model';
+import { EmployeeService } from '../service/employee.service';
 
 @Component({
   selector: 'app-project',
@@ -10,9 +12,10 @@ import { Project } from '../models/projects.model';
 })
 export class ProjectComponent implements OnInit {
 
-  constructor(private projectService: ProjectService, private route: ActivatedRoute) { }
+  constructor(private projectService: ProjectService, private employeeService: EmployeeService,private route: ActivatedRoute) { }
 
   project : Project = new Project({});
+  productOwners : Employee[] = [];
 
   ngOnInit(): void {
     this.getProject();
@@ -21,7 +24,8 @@ export class ProjectComponent implements OnInit {
     const projectId = this.route.snapshot.paramMap.get('id');
     this.projectService.getProjectById(projectId).subscribe((data:any) => {
       this.project = new Project(data);
-    })
+      this.employeeService
+    });
   }
 
 }
