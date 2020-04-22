@@ -4,12 +4,12 @@ import { HomeComponent } from './home/home.component';
 import { TeamComponent } from './team/team.component';
 import { PersonComponent } from './person/person.component';
 import { AllTeamsComponent } from './all-teams/all-teams.component';
-import { ProjectComponent } from './projects/project.component';
+import { ProjectComponent } from './project/project.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'allTeams', component:  AllTeamsComponent},
   { path: 'Team/:id', component:  TeamComponent},
-  { path: 'Projects/:id', component: ProjectComponent },
+  { path: 'Project', component: ProjectComponent },
   { path: 'MobilityApps', component: HomeComponent },
   { path: 'Person/:id', component: PersonComponent}
 

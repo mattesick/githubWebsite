@@ -5,7 +5,10 @@
         "desc": "Description",
         "productOwners": [
             "1"
-        ]
+        ],
+        "image":"projectImageOne.png",
+        "presentaion":["filedestination"]
+
     },
     {
         "id": "2",
@@ -13,7 +16,10 @@
         "desc": "Description",
         "productOwners": [
             "1"
-        ]
+        ],
+        "image":"projectImageTwo.png",
+        "presentaion":["filedestination"]
+        
     },
     {
         "id": "3",
@@ -21,7 +27,9 @@
         "desc": "Description",
         "productOwners": [
             "1"
-        ]
+        ],
+        "image":"projectImageThree.png",
+        "presentaion":["filedestination"]
     },
     {
         "id": "4",
@@ -29,7 +37,9 @@
         "desc": "Description",
         "productOwners": [
             "1"
-        ]
+        ],
+        "image":"projectImageFour.png",
+        "presentaion":["filedestination"]
     },
     {
         "id": "5",
@@ -37,7 +47,9 @@
         "desc": "Description",
         "productOwners": [
             "1"
-        ]
+        ],
+        "image":"projectImageFour.png",
+        "presentaion":["filedestination"]
     },
     {
         "id": "6",
@@ -45,7 +57,9 @@
         "desc": "Description",
         "productOwners": [
             "1"
-        ]
+        ],
+        "image":"projectImageFour.png",
+        "presentaion":["filedestination"]
     },
     {
         "id": "7",
@@ -53,6 +67,8 @@
         "desc": "Description",
         "productOwners": [
             "1"
-        ]
+        ],
+        "image":"projectImageFour.png",
+        "presentaion":["filedestination"]
     }
 ]
