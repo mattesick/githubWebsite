@@ -5,12 +5,12 @@
     <div id="team">
         <p routerLink="/Team/{{team.id}}">Members in team: {{team.name}}</p>
         <div *ngFor="let emp of team.employees">
-        <figure   *ngIf="emp.id != employee.id" class="image" routerLink="/Person/{{emp.id}}" (click)="ngOnInit()">
-            <img src="../../assets/images/profile.jpg" alt="employee">
-            <figcaption>{{emp.name}}</figcaption>
-            <figcaption>{{emp.role}}</figcaption>
-        </figure>
-    </div>
+            <figure *ngIf="emp.id != employee.id" class="image" routerLink="/Person/{{emp.id}}" (click)="this.ngOnInit()">
+                <img src="../../assets/images/profile.jpg" alt="employee">
+                <figcaption>{{emp.name}}</figcaption>
+                <figcaption>{{emp.role}}</figcaption>
+            </figure>
+        </div>
     </div>
     <div id="person">
         <figure id="focus">
@@ -21,10 +21,11 @@
         <div id="description">
             Skills:
             <ul *ngFor="let skill of skills" id="list">
-                <li >{{skill}}</li>
+                <li>{{skill}}</li>
             </ul>
             <p></p>
-            <p id="about">basic filler text to make up space on the page where the description should be when the site is done.</p>
+            <p id="about">basic filler text to make up space on the page where the description should be when the site
+                is done.</p>
         </div>
     </div>
 </div>

@@ -28,6 +28,7 @@ export class PersonComponent implements OnInit {
     this.teamService.getTeamByEmployeeId(employeeId).subscribe(data => { this.team = new Team(data);});
     this.employeeService.getEmployeeById(employeeId).subscribe(data => { 
       this.employee = new Employee(data);
+      console.log(this.route.snapshot.paramMap);
       this.skills = this.employee.skills.split(",");
     });
   }
