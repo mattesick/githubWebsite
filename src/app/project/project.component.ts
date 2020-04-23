@@ -24,7 +24,7 @@ export class ProjectComponent implements OnInit {
     const projectId = this.route.snapshot.paramMap.get('id');
     this.projectService.getProjectById(projectId).subscribe((data:any) => {
       this.project = new Project(data);
-      this.employeeService
+      this.employeeService;
     });
   }
 
