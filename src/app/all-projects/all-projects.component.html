@@ -1,14 +1,17 @@
 <app-nav-bar></app-nav-bar>
 <app-go-back></app-go-back>
-<table>
-    <th>Projects
-        <tr *ngFor="let project of allProjects" routerLink="/Project/{{project.id}}">
-            <td>{{project.name}}</td>
-        </tr>
-    </th>
-    <th>description
-        <tr *ngFor="let project of allProjects" routerLink="/Project/{{project.id}}">
-            <td>{{project.desc}}</td>
-        </tr>
-    </th>
-</table>
+
+<div id="container">
+    <span>
+        <h2>Projects</h2>
+        <hr>
+    </span>
+    <div id="projects">
+        <div *ngFor="let project of allProjects" routerLink="/Project/{{project.id}}" class="teams">
+            <img src="../../assets/projectImages/{{project.image}}" alt="Description" />
+            <h3>{{project.name}}</h3>
+            <hr>
+            <h3>{{project.desc}}</h3>
+        </div>
+    </div>
+</div>

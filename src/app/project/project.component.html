@@ -1,7 +1,11 @@
 <app-nav-bar></app-nav-bar>
 <app-go-back></app-go-back>
+<div id="container">
+    <img src="../../assets/projectImages/{{project.image}}" alt="project description"/>
+    <h2>{{project.name}}</h2>
+    <hr>
+    {{project.desc}}
+    {{project.id}}
+</div>
 
-{{project.name}}
-{{project.desc}}
-{{project.id}}
-<img src="../../assets/projectImages/{{project.image}}" alt="Description"/>
+

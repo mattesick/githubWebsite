@@ -63,6 +63,16 @@
     },
     {
         "id": "7",
+        "name": "REX",
+        "desc": "Description",
+        "productOwners": [
+            "1"
+        ],
+        "image":"projectImageOne.png",
+        "presentaion":["filedestination"]
+    },
+    {
+        "id": "8",
         "name": "Test",
         "desc": "Description",
         "productOwners": [

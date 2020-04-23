@@ -8,7 +8,7 @@ h2{
     "header header header header"
     "main main sideone sidetwo"
     "main main sidethree sidefour";
-    height:80vh;
+    height:70vh;
     grid-gap: 5px;
     grid-template-rows: 1fr 3fr 3fr;
 }
