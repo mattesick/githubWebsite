@@ -1,4 +1,3 @@
-
 nav{
     overflow: hidden;
     position: relative;
@@ -8,10 +7,6 @@ nav{
     display: flex;
 
     align-items: center;
-}
-nav img{
-    width: 10%;
-    float: left;
 }
 #links{
     display: none;
@@ -39,9 +34,19 @@ nav a:hover{
     background-color: #ddd;
     color: black;
 }
+nav img{
+    width: 10%;
+    float: left;
+}
 img{
-    width: 100%;
     height: 80%;
     min-width: 140px;
+}
+h2{
+    color: #ebebeb;
+    float: left;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 18px;
 }
 
