@@ -12,6 +12,7 @@ import { GoBackComponent } from './go-back/go-back.component';
 import { ProjectComponent } from './project/project.component';
 import { AllTeamsComponent } from './all-teams/all-teams.component';
 import { AllProjectsComponent } from './all-projects/all-projects.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AllProjectsComponent } from './all-projects/all-projects.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

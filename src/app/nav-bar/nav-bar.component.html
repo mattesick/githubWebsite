@@ -1,10 +1,15 @@
 <nav>
-    <ul>
-        <li id="image"><img src="assets/images/logo.png" alt="missing logo"></li>
-        <li><a routerLink="/MobilityApps">Mobility apps</a></li>
-        <li><a routerLink="/allTeams">Teams</a></li>
-        <li><a routerLink="/allProjects">Projects</a></li>
-        <li><a routerLink="">Home</a></li>
-    </ul>
+    <a class="icon" (click)="myFunction()">
+        <fa-icon [icon]="faEllipsis"></fa-icon>
+    </a>
+    
+    <img src="assets/images/logo.png" alt="missing logo">
+    <h2>Galway</h2>
+    <div id="links">
+        <a routerLink="">Home</a>
+        <a routerLink="/allProjects">Projects</a>
+        <a routerLink="/allTeams">Teams</a>
+        <a routerLink="/MobilityApps">Mobility apps</a>
+    </div>
     
 </nav>

@@ -12,7 +12,7 @@ import { EmployeeService } from '../service/employee.service';
 })
 export class ProjectComponent implements OnInit {
 
-  constructor(private projectService: ProjectService, private employeeService: EmployeeService) { }
+  constructor(private projectService: ProjectService, private employeeService: EmployeeService,private route: ActivatedRoute) { }
 
   project : Project = new Project({});
   productOwners : Employee[] = [];
@@ -21,7 +21,8 @@ export class ProjectComponent implements OnInit {
     this.getProject();
   }
   getProject():void{
-    this.projectService.getProjectById("2").subscribe((data:any) => {
+    const projectId = this.route.snapshot.paramMap.get('id');
+    this.projectService.getProjectById(projectId).subscribe((data:any) => {
       this.project = new Project(data);
       this.employeeService;
     });
