@@ -25,6 +25,8 @@ header a.icon{
 header a:hover{
     background-color: #ddd;
     color: black;
+    cursor: pointer;
+    transition: 200ms ease-in-out;
 }
 header img{
     width: 10%;
@@ -43,17 +45,21 @@ header h2{
 
 #nav-bar{
     float: left;
-    display: flex;
     flex-direction: column;
     width: 15%;
     height: 96vh;
     border: 1px solid lightgrey;
+    width: 0px;
+    transition: ease-in-out 50ms;
+}
+#myLinks{
     display: none;
 }
 #nav-bar div{
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
+    transition: 75ms ease-in-out;
 }
 #nav-bar div a{
     text-decoration: none;
@@ -62,7 +68,7 @@ header h2{
 }
 #myLinks div:hover{
     background-color: rgb(230, 230, 230);
-   
+    cursor: pointer;
 }
 #under{
     border: 1px solid lightgrey;

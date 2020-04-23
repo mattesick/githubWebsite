@@ -15,10 +15,15 @@ export class NavBarComponent implements OnInit {
   }
   menu() {
     var y = document.getElementById("nav-bar");
-    if (y.style.display === "block") {
-      y.style.display = "none";
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      y.style.width = "0px";
+      x.style.display = "none";
+      x.style.color = "white";
     } else {
-      y.style.display = "block";
+      y.style.width = "15%";
+      x.style.display = "block";
+      x.style.color = "black";
     }
   }
 
