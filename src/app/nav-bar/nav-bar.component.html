@@ -1,15 +1,18 @@
-<nav>
-    <a class="icon" (click)="myFunction()">
+<header>
+    <a class="icon white" (click)="menu()">
         <fa-icon [icon]="faEllipsis"></fa-icon>
     </a>
-    
     <img src="assets/images/logo.png" alt="missing logo">
-    <h2>Galway</h2>
-    <div id="links">
-        <a routerLink="">Home</a>
-        <a routerLink="/allProjects">Projects</a>
-        <a routerLink="/allTeams">Teams</a>
-        <a routerLink="/MobilityApps">Mobility apps</a>
+</header>
+<div id="under">
+    <img src="assets/images/logoBlack.png" alt="missing logo">
+    <h2>DXC <span>Galway</span></h2>
+</div>
+<nav id="nav-bar">
+    <div id="myLinks">
+        <div><a routerLink="">Home</a></div>
+        <div> <a routerLink="/allProjects">Projects</a></div>
+        <div><a routerLink="/allTeams">Teams</a></div>
+        <div> <a routerLink="/MobilityApps">Mobility apps</a></div>
     </div>
-    
 </nav>

@@ -13,12 +13,12 @@ export class NavBarComponent implements OnInit {
    faEllipsis =  faEllipsisH;
   ngOnInit(): void {
   }
-   myFunction() {
-    var x = document.getElementById("links");
-    if (x.style.display === "block") {
-      x.style.display = "none";
+  menu() {
+    var y = document.getElementById("nav-bar");
+    if (y.style.display === "block") {
+      y.style.display = "none";
     } else {
-      x.style.display = "block";
+      y.style.display = "block";
     }
   }
 
