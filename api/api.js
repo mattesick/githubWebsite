@@ -27,10 +27,6 @@ app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
-app.get("/AllProjects", (req, res) => {
-  console.log("hello");
-});
-
 let json;
 let projects;
 
@@ -57,6 +53,7 @@ app.get("/getEmployeesWithArrayOfIds/:array", (req, res) => {
       for (const employee of team.employees) {
         for (const employeeId of req.params.array) {
           if (employee.id == employeeId) employees.push(employee);
+          if(employees.length == req.params.array.length) break;
         }
       }
     }

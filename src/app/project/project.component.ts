@@ -23,7 +23,7 @@ export class ProjectComponent implements OnInit {
   getProject():void{
     this.projectService.getProjectById("2").subscribe((data:any) => {
       this.project = new Project(data);
-      this.employeeService
+      this.employeeService;
     });
   }
 
