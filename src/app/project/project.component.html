@@ -6,6 +6,11 @@
     <hr>
     {{project.desc}}
     {{project.id}}
+    <h3>Product Owners:</h3>
+    <div *ngFor="let owner of productOwners" routerLink="/Person/{{owner.id}}" class="">
+        <h4>{{owner.fullName()}}</h4>
+        <p>{{owner.skills}}</p>
+    </div>
 </div>
 
 
