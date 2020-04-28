@@ -27,5 +27,13 @@
             <p id="about">basic filler text to make up space on the page where the description should be when the site
                 is done.</p>
         </div>
+        <div>
+            <div *ngFor="let project of employeeProjects">
+                <figure routerLink="/Project/{{project.id}}">
+                    <figcaption>{{project.name}}</figcaption>
+                    <figcaption>{{project.desc}}</figcaption>
+                </figure>
+            </div>
+        </div>
     </div>
 </div>

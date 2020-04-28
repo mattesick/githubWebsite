@@ -4,7 +4,7 @@
         "name": "Test",
         "desc": "Description",
         "productOwners": [
-            "1"
+            "1","44"
         ],
         "image":"projectImageOne.png",
         "presentaion":["filedestination"]
@@ -12,7 +12,7 @@
     },
     {
         "id": "2",
-        "name": "Project 2",
+        "name": "Test",
         "desc": "Description",
         "productOwners": [
             "1"
@@ -23,7 +23,7 @@
     },
     {
         "id": "3",
-        "name": "Project 3",
+        "name": "Test",
         "desc": "Description",
         "productOwners": [
             "1"
@@ -33,17 +33,17 @@
     },
     {
         "id": "4",
-        "name": "Project 4",
+        "name": "Test",
         "desc": "Description",
         "productOwners": [
-            "1"
+            "1","2","424"
         ],
         "image":"projectImageFour.png",
         "presentaion":["filedestination"]
     },
     {
         "id": "5",
-        "name": "Project 5",
+        "name": "Test",
         "desc": "Description",
         "productOwners": [
             "1"
@@ -63,16 +63,6 @@
     },
     {
         "id": "7",
-        "name": "REX",
-        "desc": "Description",
-        "productOwners": [
-            "1"
-        ],
-        "image":"projectImageOne.png",
-        "presentaion":["filedestination"]
-    },
-    {
-        "id": "8",
         "name": "Test",
         "desc": "Description",
         "productOwners": [
