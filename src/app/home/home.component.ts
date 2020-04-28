@@ -14,13 +14,16 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
   dropDown() {
+    var y = document.getElementById("container");
     var x = document.getElementById("drop");
     if (x.style.display === "flex") {
+      y.style.height = "0px";
       x.style.display = "none";
     } else {
+      y.style.height = "30vh";
       x.style.display = "flex";
-
     }
   }
+
 
 }
