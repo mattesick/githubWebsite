@@ -1,17 +1,46 @@
 <app-nav-bar></app-nav-bar>
 <div class="content">
-    <div class="content-header"><h3>Welcome to DXC Galway</h3></div>
-    <div class="content-main image">
-        <div class="project-desc"><h5>DXC Tour App</h5></div>
-        
+    <div class="content-header">
+        <h3>Welcome to DXC Galway</h3>
     </div>
-    <div class="content-sideone image"> <div class="project-desc"><h5>Github Website</h5></div>
+    <div class="content-main image">
+        <div class="project-desc">
+            <h5>DXC Tour App</h5>
+        </div>
+
+    </div>
+    <div class="content-sideone image">
+        <div class="project-desc">
+            <h5>Github Website</h5>
+        </div>
+    </div>
+    <div class="content-sidetwo image">
+        <div class="project-desc">
+            <h5>Rex Project</h5>
+        </div>
+    </div>
+    <div class="content-sidethree image">
+        <div class="project-desc">
+            <h5>Project Three</h5>
+        </div>
+    </div>
+    <div class="content-sidefour image">
+        <div class="project-desc">
+            <h5>Project Four</h5>
+        </div>
+    </div>
 </div>
-    <div class="content-sidetwo image"> <div class="project-desc"><h5>Rex Project</h5></div>
-</div>
-    <div class="content-sidethree image"> <div class="project-desc"><h5>Project Three</h5></div>
-</div>
-    <div class="content-sidefour image"> <div class="project-desc"><h5>Project Four</h5></div>
-</div>
+<div id="container">
+    <div id="text" (click)="dropDown()">
+        <h3>Upcoming events</h3>
+        <fa-icon [icon]="faChevronDown" id="icon"></fa-icon>
+    </div>
+    <div id="drop" class="drop-down">
+        <div><h3>Event name <br><span>Some details about time and place</span></h3></div>
+        <div><h3>Event name <br><span>Some details about time and place</span></h3></div>
+        <div><h3>Event name <br><span>Some details about time and place</span></h3></div>
+        <div><h3>Event name <br><span>Some details about time and place</span></h3></div>
+    </div>
     
+
 </div>
