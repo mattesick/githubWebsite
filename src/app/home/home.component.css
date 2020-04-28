@@ -57,3 +57,44 @@ h2{
     background-size: cover;
     background-position: center;
 }
+.drop-down div{
+
+    color: black;
+    background-color: white;
+}
+#drop div:hover{
+    background-color: rgb(230, 230, 230);
+    transition: 75ms ease-in-out;
+}
+#container{
+    margin: 4em;
+    display: flex;
+    flex-direction: column;
+}
+#container div{
+    width:100%
+}
+#text{
+    background-color: black;
+    color: white;
+    display: flex;
+    align-content: center;
+}
+h3{
+    margin-left: 2em;
+    width: 80%;
+}
+#drop span{
+    margin-left: 2em;
+    font-weight: normal;
+}
+#drop{
+    display: none;
+    flex-direction: column;
+}
+#icon{
+    display: flex;
+    align-items: center;
+    margin-left: 15%;
+    padding-right: 2%;
+}
