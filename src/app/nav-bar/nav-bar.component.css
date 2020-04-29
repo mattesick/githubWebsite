@@ -30,6 +30,7 @@ header a:hover{
 }
 header img{
     width: 10%;
+    cursor: pointer;
     float: left;
     min-width: 140px;
     height: 80%;
@@ -88,6 +89,7 @@ header h2{
     margin-left: 3%;
     width: 5%;
     min-width: 50px;
+    cursor: pointer;
 }
 #under span{
     color: black;
