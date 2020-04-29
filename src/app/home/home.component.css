@@ -70,9 +70,11 @@ h2{
     margin: 4em;
     display: flex;
     flex-direction: column;
+    transition: 400ms ease-in-out;
 }
 #container div{
-    width:100%
+    width:100%;
+    transition: 100ms ease-in-out;
 }
 #text{
     background-color: black;
@@ -91,6 +93,8 @@ h3{
 #drop{
     display: none;
     flex-direction: column;
+    max-height: 30vh;
+    overflow-y: auto;
 }
 #icon{
     display: flex;
