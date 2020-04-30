@@ -1,0 +1,17 @@
+.footer{
+    position: relative;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    justify-content: space-around;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.links{
+    float: right;
+}
