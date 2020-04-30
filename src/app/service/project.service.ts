@@ -22,4 +22,7 @@ export class ProjectService {
   getAllProjects() {
     return this.http.get('http://localhost:8000/getAllProjects/')
   }
+  getFristXProjects(x:string){
+    return this.http.get('http://localhost:8000/getFristXProjects/' + x)
+  }
 }

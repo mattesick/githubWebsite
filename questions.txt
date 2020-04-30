@@ -1,0 +1,8 @@
+Q1: Homebutton page, remove home button? Have both logos as home buttons? Have both logos?
+
+Q2: Who's going to do the comment on the branches if anyone?
+
+Q3: Who's going to approve pull requests on branches? And who is going to merge branches to develop.
+
+Q4: Should i have the projects in the same div or diffrent divs in the home page?
+

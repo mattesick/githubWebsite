@@ -138,6 +138,13 @@ app.get("/getProjectById/:id", (req, res) => {
 app.get("/getAllProjects", (req, res) => {
   return res.send(projects);
 });
+app.get("/getFristXProjects/:X", (req, res) => {
+  let arr = [];
+  for(let i = projects.length - 1; i >= (projects.length) - req.params.X; i--){
+    arr.push(projects[i]);
+  }
+  return res.send(arr);
+});
 app.get("/getAllTeams", (req, res) => {
   let allTeams = [];
   for (const department of json) {

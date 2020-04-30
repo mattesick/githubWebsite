@@ -2,20 +2,29 @@ h2{
     font-size: 46px;
 }
 .content{
-    margin:4em;
+    padding:4em;
     display:grid;
     grid-template-areas: 
-    "header header header header"
     "main main sideone sidetwo"
     "main main sidethree sidefour";
     height:70vh;
     grid-gap: 5px;
-    grid-template-rows: 1fr 3fr 3fr;
+    grid-template-rows: repeat(2, 3fr);
 }
+@media screen and (max-width: 1000px) {
+    .content{
+        grid-template-rows: repeat(3, 3fr);
+        grid-template-areas: 
+        "main main main main"
+        "sidethree sidethree sidetwo sidetwo"
+        "sideone sideone sidefour sidefour" !important;
+    }
+  }
+
 .project-desc{
     position: relative;
     height:100%;
-    transition: 200ms all ease-in-out;
+    transition: 150ms all ease-in-out;
     cursor: pointer;;
 }
 .project-desc:hover{
@@ -28,31 +37,28 @@ h2{
     margin:2.5em 1em;
     bottom:0;
 }
-.content-header{
-    grid-area: header;
-    font-size:3em;
-}
-.content-main{
+
+.content-image:nth-child(1){
     background-image:url("../../assets/images/work1.jpg");
     grid-area: main;
 }
-.content-sideone{
+.content-image:nth-child(2){
     background-image:url("../../assets/images/work2.jpg");
     grid-area: sideone;
 }
-.content-sidetwo{
+.content-image:nth-child(3){
     background-image:url("../../assets/images/work3.jpeg");
     grid-area: sidetwo;
 }
-.content-sidethree{
+.content-image:nth-child(4){
     background-image:url("../../assets/images/work4.jpg");
     grid-area: sidethree;
 }
-.content-sidefour{
+.content-image:nth-child(5){
     background-image:url("../../assets/images/work5.jpg");
     grid-area: sidefour;
 }
-.image{
+.content-image{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

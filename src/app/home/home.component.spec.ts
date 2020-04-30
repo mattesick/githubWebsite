@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
 
+
 describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
@@ -22,4 +23,15 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it("upcoming events should be clickable", ()=> {
+    component.ngOnInit();
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    const btn = compiled.querySelector("#text");
+    spyOn(component, "dropDown");
+    btn.click();
+    expect(component.dropDown).toHaveBeenCalled();
+  });
+
 });

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { ProjectService } from '../service/project.service';
+import { Project } from '../models/projects.model';
 
 @Component({
   selector: 'app-home',
@@ -8,10 +10,20 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private projectService: ProjectService) { }
 
   faChevronDown = faChevronDown;
+  showProjects:Project[] = [];
   ngOnInit(): void {
+    this.loadProjects();
+  }
+  loadProjects(){
+    this.projectService.getFristXProjects("5").subscribe((data:any) => {
+      data.forEach(project => {
+        this.showProjects.push(new Project(project));
+      });
+      console.log(data)
+    })
   }
   dropDown() {
     var y = document.getElementById("container");
