@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 h2{
     font-size: 46px;
 }
@@ -22,20 +25,52 @@ h2{
   }
 
 .project-desc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     position: relative;
     height:100%;
     transition: 150ms all ease-in-out;
     cursor: pointer;;
 }
-.project-desc:hover{
+.cool-hover{
+    height:0%;
+    transition: 250ms all ease-in-out;
+    width:100%;
     background-color:rgba(0,0,0,.5)
 }
+.project-desc:hover .cool-hover{
+    height:100%;
+}
+.project-desc:hover h5 span{
+    opacity: 1;
+    height:100px;
+}
+.project-desc:hover h5{
+    background-color:rgba(0,0,0,0) !important;
+}
 .project-desc h5{
+    width:100%;
     font-size:2em;
     color:rgb(255,255,255);
     position: absolute;
-    margin:2.5em 1em;
+    background-color:rgba(0,0,0,.3);
     bottom:0;
+    padding:1em 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 200ms all ease-in-out;
+    text-align: center;
+}
+
+.project-desc h5 span{
+    display:block;
+    opacity: 0;
+    font-size:0.5em;
+    height:0;
+    overflow: hidden;
+    transition: 350ms all ease-in-out;
 }
 
 .content-image:nth-child(1){

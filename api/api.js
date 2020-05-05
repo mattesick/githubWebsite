@@ -96,7 +96,19 @@ app.get("/getEmployeesBySkill/:skill", (req, res) => {
       for (const employee of team.employees) {
         if (employee.skills == req.params.skill) result.push(employee);
       }
-     
+    }
+  }
+  return res.send(result);
+});
+app.get("/getEmployeesByProjectId/:id", (req, res) => {
+  let result = [];
+  for (const department of json) {
+    for (const team of department.teams) {
+      for (const employee of team.employees) {
+        for (const projectId of employee.projects) {
+          if (projectId == req.params.id) result.push(employee);
+        }
+      }
     }
   }
   return res.send(result);
@@ -154,6 +166,7 @@ app.get("/getAllTeams", (req, res) => {
   }
   return res.send(allTeams);
 })
+
 
 //Config things
 const port = 8000;

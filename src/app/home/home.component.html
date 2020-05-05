@@ -2,7 +2,8 @@
 <div class="content">
     <div *ngFor="let project of showProjects" routerLink="/Project/{{project.id}}" class="content-image">
         <div class="project-desc">
-            <h5>{{project.name}}</h5>
+            <div class="cool-hover"></div>
+            <h5>{{project.name}}<span>{{project.desc}}</span></h5>
         </div>
     </div>
 </div>

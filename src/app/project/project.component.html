@@ -1,7 +1,8 @@
 <app-nav-bar></app-nav-bar>
 <app-go-back></app-go-back>
 <div id="container">
-    <img src="../../assets/projectImages/{{project.image}}" alt="project description"/>
+    <!-- <img src="../../assets/projectImages/{{project.image}}" alt="project description"/> -->
+    <div class="header-img" [style.backgroundImage]="'url(../../assets/projectImages/' + project.image + ')'" [style.backgroundSize]="'cover'" [style.backgroundPosition]="'center'"></div>
     <h2>{{project.name}}</h2>
     <hr>
     {{project.desc}}
@@ -10,6 +11,11 @@
     <div *ngFor="let owner of productOwners" routerLink="/Person/{{owner.id}}" class="">
         <h4>{{owner.fullName()}}</h4>
         <p>{{owner.skills}}</p>
+    </div>
+    <h3>Employees:</h3>
+    <div *ngFor="let employee of employees" routerLink="/Person/{{employee.id}}" class="">
+        <h4>{{employee.fullName()}}</h4>
+        <p>{{employee.skills}}</p>
     </div>
 </div>
 

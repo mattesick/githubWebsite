@@ -26,8 +26,8 @@ export class HomeComponent implements OnInit {
     })
   }
   dropDown() {
-    var y = document.getElementById("container");
-    var x = document.getElementById("drop");
+    let y = document.getElementById("container");
+    let x = document.getElementById("drop");
     if (x.style.display === "flex") {
       y.style.height = "0px";
       x.style.display = "none";
