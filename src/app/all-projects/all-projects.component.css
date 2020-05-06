@@ -14,7 +14,8 @@
 }
 .project img{
     width: 100%;
-    height: 200px;
+    height: auto;
+    max-height: 200px;
 }
 hr{
     width: 80%;
@@ -50,7 +51,5 @@ span{
     .project{
         width: 80%;
     }
-    .project img{
-        height: 350px;
-    }
+
   }
