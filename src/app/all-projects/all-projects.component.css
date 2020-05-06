@@ -1,9 +1,16 @@
+html, body{
+    height:100%;
+}
+*{
+    box-sizing: border-box;
+}
 #container{
     display: flex;
     flex-wrap: wrap;
     width: 80%;
     margin: auto;
     justify-content: center;
+    min-height:100%;
 }
 .teams{
     width: 30%;
