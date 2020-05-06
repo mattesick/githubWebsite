@@ -5,14 +5,14 @@
     margin: auto;
     justify-content: center;
 }
-.teams{
+.project{
     width: 30%;
     padding: 20px;
     text-align: center;
     transition: 200ms all ease-in-out;
     cursor: pointer;
 }
-.teams img{
+.project img{
     width: 100%;
     height: 200px;
 }
@@ -30,7 +30,27 @@ span{
     width: 100%;
     text-align: center;
 }
-.teams:hover{
+.project:hover{
     background-color: rgb(230, 230, 230);
     transition: ease-in-out 50ms;
 }
+@media screen and (max-width: 1510){
+    #projects{
+        width: 100%;
+        display: block;
+    }
+    .project{
+        min-width: 100%;
+    }
+}
+@media screen and (max-width: 1300px){
+    
+}
+@media screen and (max-width: 1100px) {
+    .project{
+        width: 80%;
+    }
+    .project img{
+        height: 350px;
+    }
+  }
