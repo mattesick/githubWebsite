@@ -19,6 +19,7 @@ table {
   table td, table th {
     border: 1px solid #ddd;
     padding: 8px;
+    font-size:1.5em;
   }
   table td{
     min-width:200px;
