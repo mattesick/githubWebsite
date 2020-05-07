@@ -1,14 +1,29 @@
-#container{
+#grid{
     text-align: justify;
     display: grid;
     grid-template-areas:"header header header header header"
                         "leftOwner main main main logo"
                         "leftOwner roadmap text img .";
-    grid-template-columns: 12.5% 30% 20% 22.5% 10%;
+    grid-template-columns: 12.5% 28% 20% 22.5% 10%;
     column-gap: 2%;
     row-gap: 1%;
-    margin: 2%;
+    margin: 1%;
+    padding-bottom: 60px;
 
+}
+@media screen and (max-width: 1200px) {
+   #grid{
+    grid-template-areas:"header"
+    "main"
+    "roadmap"
+    "text"
+    "img"
+    "leftOwner"
+    "logo";
+    grid-template-columns: auto;
+    margin: 2em 3em;
+    padding-bottom: 150px;
+   } 
 }
 hr{
     width: 70%;
@@ -25,15 +40,22 @@ hr{
     min-width: 100%;
 }
 #owners{
-    border: 1px solid black;
     grid-area: leftOwner;
+    overflow-y:auto;
+    height: 65vh;
+}
+#owners figure{
+    grid-area: main;
+    width: 85%;
+    margin-right: 15px;
+    margin: 1em auto;
+    padding: 5px;
+    border-bottom: 2px solid grey;
+    transition: 200ms all ease-in-out;
+    cursor: pointer;
 }
 #owners img{
     width: 100%;
-}
-figure{
-    border: 1px solid black;
-    grid-area: main;
 }
 #main{
     grid-area: main;
@@ -44,6 +66,11 @@ figure{
 }
 #logos{
     grid-area: logo;
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: auto;
 }
 #roadmap{
     grid-area: roadmap;
@@ -57,3 +84,12 @@ figure{
 #img img{
     width: 100%;
 }
+.header-img{
+    width:100%;
+    height: 50vh;
+}
+@media screen and (max-width: 600px) {
+    .header-img{
+        height: 20vh;
+    }
+  }

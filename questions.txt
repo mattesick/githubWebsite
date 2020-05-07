@@ -1,0 +1,13 @@
+Q1DONE: Homebutton page, remove home button? Have both logos as home buttons? Have both logos?
+
+Q2DONE: Who's going to do the comment on the branches if anyone?
+
+Q3DONE: Who's going to approve pull requests on branches? And who is going to merge branches to develop.
+
+
+
+Q1: We need to pull eachothers code, will we get someone who will do the merging anytime soon?
+
+Q2: Do you guys want diffrent roles for employees on diffrent projects?
+
+Q3: Do you want an arrow to show the entire image when viewing a project?

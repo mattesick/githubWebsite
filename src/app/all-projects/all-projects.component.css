@@ -1,9 +1,16 @@
+html, body{
+    height:100%;
+}
+*{
+    box-sizing: border-box;
+}
 #container{
     display: flex;
     flex-wrap: wrap;
     width: 80%;
     margin: auto;
     justify-content: center;
+    min-height:100%;
 }
 .project{
     width: 30%;
@@ -14,14 +21,16 @@
 }
 .project img{
     width: 100%;
-    height: auto;
+    height: 300px;
+}
+.name{ text-align: center;
 }
 hr{
     width: 80%;
 }
 #projects{
     display: flex;
-    justify-content: center;
+    justify-content: center ;
     flex-wrap: wrap;
     max-width: 100%;
     align-content: center;

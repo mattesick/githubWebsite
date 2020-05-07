@@ -1,6 +1,6 @@
 <app-nav-bar></app-nav-bar>
-<div id="topImg"><img src="../../assets/projectImages/{{project.image}}" alt="project description" /></div>
-<div id="container">
+<div id="topImg"><img src="../../assets/images/{{project.image}}" alt="project description" /></div>
+<div id="grid">
     <div id="title">
         <h2>{{project.name}}</h2>
         <hr>
@@ -21,11 +21,15 @@
         <img src="../../assets/images/Asus.png" alt="missing logos">
     </div>
     <div id="owners">
-        <h3>Product Owners:</h3>
         <figure *ngFor="let owner of productOwners" routerLink="/Person/{{owner.id}}">
             <img src="../../assets/images/profile.jpg" alt="ownerIMG">
             <figcaption>{{owner.name}}</figcaption>
             <figcaption>{{owner.role}}</figcaption>
+        </figure>
+        <figure *ngFor="let emp of employees" routerLink="/Person/{{emp.id}}">
+            <img src="../../assets/images/profile.jpg" alt="ownerIMG">
+            <figcaption>{{emp.name}}</figcaption>
+            <figcaption>{{emp.role}}</figcaption>
         </figure>
     </div>
     <div id="roadmap"><img src="../../assets/images/roadmap.png" alt="missing roadmap image"></div>

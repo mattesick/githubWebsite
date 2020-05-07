@@ -1,15 +1,26 @@
 <app-nav-bar></app-nav-bar>
 <app-go-back></app-go-back>
-<div routerLink="/allTeams">
-    <h2>All teams</h2>
+
+
+<div class="content">
+    <h3>{{team.name}}</h3>
+    <table>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Role
+            </th>
+            <th>
+                Skills
+            </th>
+        </tr>
+        <tr *ngFor="let employee of team.employees" routerLink="/Person/{{employee.id}}">
+            <td>{{employee.fullName()}}</td>
+            <td>{{employee.role}}</td>
+            <td>{{employee.skills}}</td>
+        </tr>
+    </table>
 </div>
-<tr>
-    <td>{{team.name}}</td>
-    <td>{{team.desc}}</td>
-</tr>
-<tr *ngFor="let employee of team.employees" routerLink="/Person/{{employee.id}}">
-    <td>{{employee.fullName()}}</td>
-    
-    
-</tr>
 <app-footer></app-footer>

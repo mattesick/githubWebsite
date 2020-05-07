@@ -1,32 +1,9 @@
 <app-nav-bar></app-nav-bar>
 <div class="content">
-    <div class="content-header">
-        <h3>Welcome to DXC Galway</h3>
-    </div>
-    <div class="content-main image">
+    <div *ngFor="let project of showProjects" routerLink="/Project/{{project.id}}" class="content-image">
         <div class="project-desc">
-            <h5>DXC Tour App</h5>
-        </div>
-
-    </div>
-    <div class="content-sideone image">
-        <div class="project-desc">
-            <h5>Github Website</h5>
-        </div>
-    </div>
-    <div class="content-sidetwo image">
-        <div class="project-desc">
-            <h5>Rex Project</h5>
-        </div>
-    </div>
-    <div class="content-sidethree image">
-        <div class="project-desc">
-            <h5>Project Three</h5>
-        </div>
-    </div>
-    <div class="content-sidefour image">
-        <div class="project-desc">
-            <h5>Project Four</h5>
+            <div class="cool-hover"></div>
+            <h5>{{project.name}}<span>{{project.desc}}</span></h5>
         </div>
     </div>
 </div>

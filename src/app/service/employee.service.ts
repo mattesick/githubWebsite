@@ -20,8 +20,10 @@ export class EmployeeService {
     return this.http.get('http://localhost:8000/getEmployeesBySkill/' + skill)
   }
   getEmployeesWithArrayOfIds(ids:string[]){
-    console.log(ids);
     return this.http.get('http://localhost:8000/getEmployeesWithArrayOfIds/' + JSON.stringify(ids));
+  }
+  getEmployeesByProjectId(id:string){
+    return this.http.get('http://localhost:8000/getEmployeesByProjectId/' + id)
   }
 
 }

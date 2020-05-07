@@ -21,7 +21,7 @@ export class Team {
       this.initEmployees();
     }
   
-    fullName() {
-      return this.name;
+    numberOfEmployees() {
+      return this.employees.length;
     }
 }

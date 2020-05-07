@@ -96,7 +96,19 @@ app.get("/getEmployeesBySkill/:skill", (req, res) => {
       for (const employee of team.employees) {
         if (employee.skills == req.params.skill) result.push(employee);
       }
-     
+    }
+  }
+  return res.send(result);
+});
+app.get("/getEmployeesByProjectId/:id", (req, res) => {
+  let result = [];
+  for (const department of json) {
+    for (const team of department.teams) {
+      for (const employee of team.employees) {
+        for (const projectId of employee.projects) {
+          if (projectId == req.params.id) result.push(employee);
+        }
+      }
     }
   }
   return res.send(result);
@@ -138,6 +150,13 @@ app.get("/getProjectById/:id", (req, res) => {
 app.get("/getAllProjects", (req, res) => {
   return res.send(projects);
 });
+app.get("/getFristXProjects/:X", (req, res) => {
+  let arr = [];
+  for(let i = projects.length - 1; i >= (projects.length) - req.params.X; i--){
+    arr.push(projects[i]);
+  }
+  return res.send(arr);
+});
 app.get("/getAllTeams", (req, res) => {
   let allTeams = [];
   for (const department of json) {
@@ -147,6 +166,7 @@ app.get("/getAllTeams", (req, res) => {
   }
   return res.send(allTeams);
 })
+
 
 //Config things
 const port = 8000;
