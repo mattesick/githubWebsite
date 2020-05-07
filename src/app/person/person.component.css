@@ -3,43 +3,46 @@
 }
 .Container{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-    padding-top:40px;
+    padding:80px;
+}
+.content{
+    padding:0;
+    width:100%;
 }
 .image{
     width: 85%;
     margin-right: 15px;
-    margin: auto;
+    margin: 1em auto;
     padding: 5px;
-    border: 2px solid grey;
+    border-bottom: 2px solid grey;
     transition: 200ms all ease-in-out;
     cursor: pointer;
 }
 .image:hover{
     background-color: rgba(150, 150, 150, .5);
 }
-#team{
-    width: 15%;
-    order: 1;
+#projects{
+    width: 25%;
+    order: 3;
     text-align: center;
-    max-height: 85vh;
+    max-height: 60vh;
     overflow-y: auto;
     overflow-x: hidden;
-    border: 2px solid grey;
 }
+
 #person{
-    order: 2;
-    width: 40%;
+    order: 1;
+    width: 30%;
 }
 img{
     max-width: 100%;
 }
-#focus{
-    width: 85%;
-    margin: auto;
-    text-align: center;
+
+#description{
+    order:2;
+    width:30%;
 }
 #description ul{
     padding:0;
@@ -71,37 +74,35 @@ img{
 *{
     box-sizing: border-box;
 }
-.content{
-    padding:2em 5em;
-}
-.content h3{
-    font-size:2em;
-    padding:0.3em;
-    margin:0;
+
+
+  .header-img{
     width:100%;
-    text-align: center;
+    height: 50vh;
 }
-table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  table td, table th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  table td{
-      cursor:pointer;
-  }
-  
-  table tr:nth-child(even){background-color: #f2f2f2;}
-  
-  table tr:hover {background-color: #ddd;}
-  
-  table th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #000000;
-    color: white;
-  }
+#personName{
+    display: block;
+    text-align: center;
+    margin: 1em 20% 2em 20%;
+    padding:1em;
+    border-bottom: 1px solid grey;
+}
+@media screen and (max-width: 1200px){
+    .Container{
+        flex-direction: column;
+    }
+    #projects{
+        width: 100%;
+    }
+    #description{
+        width: 100%;
+    }
+    #person{
+        display:flex;
+        justify-content: center;
+        width:100%;
+    }
+    #person img{
+        height:400px;
+    }
+}

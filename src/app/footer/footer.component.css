@@ -11,6 +11,7 @@
     align-items: center;
     justify-content: space-between;
     float: left;
+    margin-top: 60px;
 }
 a{
     font-size:1.17em;
@@ -43,10 +44,10 @@ div{
     align-items: center;
     width: 3%;
 }
-h3{
+p{
     transition: ease-in-out 100ms;
 }
-h3:hover{
+p:hover{
     color: white;
     
 }

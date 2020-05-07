@@ -2,25 +2,27 @@
     {
         "id": "1",
         "name": "Test",
-        "desc": "Description",
-        
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         "productOwners": [
-            "1","44"
+            "1",
+            "44"
         ],
-        "image":"projectImageOne.png",
-        "presentaion":["filedestination"]
-
+        "image": "work1.jpg",
+        "presentaion": [
+            "filedestination"
+        ]
     },
     {
         "id": "2",
         "name": "Test",
-        "desc": "Description",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         "productOwners": [
             "1"
         ],
-        "image":"projectImageTwo.png",
-        "presentaion":["filedestination"]
-        
+        "image": "work4.jpg",
+        "presentaion": [
+            "filedestination"
+        ]
     },
     {
         "id": "3",
@@ -29,8 +31,10 @@
         "productOwners": [
             "1"
         ],
-        "image":"projectImageThree.png",
-        "presentaion":["filedestination"]
+        "image": "work3.jpeg",
+        "presentaion": [
+            "filedestination"
+        ]
     },
     {
         "id": "4",
@@ -39,8 +43,10 @@
         "productOwners": [
             "1","2","424","89"
         ],
-        "image":"projectImageFour.png",
-        "presentaion":["filedestination"]
+        "image": "projectImageFour.png",
+        "presentaion": [
+            "filedestination"
+        ]
     },
     {
         "id": "5",
@@ -49,8 +55,10 @@
         "productOwners": [
             "1"
         ],
-        "image":"projectImageFour.png",
-        "presentaion":["filedestination"]
+        "image": "projectImageOne.png",
+        "presentaion": [
+            "filedestination"
+        ]
     },
     {
         "id": "6",
@@ -59,8 +67,10 @@
         "productOwners": [
             "1"
         ],
-        "image":"projectImageFour.png",
-        "presentaion":["filedestination"]
+        "image": "projectImageFour.png",
+        "presentaion": [
+            "filedestination"
+        ]
     },
     {
         "id": "7",
@@ -69,7 +79,9 @@
         "productOwners": [
             "1"
         ],
-        "image":"projectImageFour.png",
-        "presentaion":["filedestination"]
+        "image": "projectImageTwo.png",
+        "presentaion": [
+            "filedestination"
+        ]
     }
 ]
