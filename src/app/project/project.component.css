@@ -1,6 +1,59 @@
 #container{
-    text-align: center;
+    text-align: justify;
+    display: grid;
+    grid-template-areas:"header header header header header"
+                        "leftOwner main main main logo"
+                        "leftOwner roadmap text img .";
+    grid-template-columns: 12.5% 30% 20% 22.5% 10%;
+    column-gap: 2%;
+    row-gap: 1%;
+    margin: 2%;
+
 }
 hr{
     width: 70%;
+}
+#topImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 35vh;
+}
+#topImg img {
+    flex-shrink: 0;
+    min-width: 100%;
+}
+#owners{
+    border: 1px solid black;
+    grid-area: leftOwner;
+}
+#owners img{
+    width: 100%;
+}
+figure{
+    border: 1px solid black;
+    grid-area: main;
+}
+#main{
+    grid-area: main;
+}
+#title{
+    grid-area: header;
+    text-align: center;
+}
+#logos{
+    grid-area: logo;
+}
+#roadmap{
+    grid-area: roadmap;
+}
+#roadmap img {
+    width: 100%;
+}
+#img{
+    grid-area: img;
+}
+#img img{
+    width: 100%;
 }

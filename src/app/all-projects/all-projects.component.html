@@ -8,8 +8,8 @@
     </span>
     <div id="projects">
         <div *ngFor="let project of allProjects" routerLink="/Project/{{project.id}}" class="project">
-            <img src="../../assets/projectImages/{{project.image}}" alt="Description" />
-            <h3>{{project.name}}</h3>
+            <div id="box"><img src="../../assets/projectImages/{{project.image}}" alt="Description" /></div>
+            <h3 id="title">{{project.name}}</h3>
             <hr>
             <h3>{{project.desc}}</h3>
         </div>

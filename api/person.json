@@ -15,7 +15,8 @@
               "lastName": "Sjonell",
               "role": "Intern",
               "skills": "Webdevelopment, React",
-              "projects": ["1","2"]
+              "projects": ["1","2"],
+              "hobbys": "Acting, Weight training"
             },
              {
               "id": "23",
@@ -23,7 +24,8 @@
               "lastName": "Knutsson",
               "role": "Student",
               "skills": "Webdevelopment, React",
-              "projects":  ["1","31", "12"]
+              "projects":  ["1","31", "12"],
+              "hobbys": "Welding, Lego building"
             },
              {
               "id": "55",
@@ -31,7 +33,8 @@
               "lastName": "Holm",
               "role": "Developer",
               "skills": "React",
-              "projects": ["1","31", "12"]
+              "projects": ["1","31", "12"],
+              "hobbys": "Robot combat"
             },
              {
               "id": "89",
@@ -39,7 +42,8 @@
               "lastName": "Himmelberg",
               "role": "Developer",
               "skills": "Java",
-              "projects": ["1","31", "12"]
+              "projects": ["1","31", "12"],
+              "hobbys": "Geology, Card games"
             },
             {
               "id": "2",
@@ -47,7 +51,8 @@
               "lastName": "Svensson",
               "role": "Webdeveloper",
               "skills": "Webdevelopment",
-              "projects": ["1","31", "12"]
+              "projects": ["1","31", "12"],
+              "hobbys": "Diving, Yoga"
             },
             {
               "id": "3",
@@ -55,7 +60,8 @@
               "lastName": "Andersson",
               "role": "Intern",
               "skills": "Webdevelopment",
-              "projects": ["1","31", "12"]
+              "projects": ["1","31", "12"],
+              "hobbys": "Sculpting"
             }     
           ]
         },
@@ -70,7 +76,8 @@
               "lastName": "Sjonell",
               "role": "Intern",
               "skills": "Webdevelopment, React",
-              "projects": ["1","31", "12"]
+              "projects": ["1","31", "12"],
+              "hobbys": "Airsoft, Fishing"
             },
             {
               "id": "2",
@@ -78,7 +85,8 @@
               "lastName": "Svensson",
               "role": "Webdeveloper",
               "skills": "Webdevelopment",
-              "projects": ["1","31", "12"]
+              "projects": ["1","31", "12"],
+              "hobbys": "Camping, Canoeing"
             },
             {
               "id": "3",
@@ -86,7 +94,8 @@
               "lastName": "Andersson",
               "role": "Intern",
               "skills": "Webdevelopment",
-              "projects": ["1","31", "12"]
+              "projects": ["1","31", "12"],
+              "hobbys": "Ice skating"
             }     
           ]
         },
@@ -101,7 +110,8 @@
               "lastName": "Sjonell",
               "role": "Intern",
               "skills": "Webdevelopment, React",
-              "projects": ["1","31", "12"]
+              "projects": ["1","31", "12"],
+              "hobbys": "Digital arts, Bowling"
             },
             {
               "id": "2",
@@ -109,7 +119,8 @@
               "lastName": "Svensson",
               "role": "Webdeveloper",
               "skills": "Webdevelopment",
-              "projects": ["1","31", "12"]
+              "projects": ["1","31", "12"],
+              "hobbys": "Cycling, Perfume"
             },
             {
               "id": "3",
@@ -117,7 +128,8 @@
               "lastName": "Andersson",
               "role": "Intern",
               "skills": "Webdevelopment",
-              "projects": ["1","31", "12"]
+              "projects": ["1","31", "12"],
+              "hobbys": "Art collecting"
             }     
           ]
         },
@@ -132,7 +144,8 @@
               "lastName": "Sjonell",
               "role": "Intern",
               "skills": "Webdevelopment, React",
-              "projects": ["1","31", "12"]
+              "projects": ["1","31", "12"],
+              "hobbys": "American football, Knife throwing"
             },
             {
               "id": "2",
@@ -140,7 +153,8 @@
               "lastName": "Svensson",
               "role": "Webdeveloper",
               "skills": "Webdevelopment",
-              "projects": ["1","31", "12"]
+              "projects": ["1","31", "12"],
+              "hobbys": "Softball"
             },
             {
               "id": "3",
@@ -148,7 +162,8 @@
               "lastName": "Andersson",
               "role": "Intern",
               "skills": "Webdevelopment",
-              "projects": ["1","31", "12"]
+              "projects": ["1","31", "12"],
+              "hobbys": "Triathlon"
             }     
           ]
         },
@@ -163,7 +178,8 @@
               "lastName": "Heraghty",
               "role": "Graduate",
               "skills": "Nothing",
-              "projects": ["1","31", "12"]
+              "projects": ["1","31", "12"],
+              "hobbys": "Rowing, Tennis"
             },
             {
               "id": "conor.tuffy",
@@ -171,7 +187,8 @@
               "lastName": "Tuffy",
               "role": "Developer",
               "skills": "C#, .NET",
-              "projects":["1","31", "12"]
+              "projects":["1","31", "12"],
+              "hobbys": "Fencing, Poker "
             }
           ]
         }
@@ -193,7 +210,8 @@
               "lastName": "Ali",
               "role": "Intern",
               "skills": "Webdevelopment, React",
-              "projects":["1","31", "12"]
+              "projects":["1","31", "12"],
+              "hobbys": "Marbles, Judo"
             },
             {
               "id": "7",
@@ -201,7 +219,8 @@
               "lastName": "Svensson",
               "role": "Webdeveloper",
               "skills": "Webdevelopment",
-              "projects": ["1","31", "12"]
+              "projects": ["1","31", "12"],
+              "hobbys": "Archery"
             },
             {
               "id": "8",
@@ -209,10 +228,9 @@
               "lastName": "Andersson",
               "role": "Intern",
               "skills": "Webdevelopment",
-              "projects": ["1","31", "12"]
+              "projects": ["1","31", "12"],
+              "hobbys": "Magic"
             }
-  
-  
           ]
         },
         {
@@ -226,7 +244,8 @@
               "lastName": "Heraghty",
               "role": "Graduate",
               "skills": "Webdevelopment, React",
-              "projects": ["1","31", "12"]
+              "projects": ["1","31", "12"],
+              "hobbys": "Photography"
             },
             {
               "id": "10",
@@ -234,7 +253,8 @@
               "lastName": "",
               "role": "Developer",
               "skills": "C#, .NET",
-              "projects": ["1","31", "12"]
+              "projects": ["1","31", "12"],
+              "hobbys": "Makeup"
             }
           ]
         }
