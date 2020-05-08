@@ -64,7 +64,7 @@ hr{
     grid-area: header;
     text-align: center;
 }
-#logos{
+.logos{
     grid-area: logo;
     width: 70%;
     display: flex;

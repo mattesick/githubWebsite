@@ -9,16 +9,8 @@
         {{project.desc}}
         {{project.id}}
     </div>
-    <div id="logos">
-        <img src="../../assets/images/EA.png" alt="missing logos">
-        <img src="../../assets/images/intel.png" alt="missing logos">
-        <img src="../../assets/images/Asus.png" alt="missing logos">
-        <img src="../../assets/images/EA.png" alt="missing logos">
-        <img src="../../assets/images/Asus.png" alt="missing logos">
-        <img src="../../assets/images/intel.png" alt="missing logos">
-        <img src="../../assets/images/EA.png" alt="missing logos">
-        <img src="../../assets/images/intel.png" alt="missing logos">
-        <img src="../../assets/images/Asus.png" alt="missing logos">
+    <div class="logos" >
+        <img  *ngFor="let logo of project.logos"src="../../assets/images/{{logo}}" alt="missing logo">
     </div>
     <div id="owners">
         <figure *ngFor="let owner of productOwners" routerLink="/Person/{{owner.id}}">
@@ -40,6 +32,6 @@
             Proof of Concept --> Product, challanges, clients involved etc Proof of Concept --> Product, challanges,
             clients involved etc </p>
     </div>
-    <div id="img"><img src="../../assets/images/working.jpg" alt="missing image"></div>
+    <div id="img"><img src="../../assets/images/content4.jpg" alt="missing image"></div>
 </div>
 <app-footer></app-footer>
