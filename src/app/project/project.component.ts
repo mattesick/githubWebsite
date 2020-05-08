@@ -31,19 +31,20 @@ export class ProjectComponent implements OnInit {
         });
 
       });
-      this.employeeService.getEmployeesByProjectId(projectId).subscribe((data: any) => {
-        data.forEach(employee => {
-          let isOwner = false;
-          for (const owner of this.productOwners) {
-            if (employee.id !== owner.id) {
-              isOwner = true;
-              break;
-            }
-          }
-          if (!isOwner) this.employees.push(new Employee(employee));
-        });
-      });
+    
 
+    });
+    this.employeeService.getEmployeesByProjectId(projectId).subscribe((data: any) => {
+      data.forEach(employee => {
+        let isOwner = false;
+        for (const owner of this.productOwners) {
+          if (employee.id !== owner.id) {
+            isOwner = true;
+            break;
+          }
+        }
+        if (!isOwner) this.employees.push(new Employee(employee));
+      });
     });
 
   }
