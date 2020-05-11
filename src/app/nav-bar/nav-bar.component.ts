@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faEllipsisH } from '@fortawesome/free-solid-svg-icons';
+import { faEllipsisH, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,9 +9,14 @@ import { faEllipsisH } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
-
-  constructor() { }
+  searchForm;
+  constructor(private formBuilder: FormBuilder,) { 
+    this.searchForm = this.formBuilder.group({
+      query: ''
+    });
+  }
    faEllipsis =  faEllipsisH;
+   faSearch = faSearch;
   ngOnInit(): void {
   }
   menu() {
@@ -25,6 +31,10 @@ export class NavBarComponent implements OnInit {
       x.style.display = "block";
       x.style.color = "black";
     }
+  }
+  search({query}){
+    console.log(query)
+    window.location.href = "https://localhost:4200/Search/" + query;
   }
 
 }

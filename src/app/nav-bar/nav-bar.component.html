@@ -3,11 +3,13 @@
         <fa-icon [icon]="faEllipsis"></fa-icon>
     </a>
     <img routerLink="" src="assets/images/logo.png" alt="missing logo">
-</header>
-<!-- <div id="under">
-    <img routerLink="" src="assets/images/logoBlack.png" alt="missing logo">
-    <h2>DXC <span>Galway</span></h2>
-</div> -->
+    <form [formGroup]="searchForm" (ngSubmit)="search(searchForm.value)" class="search-bar">
+        <button type="submit"><fa-icon [icon]="faSearch"></fa-icon></button>
+        <input placeholder="Search.." type="search" formControlName="query">
+    </form>
+    
+</header>   
+
 <nav id="nav-bar">
     <div id="myLinks">
         <div routerLink=""><a >Home</a></div>

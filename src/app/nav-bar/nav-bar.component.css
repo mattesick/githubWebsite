@@ -100,3 +100,29 @@ header h2{
     font-size: 30px;
     margin-left: 5%;
 }
+.search-bar{
+    float:right;
+    width:100%;
+    margin:0 1em;
+}
+.search-bar input, .search-bar button{
+    float:right;
+}
+.search-bar input{
+    padding: 6px;
+    font-size: 17px;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.search-bar button{
+    padding: 6px 10px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  transition: 100ms all ease-in-out;
+}
+.search-bar button:hover{
+    background:grey;
+}
