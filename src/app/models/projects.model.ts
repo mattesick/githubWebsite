@@ -3,14 +3,16 @@ export class Project {
     name: string;
     desc: string;
     productOwner: string[];
-    image: string[];
+    images: string[];
     presentaion: string[];
-    constructor({ name, desc, productOwner, id , presentaion, image}: any) {
+    logos: string[];
+    constructor({ name, desc, productOwner, id , presentaion, images, logos}: any) {
         this.name = name;
         this.desc = desc;
         this.productOwner = productOwner;
         this.id = id;
-        this.image = image;
+        this.images = images;
         this.presentaion = presentaion;
+        this.logos = logos
     }
 }

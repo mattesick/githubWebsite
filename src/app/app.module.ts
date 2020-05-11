@@ -16,6 +16,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './footer/footer.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
+import { SearchComponent } from './search/search.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     ProjectComponent,
     AllTeamsComponent,
     AllProjectsComponent,
-    FooterComponent
+    FooterComponent,
+    SearchComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -165,8 +165,11 @@ app.get("/getAllTeams", (req, res) => {
     }
   }
   return res.send(allTeams);
-})
-
+});
+app.get("/Search/:query", (req,res) => {
+  let searchResult = [];
+  return res.send(searchResult);
+});
 
 //Config things
 const port = 8000;

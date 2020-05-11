@@ -7,9 +7,18 @@
             "1",
             "44"
         ],
-        "image": "work1.jpg",
+        "images": [
+            "work1.jpg",
+            "content7.jpg",
+            "content1.jpg",
+            "content2.jpg"
+        ],
         "presentaion": [
             "filedestination"
+        ],
+        "logos": [
+            "Ericsson.png",
+            "intel.png"
         ]
     },
     {
@@ -19,9 +28,16 @@
         "productOwners": [
             "1"
         ],
-        "image": "work4.jpg",
+        "images": [
+            "work4.jpg",
+            "content3.jpg"
+        ],
         "presentaion": [
             "filedestination"
+        ],
+        "logos": [
+            "intel.png",
+            "EA.png"
         ]
     },
     {
@@ -31,9 +47,16 @@
         "productOwners": [
             "1"
         ],
-        "image": "work3.jpeg",
+        "images": [
+            "work3.jpeg",
+            "content3.jpg",
+            "content5.jpg"
+        ],
         "presentaion": [
             "filedestination"
+        ],
+        "logos": [
+            "intel.png"
         ]
     },
     {
@@ -41,11 +64,23 @@
         "name": "Rex",
         "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cumque excepturi consectetur dolorem sed aspernatur. Accusamus impedit exercitationem ea provident dolores consectetur, corrupti vel fuga deleniti qui laborum minima repellat!",
         "productOwners": [
-            "1","2","424","89"
+            "1",
+            "2",
+            "424",
+            "89"
         ],
-        "image": "projectImageFour.png",
+        "images": [
+            "projectImageFour.png",
+            "content4.jpg",
+            "content6.jpg"
+        ],
         "presentaion": [
             "filedestination"
+        ],
+        "logos": [
+            "Asus.png",
+            "EA.png",
+            "intel.png"
         ]
     },
     {
@@ -55,9 +90,18 @@
         "productOwners": [
             "1"
         ],
-        "image": "projectImageOne.png",
+        "images": [
+            "projectImageOne.png",
+            "content6.jpg",
+            "content1.jpg",
+            "content3.jpg"
+        ],
         "presentaion": [
             "filedestination"
+        ],
+        "logos": [
+            "Ericsson.png",
+            "Asus.png"
         ]
     },
     {
@@ -67,9 +111,18 @@
         "productOwners": [
             "1"
         ],
-        "image": "projectImageFour.png",
+        "images": [
+            "projectImageFour.png",
+            "content2.jpg",
+            "content5.jpg",
+            "content7.jpg"
+        ],
         "presentaion": [
             "filedestination"
+        ],
+        "logos": [
+            "EA.png",
+            "intel.png"
         ]
     },
     {
@@ -79,9 +132,20 @@
         "productOwners": [
             "1"
         ],
-        "image": "projectImageTwo.png",
+        "images": [
+            "projectImageTwo.png",
+            "content4.jpg",
+            "content2.jpg",
+            "content1.jpg"
+        ],
         "presentaion": [
             "filedestination"
+        ],
+        "logos": [
+            "intel.png",
+            "Asus.png",
+            "EA.png",
+            "Ericsson.png"
         ]
     }
 ]

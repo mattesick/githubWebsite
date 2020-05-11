@@ -8,7 +8,7 @@
     </span>
     <div id="projects">
         <div *ngFor="let project of allProjects" routerLink="/Project/{{project.id}}" class="project">
-            <img src="../../assets/images/{{project.image}}" alt="Description" />
+            <img src="../../assets/images/{{project.images[0]}}" alt="Missing image" />
             <h3 class="name">{{project.name}}</h3>
             <hr>
             <h3>{{project.desc}}</h3>
