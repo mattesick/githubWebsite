@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SearchService } from '../service/search.service';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FormBuilder } from '@angular/forms';
+
 
 
 @Component({
@@ -9,24 +12,21 @@ import { SearchService } from '../service/search.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-
-  constructor(private route: ActivatedRoute, private searchService: SearchService) { }
+  searchForm;
+  faSearch = faSearch;
+  query = this.route.snapshot.paramMap.get('query');
+  constructor(private route: ActivatedRoute, private searchService: SearchService,private formBuilder: FormBuilder) {
+    this.searchForm = this.formBuilder.group({
+      query: this.query
+    });
+   }
   
   searchResult: String[];
   ngOnInit(): void {
     
   }
-  search (): void {
-    const query = this.route.snapshot.paramMap.get('query');
-    // this.searchService.search(query).subscribe((data: any) => {
-    //   this.searchResult = new Project(data);
-    //   this.searchService.search(data.productOwners).subscribe((owners: any) => {
-    //     owners.forEach(owner => {
-    //       this.productOwners.push(new Employee(owner));
-    //     });
-
-    //   });
-
-    // });
+  search({query}){
+    console.log(query)
+    window.location.href = "http://localhost:4200/Search/" + query;
   }
 }

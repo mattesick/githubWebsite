@@ -52,10 +52,9 @@ header h2{
     float: left;
     flex-direction: column;
     background:white;
-    width: 15%;
-    border: 1px solid lightgrey;
-    width: 0px;
+    width: 0%;
     transition: ease-in-out 50ms;
+    box-shadow: 10px 14px 28px -15px rgba(0,0,0,0.75);
 }
 #myLinks{
     display: none;
@@ -126,3 +125,12 @@ header h2{
 .search-bar button:hover{
     background:grey;
 }
+@media screen and (max-width: 800px) {
+    .search-bar button, .search-bar input{
+        padding: 1px 3px;
+    }
+    .search-bar input{
+        width:60%;
+    }
+    }
+    

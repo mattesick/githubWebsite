@@ -1,0 +1,53 @@
+
+body{
+    overflow: hidden;
+}
+.content{
+    position: fixed;
+    height: 100vh;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    padding:40px 2em;
+    color:white;
+    display: flex;
+    justify-content: center;
+    background:black;
+    align-items: center;
+    font-size:3em;
+}
+.content h4{
+    display: block;
+    width: 100%;
+}
+.content span{
+    display: block;
+}
+.content span a{
+    text-decoration: none;
+    background:rgb(255, 237, 0);
+    color:black;
+    padding:0.3em;
+    font-size:0.5em;
+    border:1px solid rgb(255, 237, 0);
+    transition: 150ms all ease-in-out;
+    border-radius: 5px;
+}
+#error-404{
+    font-size:0.4em;
+    font-family: monospace;
+}
+.content span a:hover{
+    background:black;
+    color:rgb(255, 237, 0);
+}
+@media screen and (max-width: 1500px) {
+    .content{
+        font-size:2em;
+    }
+    }
+@media screen and (max-width: 800px) {
+.content{
+    font-size:1.5em;
+}
+}
+

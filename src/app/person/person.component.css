@@ -1,6 +1,4 @@
-*{
-    box-sizing: border-box;
-}
+
 .Container{
     display: flex;
     flex-direction: row;

@@ -10,7 +10,7 @@ import { FormBuilder } from '@angular/forms';
 })
 export class NavBarComponent implements OnInit {
   searchForm;
-  constructor(private formBuilder: FormBuilder,) { 
+  constructor(private formBuilder: FormBuilder) { 
     this.searchForm = this.formBuilder.group({
       query: ''
     });
@@ -23,18 +23,22 @@ export class NavBarComponent implements OnInit {
     var y = document.getElementById("nav-bar");
     var x = document.getElementById("myLinks");
     if (x.style.display === "block") {
-      y.style.width = "0px";
+      y.style.width = "0%";
       x.style.display = "none";
       x.style.color = "white";
+      y.style.border = "none";
+      
     } else {
       y.style.width = "15%";
       x.style.display = "block";
       x.style.color = "black";
+      y.style.borderRight = "1px solid black";
+      y.style.borderBottom = "1px solid black";
     }
   }
   search({query}){
     console.log(query)
-    window.location.href = "https://localhost:4200/Search/" + query;
+    window.location.href = "http://localhost:4200/Search/" + query;
   }
 
 }
