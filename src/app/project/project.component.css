@@ -11,20 +11,7 @@
     padding-bottom: 60px;
 
 }
-@media screen and (max-width: 1200px) {
-   #grid{
-    grid-template-areas:"header"
-    "main"
-    "roadmap"
-    "text"
-    "img"
-    "leftOwner"
-    "logo";
-    grid-template-columns: auto;
-    margin: 2em 3em;
-    padding-bottom: 150px;
-   } 
-}
+
 hr{
     width: 70%;
 }
@@ -74,6 +61,10 @@ hr{
 }
 #roadmap{
     grid-area: roadmap;
+    background-image:url("../../assets/images/roadmap.png");
+    background-repeat: no-repeat;
+    position: relative;
+    background-size:contain;
 }
 #roadmap img {
     width: 100%;
@@ -93,3 +84,92 @@ hr{
         height: 20vh;
     }
   }
+  #opportunity{
+      left:0.3%;
+  }
+  #quote{
+    left:17%;
+  }
+  #order{
+    left:31.7%;
+  }
+  #planning{
+      left:44.4%;
+  }
+  #resources{
+      left:57%;
+  }
+  #execute{
+      left:71%;
+  }
+  #invoice{
+      left:84%;
+  }
+  #opportunity:hover ~ #opportunity-info,  #opportunity-info:hover{
+    transform: scaleY(1);
+  }
+  #quote:hover ~ #quote-info, #quote-info:hover{
+    transform: scaleY(1);
+  }
+  #order:hover ~ #order-info, #order-info:hover{
+    transform: scaleY(1);
+  }
+  #planning:hover ~ #planning-info, #planning-info:hover{
+    transform: scaleY(1);
+  }
+  #resources:hover ~ #resources-info, #resources-info:hover{
+    transform: scaleY(1);
+  }
+  #execute:hover ~ #execute-info, #execute-info:hover{
+    transform: scaleY(1);
+  }
+  #invoice:hover ~ #invoice-info, #invoice-info:hover{
+    transform: scaleY(1);
+  }
+  #roadmap .roadmap-part{
+    position: absolute;
+    width: 14.3%;
+    height:9%;
+    transition: 200ms all ease-in-out;
+    z-index: 99;
+    cursor: pointer;
+  }
+
+  .info{
+      border-radius: 3px;
+      text-align: justify;
+      color:white;
+      top:9%;
+      position: absolute;
+      background:rgba(0,0,0,.7);
+      overflow: hidden;
+      width:100%;
+      transform: scaleY(0);
+      transition: 200ms all ease-in-out;
+  }
+  .info p{
+      padding:1em;
+      font-size:1.5em;
+  }
+  @media screen and (max-width: 1200px) {
+    #grid{
+     grid-template-areas:"header"
+     "main"
+     "roadmap"
+     "text"
+     "img"
+     "leftOwner"
+     "logo";
+     grid-template-columns: auto;
+     grid-template-rows:5% 10% 25%;
+     margin: 2em 3em;
+     padding-bottom: 150px;
+    } 
+    #roadmap .roadmap-part{
+         height:18% !;
+    }
+    .info{
+        top:18%;
+    }
+ 
+ }

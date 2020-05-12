@@ -1,3 +1,9 @@
 <app-nav-bar></app-nav-bar>
-<div><h3>search</h3></div>
+<div class="content">
+    <form [formGroup]="searchForm" (ngSubmit)="search(searchForm.value)" class="search-bar">
+        
+        <input ng-model="searchForm.query" placeholder="Search.." type="search" formControlName="query" />
+        <button type="submit"><fa-icon [icon]="faSearch"></fa-icon></button>
+    </form>
+    </div>
 <app-footer></app-footer>

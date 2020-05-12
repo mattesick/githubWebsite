@@ -1,6 +1,4 @@
-*{
-    box-sizing: border-box;
-}
+
 .Container{
     display: flex;
     flex-direction: row;
@@ -34,7 +32,7 @@
 
 #person{
     order: 1;
-    width: 30%;
+    width: 25%;
 }
 img{
     max-width: 100%;

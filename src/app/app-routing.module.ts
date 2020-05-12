@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'MobilityApps', component: HomeComponent },
   { path: 'Person/:id', component: PersonComponent },
   { path: 'Search/:query', component: SearchComponent },
-  { path: 'Search/', component: SearchComponent },
+  { path: 'Search', component: SearchComponent },
   { path: '**', component: PageNotFoundComponent }
   
 

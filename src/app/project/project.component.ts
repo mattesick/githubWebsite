@@ -31,6 +31,7 @@ export class ProjectComponent implements OnInit {
         });
 
       });
+    
 
     });
     this.employeeService.getEmployeesByProjectId(projectId).subscribe((data: any) => {
