@@ -3,7 +3,7 @@
         <fa-icon [icon]="faEllipsis"></fa-icon>
     </a>
     <img routerLink="" src="assets/images/logo.png" alt="missing logo">
-    <form [formGroup]="searchForm" (ngSubmit)="search(searchForm.value)" class="search-bar">
+    <form [formGroup]="searchForm" *ngIf="! isShowSearch()" (ngSubmit)="search(searchForm.value)" class="search-bar">
         <button type="submit"><fa-icon [icon]="faSearch"></fa-icon></button>
         <input placeholder="Search.." type="search" formControlName="query">
     </form>

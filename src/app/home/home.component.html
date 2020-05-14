@@ -1,4 +1,5 @@
 <app-nav-bar></app-nav-bar>
+<main>
 <div class="content">
     <div *ngFor="let project of showProjects" routerLink="/Project/{{project.id}}" class="content-image">
         <div class="project-desc">
@@ -23,3 +24,5 @@
 
 </div>
 <app-footer></app-footer>
+</main>
+

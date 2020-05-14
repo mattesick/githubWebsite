@@ -1,9 +1,116 @@
 <app-nav-bar></app-nav-bar>
 <div class="content">
     <form [formGroup]="searchForm" (ngSubmit)="search(searchForm.value)" class="search-bar">
-        
+
         <input ng-model="searchForm.query" placeholder="Search.." type="search" formControlName="query" />
-        <button type="submit"><fa-icon [icon]="faSearch"></fa-icon></button>
+        <button type="submit">
+            <fa-icon [icon]="faSearch"></fa-icon>
+        </button>
     </form>
+    <p>Search tag: <strong>Angular</strong></p>
+    <div id="resultContainer">
+        <div class="box">
+            <h3>Projects</h3>
+            <div class="resultBox">
+                <div class="result" routerLink="/Project/6">
+                    <div class="overlay">
+                        <h4>DXC Galway Github website</h4>
+                        <p><b>Technologies:</b> Angular, Node.js</p>
+                        <p><b>Affiliated companies:</b> DXC Technologies</p>
+                    </div>
+                </div>
+                <div class="result" routerLink="/Project/3">
+                    <div class="overlay">
+                        <h4>Bank of Ireland</h4>
+                        <p><b>Technologies:</b> Angular, MongoDB</p>
+                        <p><b>Affiliated companies:</b> Bank of Ireland</p>
+                    </div>
+                </div>
+                <div class="result" routerLink="/Project/7">
+                    <div class="overlay">
+                        <h4>CBI Mobile Application</h4>
+                        <p><b>Technologies:</b> Angular, Javascript, Microsoft SQL Server</p>
+                        <p><b>Affiliated companies:</b> Bank of Ireland</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <h3>Persons</h3>
+            <div class="resultBox">
+                <div class="result" routerLink="/Person/1">
+                    <div class="overlay">
+                        <h4>Mattias Sjonell</h4>
+                        <p><b>Role:</b> Intern</p>
+                        <p><b>Current project:</b> DXC Galway Github website</p>
+                        <p><b>Technologies:</b> Angular, mySQL, PHP</p>
+                    </div>
+                </div>
+                <div class="result" routerLink="/Person/2">
+                    <div class="overlay">
+                        <h4>Linus Svensson</h4>
+                        <p><b>Role:</b>  Webdeveloper</p>
+                        <p><b>Current project:</b> DXC Galway Github website</p>
+                        <p><b>Technologies:</b> Angular, MongoDB, SCSS, Python</p>
+                    </div>
+                </div>
+                <div class="result" routerLink="/Person/3">
+                    <div class="overlay">
+                        <h4>Alex Andersson</h4>
+                        <p><b>Current project:</b> DXC Galway Github website</p>
+                        <p><b>Role:</b> Developer</p>
+                        <p><b>Technologies:</b> Angular, React, Vue, C#</p>
+                    </div>
+                </div>
+                <div class="result" routerLink="/Person/6">
+                    <div class="overlay">
+                        <h4>Mohammed Ali</h4>
+                        <p><b>Current project:</b> CBI Mobile Application</p>
+                        <p><b>Role:</b> Project Owner</p>
+                        <p><b>Technologies:</b> Angular, Java, C#, C++</p>
+                    </div>
+                </div>
+                <div class="result">
+                    <div class="overlay" routerLink="/Person/7">
+                        <h4>Linus Svensson</h4>
+                        <p><b>Current project:</b> CBI Mobile Application</p>
+                        <p><b>Role:</b> Senior Developer</p>
+                        <p><b>Technologies:</b> Angular, Java, C#, C++</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <h3>Teams</h3>
+            <div class="resultBox">
+                <div class="result" routerLink="/Team/1">
+                    <div class="overlay">
+                        <h4>Swedish Boys</h4>
+                        <p><b>Department:</b> DXC Galway Department</p>
+                        <p><b>Description:</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="result" routerLink="/Team/44">
+                    <div class="overlay">
+                        <h4>English Boys</h4>
+                        <p><b>Department:</b> DXC Galway Department</p>
+                        <p><b>Description:</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <h3>Departments</h3>
+            <div class="resultBox">
+                <div class="result">
+                    <div class="overlay">
+                        <h4>DXC Galway Department</h4>
+                        <p><b>Location:</b> Galway, Ireland</p>
+                        <p><b>Description:</b> Very efficient and nice department</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 <app-footer></app-footer>

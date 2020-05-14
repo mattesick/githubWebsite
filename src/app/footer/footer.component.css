@@ -1,26 +1,26 @@
 .footer{
-    position: fixed;
-    height:40px;
+    position: absolute;
     bottom:0;
     left:0;
     width: 100%;
-    clear:both;
     background-color: black;
     color: white;
-    display: flex;
     align-items: center;
+    font-size: 13px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    float: left;
-    margin-top: 5%;
+    margin-top: -41px;
 }
 a{
-    font-size:1.17em;
     color: white;
     text-decoration: none;
+    padding: 0 1%;
 }
 .links{
-    float: right;
     padding: 0;
+    width: 50%;
+    text-align: right;
 }
 .container{
     margin-left: 2%;
@@ -28,11 +28,6 @@ a{
     width: 50%;
     color: lightgray;
     padding: 0;
-}
-li{
-    display: inline;
-    padding: 5px;
-    list-style: none;
 }
 div{
     text-align: center;
@@ -57,4 +52,20 @@ a{
 }
 a:hover{
     color: white;
+}
+@media screen and (max-width:1000px){
+    .links{
+        width: 45%;
+        padding: 0 2%;
+    }
+}
+@media screen and (max-width:700px){
+    .container{
+        width: 100%;
+        justify-content: center;
+    }
+    .links{
+        width: 100%;
+        text-align: center;
+    }
 }
