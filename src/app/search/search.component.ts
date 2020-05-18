@@ -23,7 +23,7 @@ export class SearchComponent implements OnInit {
   
   searchResult: String[];
   ngOnInit(): void {
-    
+    console.log(this.searchService.search(this.query));
   }
   search({query}){
     console.log(query)

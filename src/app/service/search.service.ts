@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 export class SearchService {
 
   constructor(private http: HttpClient) { }
-  search(query: string){
-    return this.http.get('http://localhost:8000/Search/' + query);
+  search(query: string):Promise<any>{
+    return new Promise((resolve, reject) => this.http.get('http://localhost:8000/Search/' + query).subscribe(data => resolve(data)));
   }
 }

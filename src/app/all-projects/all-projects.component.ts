@@ -12,11 +12,12 @@ export class AllProjectsComponent implements OnInit {
   constructor(private projectService: ProjectService) { }
   allProjects: Project[] = [];
   ngOnInit(): void {
-    this.projectService.getAllProjects().subscribe((data:any) => {
-      data.forEach(project => {
+    this.getProjects();
+  }
+  async getProjects(){
+    let projects = await this.projectService.getAllProjects();
+      projects.forEach(project => {
         this.allProjects.push(new Project(project))
-      });
-      console.log(this.allProjects);
     });
   }
   

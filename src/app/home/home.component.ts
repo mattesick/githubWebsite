@@ -13,17 +13,16 @@ export class HomeComponent implements OnInit {
   constructor(private projectService: ProjectService) { }
 
   faChevronDown = faChevronDown;
-  showProjects:Project[] = [];
+  showProjects: Project[] = [];
   ngOnInit(): void {
     this.loadProjects();
   }
-  loadProjects(){
-    this.projectService.getFristXProjects("5").subscribe((data:any) => {
-      data.forEach(project => {
-        this.showProjects.push(new Project(project));
-      });
-      console.log(data)
-    })
+  async loadProjects() {
+    let projects = await this.projectService.getFirstXProjects("5");
+    projects.forEach(project => {
+      this.showProjects.push(new Project(project));
+    });
+
   }
   dropDown() {
     let y = document.getElementById("container");

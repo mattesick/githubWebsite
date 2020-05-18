@@ -18,12 +18,13 @@ export class AllTeamsComponent implements OnInit {
   allTeams: Team[] = [];
 
   ngOnInit(): void {
-    this.teamService.getAllTeams().subscribe((data:any) => {
-      data.forEach(team => {
+    this.getTeams();
+  }
+  async getTeams(){
+    let teams = await this.teamService.getAllTeams()
+      teams.forEach(team => {
         this.allTeams.push(new Team(team))
       });
-      console.log(this.allTeams)
-    });
   }
 
 }

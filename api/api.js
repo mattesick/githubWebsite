@@ -1,6 +1,7 @@
 
 const express = require('express');
 const app = express();
+const Storage = require("./storage");
 
 
 const bodyParser = require("body-parser");
@@ -27,148 +28,75 @@ app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
-let json;
-let projects;
 
-fs.readFile('person.json', (err, data) => {
+let DB;
+fs.readFile('data.json', (err, data) => {
   if (err) throw err;
-  json = JSON.parse(data);
+  DB = new Storage.Database(JSON.parse(data));
 });
-fs.readFile('projects.json', (err, data) => {
-  if (err) throw err;
-  projects = JSON.parse(data);
-});
+
 
 app.get("/getDepartmentById/:id", (req, res) => {
-  for (const department of json) {
-    if (department.id == req.params.id) return res.send(department);
-  }
+  res.send(DB.getDepartmentById(req.params.id));
 });
 
-app.get("/getEmployeesWithArrayOfIds/:array", (req, res) => {
-  req.params.array = JSON.parse(req.params.array);
-  let employees = [];
-  for (const department of json) {
-    for (const team of department.teams) {
-      for (const employee of team.employees) {
-        for (const employeeId of req.params.array) {
-          if (employee.id == employeeId) employees.push(employee);
-          if(employees.length == req.params.array.length) break;
-        }
-      }
-    }
-  }
-  return res.send(employees);
+app.get("/getPersonsWithArrayOfIds/:array", (req, res) => {
+  let arr = JSON.parse(req.params.array);
+  res.send(DB.getPersonsWithArrayOfIds(arr));
 });
 
 app.get("/getTeamById/:id", (req, res) => {
-  for (const department of json) {
-    for (const team of department.teams) {
-      if (team.id == req.params.id) return res.send(team);
-    }
-  }
+  res.send(DB.getTeamById(req.params.id));
 });
 
-app.get("/getTeamByEmployeeId/:id", (req, res) => {
-  for (const department of json) {
-    for (const team of department.teams) {
-      for (const employee of team.employees) {
-        if (employee.id == req.params.id) return res.send(team);
-      }
-    }
-  }
+app.get("/getTeamByPersonId/:id", (req, res) => {
+  res.send(DB.getTeamByPersonId(req.params.id));
 });
 
-app.get("/getEmployeeById/:id", (req, res) => {
-  for (const department of json) {
-    for (const team of department.teams) {
-      for (const employee of team.employees) {
-        if (employee.id == req.params.id) return res.send(employee);
-      }
-    }
-  }
+app.get("/getPersonById/:id", (req, res) => {
+  res.send(DB.getPersonById(req.params.id));
+});
+app.get("/getPersonTechnologiesByPersonId/:id", (req, res) => {
+  res.send(DB.getPersonTechnologiesByPersonId(req.params.id));
 });
 
-app.get("/getEmployeesBySkill/:skill", (req, res) => {
-  let result = [];
-  for (const department of json) {
-    for (const team of department.teams) {
-      for (const employee of team.employees) {
-        if (employee.skills == req.params.skill) result.push(employee);
-      }
-    }
-  }
-  return res.send(result);
+app.get("/getPersonsByTechnology/:technology", (req, res) => {
+    res.send(DB.getPersonsByTechnology(req.params.technology));
 });
-app.get("/getEmployeesByProjectId/:id", (req, res) => {
-  let result = [];
-  for (const department of json) {
-    for (const team of department.teams) {
-      for (const employee of team.employees) {
-        for (const projectId of employee.projects) {
-          if (projectId == req.params.id) result.push(employee);
-        }
-      }
-    }
-  }
-  return res.send(result);
+app.get("/getPersonsByProjectId/:id", (req, res) => {
+  res.send(DB.getPersonsByProjectId(req.params.id));
 });
 
 app.get("/getAllDepartments", (req, res) => {
-  return res.send(json);
+  res.send(DB.getAllDepartments());
 });
 
 //Project api
 
-app.get("/getProjectsByUserId/:id", (req, res) => {
-  //Gets person
-  let emp;
-  for (const department of json) {
-    for (const team of department.teams) {
-      for (const employee of team.employees) {
-        if (employee.id == req.params.id) { emp = employee; break; };
-      }
-    }
-  }
-  //gets projects from person
-  let empProjects = [];
-  for (const project of projects) {
-    for (const projectId of emp.projects) {
-      if (projectId == project.id) empProjects.push(project);
-    }
-    
-  }
-  //Sends projects
-  return res.send(empProjects);
+app.get("/getProjectsByPersonId/:id", (req, res) => {
+  res.send(DB.getProjectsByPersonId(req.params.id));
 });
 
 app.get("/getProjectById/:id", (req, res) => {
-  for (const project of projects) {
-    if (project.id == req.params.id) return res.send(project);
-  }
+  res.send(DB.getProjectById(req.params.id));
 });
 app.get("/getAllProjects", (req, res) => {
-  return res.send(projects);
+  res.send(DB.getAllProjects());
 });
-app.get("/getFristXProjects/:X", (req, res) => {
-  let arr = [];
-  for(let i = projects.length - 1; i >= (projects.length) - req.params.X; i--){
-    arr.push(projects[i]);
-  }
-  return res.send(arr);
+app.get("/getFirstXProjects/:X", (req, res) => {
+  res.send(DB.getFirstXProjects(req.params.X));
 });
 app.get("/getAllTeams", (req, res) => {
-  let allTeams = [];
-  for (const department of json) {
-    for (const team of department.teams) {
-      allTeams.push(team);
-    }
-  }
-  return res.send(allTeams);
+  res.send(DB.getAllTeams());
 });
-app.get("/Search/:query", (req,res) => {
-  let searchResult = [];
-  return res.send(searchResult);
+app.get("/getTechnologyById/:id", (req, res) => {
+  res.send(DB.getTechnologyById(req.params.id));
+})
+app.get("/getPersonRolebyPersonId:id",(req,res) => {
+  res.send(DB.getPersonRolebyPersonId(req.params.id));
+})
+app.get("/Search/:query", (req, res) => {
+  res.send(DB.search(req.params.query));
 });
 
 //Config things

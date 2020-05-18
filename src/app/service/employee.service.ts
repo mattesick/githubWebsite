@@ -13,17 +13,20 @@ export class EmployeeService {
     
   }
   
-  getEmployeeById(id:string){
-    return this.http.get('http://localhost:8000/getEmployeeById/' + id);
+  getPersonById(id:string):Promise<any>{
+    return new Promise((resolve, reject) => this.http.get('http://localhost:8000/getPersonById/' + id).subscribe(data => resolve(data)));
   }
-  getEmployeesBySkill(skill:string){
-    return this.http.get('http://localhost:8000/getEmployeesBySkill/' + skill)
+  getPersonsBySkill(skill:string):Promise<any>{
+    return new Promise((resolve, reject) => this.http.get('http://localhost:8000/getPersonsBySkill/' + skill).subscribe(data => resolve(data)));
   }
-  getEmployeesWithArrayOfIds(ids:string[]){
-    return this.http.get('http://localhost:8000/getEmployeesWithArrayOfIds/' + JSON.stringify(ids));
+  getPersonsWithArrayOfIds(ids:string[]):Promise<any>{
+    return new Promise((resolve, reject) => this.http.get('http://localhost:8000/getPersonsWithArrayOfIds/' + JSON.stringify(ids)).subscribe(data => resolve(data)));
   }
-  getEmployeesByProjectId(id:string){
-    return this.http.get('http://localhost:8000/getEmployeesByProjectId/' + id)
+  getPersonsByProjectId(id:string):Promise<any>{
+    return new Promise((resolve, reject) => this.http.get('http://localhost:8000/getPersonsByProjectId/' + id).subscribe(data => resolve(data)))
+  }
+  getPersonTechnologiesByPersonId(id:string):Promise<any>{
+    return new Promise((resolve, reject) => this.http.get('http://localhost:8000/getPersonTechnologiesByPersonId/' + id).subscribe(data => resolve(data)));
   }
 
 }

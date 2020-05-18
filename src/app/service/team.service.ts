@@ -12,16 +12,17 @@ export class TeamService {
     
   }
   
-  getTeam(id:string){
-    return this.http.get('http://localhost:8000/getTeamById/' + id);
+  getTeamById(id:string):Promise<any>{
+    return new Promise((resolve, reject) => this.http.get('http://localhost:8000/getTeamById/' + id).subscribe(data => resolve(data)));
   }
-  getEmployeesWithSkill(skill:string){
-    return this.http.get('http://localhost:8000/getEmployeesBySkill/' + skill)
+  getPersonsWithSkill(skill:string):Promise<any>{
+    return new Promise((resolve, reject) => this.http.get('http://localhost:8000/getPersonsBySkill/' + skill).subscribe(data => resolve(data)));
   }
-  getTeamByEmployeeId(id:string){
-    return this.http.get('http://localhost:8000/getTeamByEmployeeId/' + id);
+  getTeamByPersonId(id:string):Promise<any>{
+    return new Promise((resolve, reject) => this.http.get('http://localhost:8000/getTeamByPersonId/' + id).subscribe(data => resolve(data)));
   }
-  getAllTeams(){
-    return this.http.get('http://localhost:8000/getAllTeams/');
+  getAllTeams():Promise<any>{
+    return new Promise((resolve, reject) => this.http.get('http://localhost:8000/getAllTeams/').subscribe(data => resolve(data)));
   }
 }
+ 

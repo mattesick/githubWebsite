@@ -13,16 +13,19 @@ export class ProjectService {
 
   }
 
-  getProjectsByUserId(id: string) {
-    return this.http.get('http://localhost:8000/getProjectsByUserId/' + id);
+  getProjectsByPersonId(id: string):Promise<any> {
+    return new Promise((resolve, reject) => this.http.get('http://localhost:8000/getProjectsByPersonId/' + id).subscribe(data => resolve(data)));
   }
-  getProjectById(id: string) {
-    return this.http.get('http://localhost:8000/getProjectById/' + id)
+  getProjectById(id: string):Promise<any> {
+    return new Promise((resolve, reject) => this.http.get('http://localhost:8000/getProjectById/' + id).subscribe(data => resolve(data)));
   }
-  getAllProjects() {
-    return this.http.get('http://localhost:8000/getAllProjects/')
+  getAllProjects():Promise<any> {
+    return new Promise((resolve, reject) => this.http.get('http://localhost:8000/getAllProjects').subscribe(data => resolve(data)));
   }
-  getFristXProjects(x:string){
-    return this.http.get('http://localhost:8000/getFristXProjects/' + x)
+  getFirstXProjects(x:string):Promise<any>{
+    return new Promise((resolve, reject) => this.http.get('http://localhost:8000/getFirstXProjects/' + x).subscribe(data => resolve(data)))
+  }
+  getRoleById(id:string):Promise<any>{
+    return new Promise((resolve, reject) => this.http.get('http://localhost:8000/getRoleById/' + id).subscribe(data => resolve(data)));
   }
 }

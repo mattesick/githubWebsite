@@ -13,8 +13,10 @@ export class DepartmentService {
     
   }
   
-  getDepartment(id:string){
-    return this.http.get('http://localhost:8000/getDepartmentById/' + id);
+  getDepartment(id:string):Promise<any>{
+    return new Promise((resolve, reject) => {
+      this.http.get('http://localhost:8000/getDepartmentById/' + id).subscribe((data) => resolve(data));
+    })    
   }
 
 }

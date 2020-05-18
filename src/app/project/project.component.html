@@ -13,15 +13,10 @@
         <img  *ngFor="let logo of project.logos"src="../../assets/images/{{logo}}" alt="missing logo">
     </div>
     <div id="owners">
-        <figure *ngFor="let owner of productOwners" routerLink="/Person/{{owner.id}}">
-            <img src="../../assets/images/profile.jpg" alt="ownerIMG">
-            <figcaption>{{owner.name}}</figcaption>
-            <figcaption>{{owner.role}}</figcaption>
-        </figure>
         <figure *ngFor="let emp of employees" routerLink="/Person/{{emp.id}}">
             <img src="../../assets/images/profile.jpg" alt="ownerIMG">
             <figcaption>{{emp.name}}</figcaption>
-            <figcaption>{{emp.role}}</figcaption>
+            <figcaption>{{emp.projectRole}}</figcaption>
         </figure>
     </div>
     <div id="roadmap">
