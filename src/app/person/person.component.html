@@ -1,35 +1,34 @@
-<app-nav-bar></app-nav-bar>
-<app-go-back></app-go-back>
 <div class="content">
+    <div class="header-img" [style.backgroundImage]="'url(../../assets/images/projectImageFour.png)'"
+        [style.backgroundSize]="'cover'" [style.backgroundPosition]="'center'"></div>
+    <h3 id="personName">{{employee.fullName()}} - {{employee.role}}</h3>
+    <div class="Container">
 
 
-<div class="header-img" [style.backgroundImage]="'url(../../assets/images/projectImageFour.png)'" [style.backgroundSize]="'cover'" [style.backgroundPosition]="'center'"></div>
-<h3 id="personName">{{employee.fullName()}} - {{employee.role}}</h3>
-<div class="Container">
-    
-  
-    <div id="projects">
-        <h4>Projects</h4>
-        <div *ngFor="let project of employeeProjects" >
-            <figure class="image" routerLink="/Project/{{project.id}}">
-                <img src="../../assets/images/{{project.images[0]}}" alt="Project Image">
-                <figcaption>{{project.name}}</figcaption>
-            </figure>
+        <div id="projects">
+            <h4>Projects</h4>
+            <div *ngFor="let project of employeeProjects">
+                <figure class="image" routerLink="/Project/{{project.id}}">
+                    <img src="../../assets/images/{{project.images[0]}}" alt="Project Image">
+                    <figcaption>{{project.name}}</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div id="person">
+            <img src="../../assets/images/profile.jpg" alt="focusedEmployee">
+        </div>
+        <div id="description">
+            <h5>Skills:</h5>
+            <ul>
+                <li *ngFor="let skill of skills">{{skill}}, </li>
+            </ul>
+            <p></p>
+            <p id="about">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, placeat! Eos provident quaerat
+                beatae, hic ut quisquam laborum delectus deleniti amet vitae ea, in tempore voluptatem, non molestias
+                perspiciatis dolor.</p>
         </div>
     </div>
-    <div id="person">
-            <img src="../../assets/images/profile.jpg" alt="focusedEmployee">
-    </div>
-    <div id="description">
-        <h5>Skills:</h5>
-        <ul>
-            <li *ngFor="let skill of skills">{{skill}}, </li>
-        </ul>
-        <p></p>
-        <p id="about">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, placeat! Eos provident quaerat beatae, hic ut quisquam laborum delectus deleniti amet vitae ea, in tempore voluptatem, non molestias perspiciatis dolor.</p>
-    </div>
-</div>
-<!-- <div class="employee-projects">
+    <!-- <div class="employee-projects">
     <div class="project" >
         <figure  routerLink="/Project/{{project.id}}">
             <figcaption>{{project.name}}</figcaption>
@@ -38,5 +37,3 @@
     </div>
 </div> -->
 </div>
-
-<app-footer></app-footer>

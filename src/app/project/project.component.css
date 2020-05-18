@@ -178,4 +178,9 @@ hr{
         top:10%;
     }
  }
- 
+ .Summary{
+     text-align: justify;
+     width: 70%;
+     margin: auto;
+     padding: 5px;
+ }

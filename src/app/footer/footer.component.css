@@ -1,5 +1,5 @@
 .footer{
-    position: absolute;
+    position: relative;
     bottom:0;
     left:0;
     width: 100%;
@@ -10,6 +10,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    height: 41px;
     margin-top: -41px;
 }
 a{
@@ -19,13 +20,13 @@ a{
 }
 .links{
     padding: 0;
-    width: 50%;
+    width: 45%;
     text-align: right;
 }
 .container{
     margin-left: 2%;
     display: inline-flex;
-    width: 50%;
+    width: 45%;
     color: lightgray;
     padding: 0;
 }

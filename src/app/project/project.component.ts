@@ -4,6 +4,9 @@ import { ProjectService } from '../service/project.service';
 import { Project } from '../models/projects.model';
 import { Employee } from '../models/employee.model';
 import { EmployeeService } from '../service/employee.service';
+import { PageScrollService } from 'ngx-page-scroll-core';
+import { DOCUMENT } from '@angular/common';
+import { Inject, Injectable } from '@angular/core';
 
 @Component({
   selector: 'app-project',
@@ -12,7 +15,7 @@ import { EmployeeService } from '../service/employee.service';
 })
 export class ProjectComponent implements OnInit {
 
-  constructor(private projectService: ProjectService, private employeeService: EmployeeService, private route: ActivatedRoute) { }
+  constructor(private projectService: ProjectService, private employeeService: EmployeeService, private route: ActivatedRoute, private pageScrollService: PageScrollService,@Inject(DOCUMENT) private document: Document) { }
 
   project: Project = new Project({});
   productOwners: Employee[] = [];
@@ -20,6 +23,7 @@ export class ProjectComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProject();
+    
   }
   getProject(): void {
     const projectId = this.route.snapshot.paramMap.get('id');
@@ -48,5 +52,11 @@ export class ProjectComponent implements OnInit {
     });
 
   }
-
+  scroll(to): void{
+    this.pageScrollService.scroll({
+      document: this.document,
+      scrollTarget: to,
+      duration: 500
+    });
+  }
 }
