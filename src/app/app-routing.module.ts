@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { TeamComponent } from './team/team.component';
 import { PersonComponent } from './person/person.component';
@@ -8,6 +8,7 @@ import { ProjectComponent } from './project/project.component';
 import { AllProjectsComponent } from './all-projects/all-projects.component';
 import { SearchComponent } from './search/search.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'allTeams', component: AllTeamsComponent },
@@ -19,11 +20,18 @@ const routes: Routes = [
   { path: 'Search/:query', component: SearchComponent },
   { path: 'Search', component: SearchComponent },
   { path: '**', component: PageNotFoundComponent }
+  
 
 ];
+const routerOptions: ExtraOptions = {
+  useHash: false,
+  anchorScrolling: 'enabled',
+  // ...any other options you'd like to use
+};
+// then just import your RouterModule with these options
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,routerOptions)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

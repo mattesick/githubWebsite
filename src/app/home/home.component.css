@@ -106,7 +106,7 @@ h2{
     transition: 75ms ease-in-out;
 }
 #container{
-    margin: 4em;
+    padding:0 4em;
     display: flex;
     flex-direction: column;
     transition: 400ms ease-in-out;
@@ -140,4 +140,9 @@ h3{
     align-items: center;
     margin-left: 15%;
     padding-right: 2%;
+}
+main{
+    min-height: 100vh;
+    padding-top: 40px;
+    position: relative;
 }

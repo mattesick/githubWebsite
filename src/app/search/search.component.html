@@ -1,9 +1,59 @@
-<app-nav-bar></app-nav-bar>
 <div class="content">
     <form [formGroup]="searchForm" (ngSubmit)="search(searchForm.value)" class="search-bar">
-        
+
         <input ng-model="searchForm.query" placeholder="Search.." type="search" formControlName="query" />
-        <button type="submit"><fa-icon [icon]="faSearch"></fa-icon></button>
+        <button type="submit">
+            <fa-icon [icon]="faSearch"></fa-icon>
+        </button>
     </form>
+    <p>Search tag: <strong>Angular</strong></p>
+    <div id="resultContainer">
+        <div *ngIf="result.projects.length" class="box">
+            <h3>Projects</h3>
+            <div class="resultBox">
+                <div *ngFor="let project of result.projects" [ngClass]="'result'"routerLink="/Project/{{project.id}}">
+                    <img src="../assets/images/{{project.images[0]}}" alt="ownerIMG">
+                        <h4>{{project.name}}</h4>
+                        <p><b>Technologies:</b> Angular, Node.js</p>
+                        <p><b>Affiliated companies:</b> DXC Technologies</p>
+                </div>
+            </div> 
+        </div>
+        <div *ngIf="result.persons.length"  class="box">
+            <h3>Persons</h3>
+            <div class="resultBox">
+                <div class="result" *ngFor="let person of result.persons" routerLink="/Person/{{person.id}}">
+                    <div class="overlay">
+                        <h4>{{person.name + " " + person.lastName}}</h4>
+                        <p><b>Technologies:</b> Angular, Node.js</p>
+                        <p><b>Affiliated companies:</b> DXC Technologies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="result.teams.length" class="box">
+            <h3>Teams</h3>
+            <div class="resultBox">
+                <div class="result" *ngFor="let team of result.teams" routerLink="/Team/{{team.id}}">
+                    <div class="overlay">
+                        <h4>{{team.name}}</h4>
+                        <p><b>Technologies:</b> Angular, Node.js</p>
+                        <p><b>Affiliated companies:</b> DXC Technologies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="result.departments.length" class="box">
+            <h3>Departments</h3>
+            <div class="resultBox">
+                <div class="result" *ngFor="let department of result.departments" routerLink="/Department/{{department.id}}">
+                    <div class="overlay">
+                        <h4>{{department.name}}</h4>
+                        <p><b>Location:</b> Galway, Ireland</p>
+                        <p><b>Description:</b>{{department.desc}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-<app-footer></app-footer>
+</div>

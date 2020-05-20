@@ -15,6 +15,7 @@ import { AllProjectsComponent } from './all-projects/all-projects.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './footer/footer.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 
 import { SearchComponent } from './search/search.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -40,7 +41,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HttpClientModule,
     FontAwesomeModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgxPageScrollCoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

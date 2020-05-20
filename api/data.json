@@ -1,12 +1,13 @@
 {
     "persons": [
         {
+            "roles": [
+                1, 2
+            ],
             "id": 1,
             "name": "Mattias",
             "lastName": "Sjonell",
-            "role": [
-                1
-            ],
+         
             "technologies": [
                 1
             ],
@@ -21,7 +22,7 @@
             "id": 2,
             "name": "Mattias",
             "lastName": "Sjonell",
-            "role": [
+            "roles": [
                 1
             ],
             "technologies": [
@@ -38,7 +39,7 @@
     "technologies": [
         {
             "id": 1,
-            "name": "C"
+            "name": "C#"
         }
     ],
     "roles": [
@@ -82,21 +83,19 @@
         {
             "id": 1,
             "name": "Test",
-            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio error quibusdam laboriosam hic repellat. Voluptates earum error, cumque, quidem",
             "images": [
                 "work1.jpg",
                 "content7.jpg",
                 "content1.jpg",
                 "content2.jpg"
             ],
-            "presentaion": [
-                "filedestination"
-            ],
+
             "logos": [
                 "Ericsson.png",
                 "intel.png"
             ],
-            "Persons": [
+            "persons": [
                 [
                     1
                 ]
@@ -105,19 +104,17 @@
         {
             "id": 2,
             "name": "Test",
-            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "desc": "hej",
             "images": [
                 "work4.jpg",
                 "content3.jpg"
             ],
-            "presentaion": [
-                "filedestination"
-            ],
+
             "logos": [
                 "intel.png",
                 "EA.png"
             ],
-            "Persons": [
+            "persons": [
                 [
                     1
                 ]
@@ -132,13 +129,11 @@
                 "content3.jpg",
                 "content5.jpg"
             ],
-            "presentaion": [
-                "filedestination"
-            ],
+
             "logos": [
                 "intel.png"
             ],
-            "Persons": [
+            "persons": [
                 [
                     1
                 ]
@@ -153,15 +148,12 @@
                 "content4.jpg",
                 "content6.jpg"
             ],
-            "presentaion": [
-                "filedestination"
-            ],
             "logos": [
                 "Asus.png",
                 "EA.png",
                 "intel.png"
             ],
-            "Persons": [
+            "persons": [
                 [
                     1
                 ]
@@ -177,14 +169,11 @@
                 "content1.jpg",
                 "content3.jpg"
             ],
-            "presentaion": [
-                "filedestination"
-            ],
             "logos": [
                 "Ericsson.png",
                 "Asus.png"
             ],
-            "Persons": [
+            "persons": [
                 [
                     1
                 ]
@@ -200,14 +189,11 @@
                 "content5.jpg",
                 "content7.jpg"
             ],
-            "presentaion": [
-                "filedestination"
-            ],
             "logos": [
                 "EA.png",
                 "intel.png"
             ],
-            "Persons": [
+            "persons": [
                 [
                     1
                 ]
@@ -223,16 +209,13 @@
                 "content2.jpg",
                 "content1.jpg"
             ],
-            "presentaion": [
-                "filedestination"
-            ],
             "logos": [
                 "intel.png",
                 "Asus.png",
                 "EA.png",
                 "Ericsson.png"
             ],
-            "Persons": [
+            "persons": [
                 [
                     1
                 ]
