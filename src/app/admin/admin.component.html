@@ -1,0 +1,74 @@
+<div class="container">
+    <div id="head">
+        <h1>Admin CMS <b>:)</b></h1>
+    </div>
+    <div>
+        <div class="forms">
+            <h3>Person</h3>
+            <hr>
+            <div id="personHolder">
+                <fa-icon [icon]="drop" (click)="show('personHolder')" class="drop"></fa-icon>
+                <fa-icon [icon]="exit" (click)="show('personHolder')" class="exit hidden"></fa-icon>
+
+                <form action="personForm" id="personForm" class="form">
+                    <p>Name:</p> <input type="text">
+                    <p>Role:</p> <input type="text">
+                    <p>Technologies:</p>
+                    <select multiple>
+                        <option value="a">Node.js</option>
+                        <option value="b">Angular</option>
+                        <option value="c">C#</option>
+                      </select>
+                    <p>Hobbys:</p> <input type="text">
+                    <p>Projects:</p> <input type="text">
+                    <button type="submit">Add Person</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="forms">
+        <h3>Project</h3>
+        <hr>
+        <div id="projectHolder">
+            <fa-icon [icon]="drop" (click)="show('projectHolder')" class="drop"></fa-icon>
+            <fa-icon [icon]="exit" (click)="show('projectHolder')" class="exit hidden"></fa-icon>
+            <form action="projectForm" id="projectForm">
+                <p>Name:</p> <input type="text">
+                <p>Technologies:</p>
+                <input type="checkbox" name="Node" id="">
+                <label for="Node">Node.js</label>
+                <input type="checkbox" name="Angular" id="">
+                <label for="Angular">Angular</label>
+                <input type="checkbox" name="MEAN" id="">
+                <label for="MEAN">MEAN</label>
+                <input type="checkbox" name="C#" id="">
+                <label for="C#">C#</label>
+                <button type="submit">Add Project</button>
+            </form>
+        </div>
+    </div>
+    <div class="forms">
+        <h3>Technologies</h3>
+        <hr>
+        <div id="technologiesHolder">
+            <fa-icon [icon]="drop" (click)="show('technologiesHolder')" class="drop"></fa-icon>
+            <fa-icon [icon]="exit" (click)="show('technologiesHolder')" class="exit hidden"></fa-icon>
+            <form action="technologiesForm" id="technologiesForm">
+                <p>Name:</p> <input type="text">
+                <button type="submit">Add Technology</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<input type="checkbox" name="Node" id="">
+<label for="Node">Node.js</label>
+<input type="checkbox" name="Angular" id="">
+<label for="Angular">Angular</label>
+<input type="checkbox" name="MEAN" id="">
+<label for="MEAN">MEAN</label>
+<input type="checkbox" name="C#" id="">
+<label for="C#">C#</label>
