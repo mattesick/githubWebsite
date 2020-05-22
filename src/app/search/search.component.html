@@ -12,7 +12,7 @@
             <h3>Projects</h3>
             <div class="resultBox">
                 <div *ngFor="let project of result.projects" [ngClass]="'result'"routerLink="/Project/{{project.id}}">
-                    <img src="../assets/images/{{project.images[0]}}" alt="ownerIMG">
+                    <img src="assets/images/{{project.images[0]}}" alt="ownerIMG">
                         <h4>{{project.name}}</h4>
                         <p><b>Technologies:</b> Angular, Node.js</p>
                         <p><b>Affiliated companies:</b> DXC Technologies</p>

@@ -1,5 +1,5 @@
 <div class="content">
-    <div class="header-img" [style.backgroundImage]="'url(../../assets/images/projectImageFour.png)'"
+    <div class="header-img" [style.backgroundImage]="'url(assets/images/projectImageFour.png)'"
         [style.backgroundSize]="'cover'" [style.backgroundPosition]="'center'"></div>
     <h3 id="personName">{{employee.fullName()}} - {{employee.role}}</h3>
     <div class="Container">
@@ -9,13 +9,13 @@
             <h3>Projects</h3>
             <div *ngFor="let project of employeeProjects">
                 <figure class="image" routerLink="/Project/{{project.id}}">
-                    <img src="../../assets/images/{{project.images[0]}}" alt="Project Image">
+                    <img src="assets/images/{{project.images[0]}}" alt="Project Image">
                     <figcaption>{{project.name}}</figcaption>
                 </figure>
             </div>
         </div>
         <div id="person">
-            <img src="../../assets/images/profile.jpg" alt="focusedEmployee">
+            <img src="assets/images/profile.jpg" alt="focusedEmployee">
         </div>
         <div id="description">
             <h5>Skills:</h5>

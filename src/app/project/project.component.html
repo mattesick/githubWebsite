@@ -1,4 +1,4 @@
-<div id="topImg"><img src="../../assets/images/{{project.images[0]}}" alt="project description" /></div>
+<div id="topImg"><img src="assets/images/{{project.images[0]}}" alt="project description" /></div>
 <div id="grid">
     <div id="title">
         <h2>{{project.name}}</h2>
@@ -9,11 +9,11 @@
         {{project.id}}
     </div>
     <div class="logos">
-        <img *ngFor="let logo of project.logos" src="../../assets/images/{{logo}}" alt="missing logo">
+        <img *ngFor="let logo of project.logos" src="assets/images/{{logo}}" alt="missing logo">
     </div>
     <div id="owners">
         <figure *ngFor="let emp of employees" routerLink="/Person/{{emp.id}}">
-            <img src="../../assets/images/profile.jpg" alt="ownerIMG">
+            <img src="assets/images/profile.jpg" alt="ownerIMG">
             <figcaption>{{emp.name}}</figcaption>
             <figcaption>{{emp.projectRole}}</figcaption>
 
@@ -72,7 +72,7 @@
             Proof of Concept --> Product, challanges, clients involved etc Proof of Concept --> Product, challanges,
             clients involved etc </p>
     </div>
-    <div id="img"><img src="../../assets/images/content4.jpg" alt="missing image"></div>
+    <div id="img"><img src="assets/images/content4.jpg" alt="missing image"></div>
     
 </div>
 <div class="Summary" id="opportunity-summary">

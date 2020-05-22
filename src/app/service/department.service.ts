@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import 'rxjs/add/operator/map'
+import {environment} from "./../../environments/environment"
+import { from } from 'rxjs';
 
 
 @Injectable({
@@ -15,7 +17,7 @@ export class DepartmentService {
   
   getDepartment(id:string):Promise<any>{
     return new Promise((resolve, reject) => {
-      this.http.get('http://localhost:8000/getDepartmentById/' + id).subscribe((data) => resolve(data));
+      this.http.get(environment.API_URL + 'getDepartmentById/' + id).subscribe((data) => resolve(data));
     })    
   }
 
