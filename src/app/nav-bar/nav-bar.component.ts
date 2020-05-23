@@ -4,6 +4,7 @@ import { faEllipsisH, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
+import {environment} from "./../../environments/environment"
 
 @Component({
   selector: 'app-nav-bar',
@@ -42,7 +43,7 @@ export class NavBarComponent implements OnInit {
   }
   search({ query }) {
     console.log(query)
-    window.location.href = "http://localhost:4200/Search/" + query;
+    window.location.href = environment.WEBSITE_URL + "Search/" + query;
   }
   isShowSearch() {
      return this.route.snapshot["_routerState"].url.includes("Search");
