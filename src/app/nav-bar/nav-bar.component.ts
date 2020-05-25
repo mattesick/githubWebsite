@@ -18,6 +18,7 @@ export class NavBarComponent implements OnInit {
       query: ''
     });
   }
+  //font awesome icons
   faEllipsis = faEllipsisH;
   faSearch = faSearch;
   
