@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## API Data Server
 
-Run `node api` in /api folder. Navigate to `http://localhost:8000/` to look if the website is running.
+Run `node api` in /api folder. Navigate to `http://localhost:8000/` to see if the website is running.
 
 ## Development server
 
