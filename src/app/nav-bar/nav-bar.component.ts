@@ -43,7 +43,6 @@ export class NavBarComponent implements OnInit {
     }
   }
   search({ query }) {
-    console.log(query)
     window.location.href = environment.WEBSITE_URL + "Search/" + encodeURIComponent(query);
   }
   isShowSearch() {
