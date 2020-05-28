@@ -5,6 +5,7 @@ import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import {environment} from "./../../environments/environment"
+import {CookieService} from "ngx-cookie-service";
 
 @Component({
   selector: 'app-nav-bar',
@@ -23,6 +24,7 @@ export class NavBarComponent implements OnInit {
   faSearch = faSearch;
   
   ngOnInit(): void {
+
   }
   
   menu() {
@@ -43,9 +45,13 @@ export class NavBarComponent implements OnInit {
     }
   }
   search({ query }) {
+    
     window.location.href = environment.WEBSITE_URL + "Search/" + encodeURIComponent(query);
   }
   isShowSearch() {
      return this.route.snapshot["_routerState"].url.includes("Search");
   }
+  isLogin() {
+    return this.route.snapshot["_routerState"].url.includes("login");
+ }
 }

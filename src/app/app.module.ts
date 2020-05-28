@@ -19,6 +19,8 @@ import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 
 import { SearchComponent } from './search/search.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LoginComponent } from './login/login.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AllProjectsComponent,
     FooterComponent,
     SearchComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LoginComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
