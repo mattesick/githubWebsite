@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
     let y = document.getElementById("container");
     let x = document.getElementById("drop");
     if (x.style.display === "flex") {
-      y.style.height = "0px";
+      y.style.height = "auto";
       x.style.display = "none";
     } else {
       y.style.height = "30vh";

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {CookieService} from "ngx-cookie-service";
 import { FormBuilder } from '@angular/forms';
+import {environment} from "./../../environments/environment"
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +11,7 @@ import { FormBuilder } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
   loginForm;
-  constructor(private cookieService:CookieService,private formBuilder: FormBuilder) {
+  constructor(private cookieService:CookieService,private formBuilder: FormBuilder, public router: Router) {
     this.loginForm = this.formBuilder.group({
       uname:"",
       psw:""
@@ -23,7 +25,7 @@ export class LoginComponent implements OnInit {
     console.log(uname, psw)
     if(uname == "Admin" && psw == "rockandroll"){
       this.cookieService.set("Admin", "true");
-      window.location.href =  "http://localhost:4200/"
+      this.router.navigate(['/']);
     }
   }
 

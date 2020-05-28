@@ -45,8 +45,7 @@ export class NavBarComponent implements OnInit {
     }
   }
   search({ query }) {
-    
-    window.location.href = environment.WEBSITE_URL + "Search/" + encodeURIComponent(query);
+    this.router.navigate(["Search/" + encodeURIComponent(query)]);
   }
   isShowSearch() {
      return this.route.snapshot["_routerState"].url.includes("Search");
