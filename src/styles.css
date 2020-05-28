@@ -11,6 +11,6 @@ body{
 main{
     min-height: 100vh;
     position: relative;
-    padding-bottom: 41px;
     margin: 0;
+    padding-top:80px;
 }

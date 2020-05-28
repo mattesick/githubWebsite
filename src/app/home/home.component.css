@@ -203,8 +203,9 @@ main{
       background:black;
       color:white;
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 800px) {
     .about-text{
-        width:60%;
+        width:100%;
+        border-radius: 0%;
     }
   }
