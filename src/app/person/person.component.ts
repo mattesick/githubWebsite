@@ -17,26 +17,23 @@ import { ProjectService } from '../service/project.service';
 })
 export class PersonComponent implements OnInit {
 
-  constructor(private teamService: TeamService, private employeeService:EmployeeService,private projectService:ProjectService, private location: Location, private route: ActivatedRoute) { }
+  constructor(private teamService: TeamService, private employeeService: EmployeeService, private projectService: ProjectService, private location: Location, private route: ActivatedRoute) { }
   team: Team = new Team({});
-  employee:Employee = new Employee({});
-  skills: String[];
-  employeeProjects:Project[] = [];
+  employee: Employee = new Employee({});
+  technologies: String[];
+  employeeProjects: Project[] = [];
 
   ngOnInit(): void {
     this.getEmployee();
   }
-  getEmployee(){
+  async getEmployee() {
     const employeeId = this.route.snapshot.paramMap.get('id');
-    this.teamService.getTeamByEmployeeId(employeeId).subscribe(data => { this.team = new Team(data);});
-    this.employeeService.getEmployeeById(employeeId).subscribe(data => { 
-      this.employee = new Employee(data);
-      this.skills = this.employee.skills.split(",");
-      this.projectService.getProjectsByUserId(this.employee.id).subscribe((projects:any) => {
-        projects.forEach(project => {
-            this.employeeProjects.push(new Project(project));
-        });
-      });
+    this.employee = new Employee(await this.employeeService.getPersonById(employeeId));
+    this.technologies = await this.employeeService.getPersonTechnologiesByPersonId(this.employee.id);
+
+    let projects = await this.projectService.getProjectsByPersonId(this.employee.id);
+    projects.forEach(project => {
+      this.employeeProjects.push(new Project(project));
     });
   }
 }

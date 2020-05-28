@@ -4,6 +4,8 @@ import { faEllipsisH, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
+import {environment} from "./../../environments/environment"
+import {CookieService} from "ngx-cookie-service";
 
 @Component({
   selector: 'app-nav-bar',
@@ -17,10 +19,12 @@ export class NavBarComponent implements OnInit {
       query: ''
     });
   }
+  //font awesome icons
   faEllipsis = faEllipsisH;
   faSearch = faSearch;
   
   ngOnInit(): void {
+
   }
   
   menu() {
@@ -41,10 +45,13 @@ export class NavBarComponent implements OnInit {
     }
   }
   search({ query }) {
-    console.log(query)
-    window.location.href = "http://localhost:4200/Search/" + query;
+    
+    window.location.href = environment.WEBSITE_URL + "Search/" + encodeURIComponent(query);
   }
   isShowSearch() {
      return this.route.snapshot["_routerState"].url.includes("Search");
   }
+  isLogin() {
+    return this.route.snapshot["_routerState"].url.includes("login");
+ }
 }

@@ -9,6 +9,7 @@ import { AllProjectsComponent } from './all-projects/all-projects.component';
 import { SearchComponent } from './search/search.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AdminComponent } from './admin/admin.component';
+import {LoginComponent} from "./login/login.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'Search/:query', component: SearchComponent },
   { path: 'Search', component: SearchComponent },
   { path: 'Admin', component: AdminComponent },
+  { path: 'login', component: LoginComponent },
   { path: '**', component: PageNotFoundComponent }
   
   

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import 'rxjs/add/operator/map'
-
+import {environment} from "./../../environments/environment"
 
 @Injectable({
   providedIn: 'root'
@@ -13,16 +13,19 @@ export class ProjectService {
 
   }
 
-  getProjectsByUserId(id: string) {
-    return this.http.get('http://localhost:8000/getProjectsByUserId/' + id);
+  getProjectsByPersonId(id: string):Promise<any> {
+    return new Promise((resolve, reject) => this.http.get(environment.API_URL + 'getProjectsByPersonId/' + id).subscribe(data => resolve(data)));
   }
-  getProjectById(id: string) {
-    return this.http.get('http://localhost:8000/getProjectById/' + id)
+  getProjectById(id: string):Promise<any> {
+    return new Promise((resolve, reject) => this.http.get(environment.API_URL + 'getProjectById/' + id).subscribe(data => resolve(data)));
   }
-  getAllProjects() {
-    return this.http.get('http://localhost:8000/getAllProjects/')
+  getAllProjects():Promise<any> {
+    return new Promise((resolve, reject) => this.http.get(environment.API_URL + 'getAllProjects').subscribe(data => resolve(data)));
   }
-  getFristXProjects(x:string){
-    return this.http.get('http://localhost:8000/getFristXProjects/' + x)
+  getFirstXProjects(x:string):Promise<any>{
+    return new Promise((resolve, reject) => this.http.get(environment.API_URL + 'getFirstXProjects/' + x).subscribe(data => resolve(data)))
+  }
+  getRoleById(id:string):Promise<any>{
+    return new Promise((resolve, reject) => this.http.get(environment.API_URL + 'getRoleById/' + id).subscribe(data => resolve(data)));
   }
 }

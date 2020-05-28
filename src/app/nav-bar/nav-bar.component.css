@@ -108,22 +108,25 @@ header h2{
     float:right;
 }
 .search-bar input{
-    padding: 6px;
+    background:black;
+    color:white;
+    padding: 10px;
     font-size: 17px;
     border: none;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-left:1px solid grey;
+    border-right:1px solid grey;
 }
 .search-bar button{
-    padding: 6px 10px;
-  background: #ddd;
+    padding: 10px;
+  background: black;
+  color:grey;
   font-size: 17px;
   border: none;
   cursor: pointer;
   transition: 100ms all ease-in-out;
 }
 .search-bar button:hover{
-    background:grey;
+    color:yellow;
 }
 @media screen and (max-width: 800px) {
     .search-bar button, .search-bar input{

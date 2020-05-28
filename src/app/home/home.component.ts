@@ -11,20 +11,18 @@ import { Project } from '../models/projects.model';
 export class HomeComponent implements OnInit {
 
   constructor(private projectService: ProjectService) { }
-
+  expanded = false;
   faChevronDown = faChevronDown;
   showProjects: Project[] = [];
-  expanded = false;
   ngOnInit(): void {
     this.loadProjects();
   }
-  loadProjects() {
-    this.projectService.getFristXProjects("5").subscribe((data: any) => {
-      data.forEach(project => {
-        this.showProjects.push(new Project(project));
-      });
-      console.log(data)
-    })
+  async loadProjects() {
+    let projects = await this.projectService.getFirstXProjects("5");
+    projects.forEach(project => {
+      this.showProjects.push(new Project(project));
+    });
+
   }
   dropDown() {
     let y = document.getElementById("container");

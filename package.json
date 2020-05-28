@@ -29,6 +29,7 @@
     "cors": "^2.8.5",
     "fs": "0.0.1-security",
     "ng": "0.0.0",
+    "ngx-cookie-service": "^3.0.4",
     "ngx-page-scroll": "^7.0.1",
     "ngx-page-scroll-core": "^7.0.1",
     "node": "^13.13.0",
@@ -40,7 +41,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.1",
-    "@angular/cli": "^9.1.1",
+    "@angular/cli": "^9.1.5",
     "@angular/compiler-cli": "~9.1.1",
     "@angular/language-service": "~9.1.1",
     "@types/jasmine": "~3.5.0",

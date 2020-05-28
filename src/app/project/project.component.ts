@@ -4,6 +4,7 @@ import { ProjectService } from '../service/project.service';
 import { Project } from '../models/projects.model';
 import { Employee } from '../models/employee.model';
 import { EmployeeService } from '../service/employee.service';
+import { TechnologyService } from '../service/technology.service';
 import { PageScrollService } from 'ngx-page-scroll-core';
 import { DOCUMENT } from '@angular/common';
 import { Inject, Injectable } from '@angular/core';
@@ -18,39 +19,22 @@ export class ProjectComponent implements OnInit {
   constructor(private projectService: ProjectService, private employeeService: EmployeeService, private route: ActivatedRoute, private pageScrollService: PageScrollService,@Inject(DOCUMENT) private document: Document) { }
 
   project: Project = new Project({});
-  productOwners: Employee[] = [];
   employees: Employee[] = [];
 
   ngOnInit(): void {
     this.getProject();
     
   }
-  getProject(): void {
+  async getProject(){
     const projectId = this.route.snapshot.paramMap.get('id');
-    this.projectService.getProjectById(projectId).subscribe((data: any) => {
-      this.project = new Project(data);
-      this.employeeService.getEmployeesWithArrayOfIds(data.productOwners).subscribe((owners: any) => {
-        owners.forEach(owner => {
-          this.productOwners.push(new Employee(owner));
-        });
+    this.project = new Project(await this.projectService.getProjectById(projectId));
 
-      });
+    let persons = await this.employeeService.getPersonsByProjectId(projectId);
+    persons.forEach(employee => {
+      this.employees.push(new Employee(employee));
+
+    });
     
-
-    });
-    this.employeeService.getEmployeesByProjectId(projectId).subscribe((data: any) => {
-      data.forEach(employee => {
-        let isOwner = false;
-        for (const owner of this.productOwners) {
-          if (employee.id !== owner.id) {
-            isOwner = true;
-            break;
-          }
-        }
-        if (!isOwner) this.employees.push(new Employee(employee));
-      });
-    });
-
   }
   scroll(to): void{
     this.pageScrollService.scroll({

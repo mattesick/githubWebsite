@@ -14,19 +14,23 @@ import { FormBuilder } from '@angular/forms';
 export class SearchComponent implements OnInit {
   searchForm;
   faSearch = faSearch;
+  result:any = {"projects":[]};
+  init:Function;
   query = this.route.snapshot.paramMap.get('query');
   constructor(private route: ActivatedRoute, private searchService: SearchService,private formBuilder: FormBuilder) {
     this.searchForm = this.formBuilder.group({
       query: this.query
     });
    }
+
   
   searchResult: String[];
   ngOnInit(): void {
-    
+    this.search({"query":this.query});
   }
-  search({query}){
-    console.log(query)
-    window.location.href = "http://localhost:4200/Search/" + query;
+  async search({query}){
+    console.log(query);
+    this.result = await this.searchService.search(query)
+    console.log(this.result);
   }
 }

@@ -24,9 +24,10 @@ export class TeamComponent implements OnInit {
   //team:any = {};
 
   ngOnInit(): void {
+   this.getTeam();
+  }
+  async getTeam(){
     const teamId = this.route.snapshot.paramMap.get('id');
-    this.teamService.getTeam(teamId).subscribe((data:any) => {
-      this.team = new Team(data); console.log(this.team) 
-    });
+    this.team = new Team(await this.teamService.getTeamById(teamId));
   }
 }

@@ -8,14 +8,10 @@
             <th>
                 Description
             </th>
-            <th>
-                Employees
-            </th>
         </tr>
         <tr *ngFor="let team of allTeams" routerLink="/Team/{{team.id}}">
             <td>{{team.name}}</td>
             <td>{{team.desc}}</td>
-            <td class="employees">{{team.numberOfEmployees()}}</td>
         </tr>
     </table>
 </div>
