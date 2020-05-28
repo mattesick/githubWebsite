@@ -39,8 +39,8 @@ export class HomeComponent implements OnInit {
     let overlay = document.getElementById("visit");
     let box = document.getElementById("pop");
     if (!this.expanded) {
-      box.style.maxHeight = "700px";
-      overlay.style.display = "block";
+      box.style.maxHeight = "500px";
+      overlay.style.display = "flex";
       this.expanded = true;
     } else {
       box.style.maxHeight = "0px";
