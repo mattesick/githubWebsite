@@ -13,12 +13,13 @@ export class HomeComponent implements OnInit {
   constructor(private projectService: ProjectService) { }
 
   faChevronDown = faChevronDown;
-  showProjects:Project[] = [];
+  showProjects: Project[] = [];
+  expanded = false;
   ngOnInit(): void {
     this.loadProjects();
   }
-  loadProjects(){
-    this.projectService.getFristXProjects("5").subscribe((data:any) => {
+  loadProjects() {
+    this.projectService.getFristXProjects("5").subscribe((data: any) => {
       data.forEach(project => {
         this.showProjects.push(new Project(project));
       });
@@ -36,6 +37,17 @@ export class HomeComponent implements OnInit {
       x.style.display = "flex";
     }
   }
-
-
+  popUp() {
+    let overlay = document.getElementById("visit");
+    let box = document.getElementById("pop");
+    if (!this.expanded) {
+      box.style.maxHeight = "700px";
+      overlay.style.display = "block";
+      this.expanded = true;
+    } else {
+      box.style.maxHeight = "0px";
+      overlay.style.display = "none";
+      this.expanded = false;
+    }
+  }
 }

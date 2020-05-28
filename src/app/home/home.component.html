@@ -1,3 +1,22 @@
+<div id="popop" (click)="popUp()"></div>
+<div id="visit">
+    <div id="pop">
+        <span class="close" (click)="popUp()">&times;</span>
+        <div id="pop-text">
+            <h1>Interested in what we do?</h1>
+            <h3>Book a visit to the DXC Galway facility today!</h3>
+        </div>
+        <div>
+            <form action="" id="pop-form">
+                <input placeholder="Name@example.com" type="email">
+                <input placeholder="Full name" type="text">
+                <input placeholder="Phone number" type="tel">
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
 <div class="content">
     <div *ngFor="let project of showProjects" routerLink="/Project/{{project.id}}" class="content-image">
         <div class="project-desc">

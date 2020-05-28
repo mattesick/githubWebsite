@@ -12,6 +12,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 export class AdminComponent implements OnInit {
   drop = faCaretDown;
   exit = faTimes;
+  expanded = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -29,6 +30,15 @@ export class AdminComponent implements OnInit {
       x.querySelector('.drop').classList.add("hidden");
     }
   }
-
+   showCheckboxes(name): void {
+    var checkboxes = document.getElementById(name);
+    if (!this.expanded) {
+      checkboxes.style.maxHeight = "600px";
+      this.expanded = true;
+    } else {
+      checkboxes.style.maxHeight = "0px";
+      this.expanded = false;
+    }
+  }
 
 }
