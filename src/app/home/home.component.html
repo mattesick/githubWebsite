@@ -1,30 +1,9 @@
-<<<<<<< HEAD
-<div id="visit" >
-   
+<div id="visit">
     <div id="pop">
         <span class="close" (click)="popUp()">&times;</span>
         <div id="pop-text">
             <h1>Interested in what we do?</h1>
             <h3>Book a visit to the DXC Galway facility today!</h3>
-=======
-<div class="about-section">
-    
-    <div class="about-text">
-        <h2>DTC Galway</h2>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aut quod animi pariatur dolorem tenetur asperiores expedita, fuga totam sint voluptate delectus dicta accusamus. Repellendus officia sapiente voluptas ab dolor placeat adipisci, maxime at dolorem quod in amet quia ratione modi quas alias a delectus voluptatibus voluptatem doloremque, est unde inventore. Magni illum nostrum fugit saepe quidem impedit temporibus numquam. Suscipit fuga maiores explicabo eveniet asperiores perspiciatis obcaecati voluptate, vero officiis repellat, est quam eaque voluptatibus. Modi ipsum nostrum reprehenderit eum tenetur natus. Quam, cum? Maiores, nulla! Culpa ut iure pariatur obcaecati, amet officiis dolore eius laudantium sequi alias unde.
-        </p>
-        <button routerLink="/about">Read More</button>
-        <button id="book-visit">Book a visit</button>
-    </div>
-
-</div>
-<div class="content">
-    <div *ngFor="let project of showProjects" routerLink="/Project/{{project.id}}" class="content-image">
-        <div class="project-desc">
-            <div class="cool-hover"></div>
-            <h5>{{project.name}}<span>{{project.desc}}</span></h5>
->>>>>>> 502f88c1693a7e15af8f22d673666dd7b255ef2f
         </div>
         <div>
             <form action="" id="pop-form">
@@ -38,53 +17,51 @@
     </div>
     <div id="overlay" (click)="popUp()"></div>
 </div>
-    <div class="about-section">
-
-        <div class="about-text">
-            <h2>DTC Galway</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aut quod animi pariatur dolorem
-                tenetur asperiores expedita, fuga totam sint voluptate delectus dicta accusamus. Repellendus officia
-                sapiente voluptas ab dolor placeat adipisci, maxime at dolorem quod in amet quia ratione modi quas alias
-                a delectus voluptatibus voluptatem doloremque, est unde inventore. Magni illum nostrum fugit saepe
-                quidem impedit temporibus numquam. Suscipit fuga maiores explicabo eveniet asperiores perspiciatis
-                obcaecati voluptate, vero officiis repellat, est quam eaque voluptatibus. Modi ipsum nostrum
-                reprehenderit eum tenetur natus. Quam, cum? Maiores, nulla! Culpa ut iure pariatur obcaecati, amet
-                officiis dolore eius laudantium sequi alias unde.
-            </p>
-            <button>Read More</button>
-            <button id="book-visit" (click)="popUp()">Book a visit</button>
-        </div>
-
+<div class="about-section">
+    <div class="about-text">
+        <h2>DTC Galway</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aut quod animi pariatur dolorem
+            tenetur asperiores expedita, fuga totam sint voluptate delectus dicta accusamus. Repellendus officia
+            sapiente voluptas ab dolor placeat adipisci, maxime at dolorem quod in amet quia ratione modi quas alias
+            a delectus voluptatibus voluptatem doloremque, est unde inventore. Magni illum nostrum fugit saepe
+            quidem impedit temporibus numquam. Suscipit fuga maiores explicabo eveniet asperiores perspiciatis
+            obcaecati voluptate, vero officiis repellat, est quam eaque voluptatibus. Modi ipsum nostrum
+            reprehenderit eum tenetur natus. Quam, cum? Maiores, nulla! Culpa ut iure pariatur obcaecati, amet
+            officiis dolore eius laudantium sequi alias unde.
+        </p>
+        <button>Read More</button>
+        <button id="book-visit" (click)="popUp()">Book a visit</button>
     </div>
-    <div class="content">
-        <div *ngFor="let project of showProjects" routerLink="/Project/{{project.id}}" class="content-image">
-            <div class="project-desc">
-                <div class="cool-hover"></div>
-                <h5>{{project.name}}<span>{{project.desc}}</span></h5>
-            </div>
+</div>
+<div class="content">
+    <div *ngFor="let project of showProjects" routerLink="/Project/{{project.id}}" class="content-image">
+        <div class="project-desc">
+            <div class="cool-hover"></div>
+            <h5>{{project.name}}<span>{{project.desc}}</span></h5>
         </div>
     </div>
-    <div id="container">
-        <div id="text" (click)="dropDown()">
-            <h3>Upcoming events</h3>
-            <fa-icon [icon]="faChevronDown" id="icon"></fa-icon>
+</div>
+<div id="container">
+    <div id="text" (click)="dropDown()">
+        <h3>Upcoming events</h3>
+        <fa-icon [icon]="faChevronDown" id="icon"></fa-icon>
+    </div>
+    <div id="drop" class="drop-down">
+        <div>
+            <h3>Event name <br><span>Some details about time and place</span></h3>
         </div>
-        <div id="drop" class="drop-down">
-            <div>
-                <h3>Event name <br><span>Some details about time and place</span></h3>
-            </div>
-            <div>
-                <h3>Event name <br><span>Some details about time and place</span></h3>
-            </div>
-            <div>
-                <h3>Event name <br><span>Some details about time and place</span></h3>
-            </div>
-            <div>
-                <h3>Event name <br><span>Some details about time and place</span></h3>
-            </div>
-            <div>
-                <h3>Event name <br><span>Some details about time and place</span></h3>
-            </div>
+        <div>
+            <h3>Event name <br><span>Some details about time and place</span></h3>
+        </div>
+        <div>
+            <h3>Event name <br><span>Some details about time and place</span></h3>
+        </div>
+        <div>
+            <h3>Event name <br><span>Some details about time and place</span></h3>
+        </div>
+        <div>
+            <h3>Event name <br><span>Some details about time and place</span></h3>
         </div>
     </div>
+</div>

@@ -10,11 +10,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-<<<<<<< HEAD
-    height: 41px;
-    margin-top: -41 px;
-=======
->>>>>>> 502f88c1693a7e15af8f22d673666dd7b255ef2f
 }
 a{
     color: white;
