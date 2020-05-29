@@ -31,7 +31,6 @@ export class NavBarComponent implements OnInit {
   menu() {
     var y = document.getElementById("nav-bar");
     var x = document.getElementById("myLinks");
-    console.log(x.style.color)
     if (x.style.color === "black") {
       y.style.maxHeight = "0px";
       x.style.color = "white";
