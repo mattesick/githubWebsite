@@ -1,0 +1,99 @@
+.container{
+    width: 100%;
+    padding-top: 20px;
+}
+#head{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    margin-top: 5%;
+}
+.forms{
+    width: 40%;
+    margin: auto;
+    padding: 10px 20px;
+    border: 1px solid lightgray;
+    margin-top: 2%;
+}
+form{
+    text-align: justify;
+    max-height: 0px;
+    transition: 500ms ease-in-out all;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+fa-icon{
+    text-align: right;
+}
+fa-icon:hover{
+    cursor: pointer;
+}
+.hidden{
+    display: none;
+}
+.forms div{
+    text-align: right;
+    overflow: hidden;
+}
+
+
+.forms p{
+    text-align: justify;
+    width: 20%;
+}
+.multiselect{
+    width: 100%;
+    align-items: center;
+}
+.selectBox{
+    position: relative;
+    width: 174px;
+}
+.checkboxes{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    max-height: 0px;
+    transition: 100ms ease-in-out all;
+    width: 174px;
+    margin-left: 30%;
+}
+label{
+    width: auto;
+    text-align: justify;
+    font-size: 16px;
+    padding: 5px;
+}
+.checkboxes label{
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+}
+.checkboxes label:hover{
+    background-color: rgb(220, 220, 220);
+}
+.selectBox select{
+    width: 100%;
+    font-weight: bold;
+}
+.overSelect{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.hold{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.org{
+    width: 100%;
+    text-align: left !important;
+}
+.org label {
+    display: inline-block;
+    width: 30%;
+}

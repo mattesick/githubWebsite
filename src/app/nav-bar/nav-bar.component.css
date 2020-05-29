@@ -16,17 +16,15 @@ header a{
     height: 100% !important;
 }
 header a.icon{
+    display:none;
     float: left;
-    display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+    transition: 200ms all ease-in-out;
 }
-header a:hover{
-    background-color: #ddd;
-    color: black;
-    cursor: pointer;
-    transition: 200ms ease-in-out;
+header .icon:hover{
+    color:grey;
 }
 header img{
     width: 15%;
@@ -43,21 +41,58 @@ header h2{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-left: 18px;
 }
+#routes{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+}
+#routes div{
+    position: relative;
+    height:100%;
+    display:flex;
+    align-items: center;
+    margin:0 1em;
+    transition: 200ms all ease-in-out;
+    cursor: pointer;
+}
+#routes div a{
+    color:grey;
+    padding:0;
+    display:flex;
+    align-items: center;
+}
+#routes div a:hover{
+    color:white;
+}
+#routes div a:hover ~ .link-hover{
+  width:100%;
+}
+#routes .link-hover{
+    
+    margin:0;
+    z-index:-1;
+    position: absolute;
+    width:0%;
+    padding:0;
+    border-bottom:2px solid dodgerblue;
+}
 
 #nav-bar{
+    transition: all ease-in-out 150ms;
+    overflow: hidden;
+    max-height:0px;
+    width:100%;
     margin-top:80px;
     z-index: 99;
     position: fixed;
     float: left;
     flex-direction: column;
     background:white;
-    width: 0%;
-    transition: ease-in-out 50ms;
     box-shadow: 10px 14px 28px -15px rgba(0,0,0,0.75);
 }
-#myLinks{
-    display: none;
-}
+
 #nav-bar div{
     width: 100%;
     padding-top: 20px;
@@ -67,7 +102,7 @@ header h2{
 #nav-bar div a{
     text-decoration: none;
     color: black;
-    margin-left: 20%;
+    margin-left:10px;
 }
 #myLinks div:hover{
     background-color: rgb(230, 230, 230);
@@ -99,14 +134,13 @@ header h2{
     margin-left: 5%;
 }
 .search-bar{
+    display:flex;
     float:right;
-    width:100%;
-    margin:0 1em;
-}
-.search-bar input, .search-bar button{
-    float:right;
+    padding:0 1em;
 }
 .search-bar input{
+    z-index:2;
+    display: inline;
     background:black;
     color:white;
     padding: 10px;
@@ -137,9 +171,21 @@ header h2{
 @media screen and (max-width: 800px) {
     .search-bar button, .search-bar input{
         padding: 1px 3px;
+        float:right;
+    }
+    .search-bar{
+        display:block;
+        width:100%;
+        
     }
     .search-bar input{
         width:60%;
+        float:left;
+    }
+    header a.icon{
+        display:flex;
+    }
+    #routes{
+        display:none;
     }
     }
-    

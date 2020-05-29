@@ -3,13 +3,22 @@
 
 <header>
     <a class="icon white" (click)="menu()">
-        <fa-icon [icon]="faEllipsis"></fa-icon>
+        <fa-icon [icon]="faBars"></fa-icon>
     </a>
+
     <img routerLink="" src="assets/images/logo.png" alt="missing logo">
+    <div id="routes">
+        <div routerLink=""><a>Home</a><div class="link-hover"></div></div>
+        <div routerLink="/allProjects"><a>Projects</a><div class="link-hover"></div></div>
+        <div routerLink="/MobilityApps"><a>Mobility apps</a><div class="link-hover"></div></div>
+    </div>
+
     <form [formGroup]="searchForm" *ngIf="! isShowSearch()" (ngSubmit)="search(searchForm.value)" class="search-bar">
-        <button type="submit"><fa-icon [icon]="faSearch"></fa-icon></button>
         <input placeholder="Search.." type="search" formControlName="query">
+        <button type="submit"><fa-icon [icon]="faSearch"></fa-icon></button>
+        
     </form>
+
     
 </header>   
 

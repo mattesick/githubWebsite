@@ -1,0 +1,95 @@
+<div class="container">
+    <div id="head">
+        <h1>Admin CMS</h1>
+    </div>
+    <div>
+        <div class="forms">
+            <h3>Person</h3>
+            <hr>
+            <div id="personHolder">
+                <fa-icon [icon]="drop" (click)="show('personHolder')" class="drop"></fa-icon>
+                <fa-icon [icon]="exit" (click)="show('personHolder')" class="exit hidden"></fa-icon>
+
+                <form action="personForm" id="personForm" class="form">
+                    <div class="org">
+                        <label>Name: </label><input type="text">
+                    </div>
+                    <div class="org">
+                        <label>Role: </label> <input type="text">
+                    </div>
+                    <div class="multiselect">
+                        <div class="hold org">
+
+                            <label>Technologies: </label>
+                            <div class="selectBox" (click)="showCheckboxes('personCheckbox')">
+                                <select>
+                                    <option>Select an technology</option>
+                                </select>
+                                <div class="overSelect"></div>
+                            </div>
+                        </div>
+                        <div class="checkboxes" id="personCheckbox">
+                            <label>
+                                <input type="checkbox" />Node.js</label>
+                            <label>
+                                <input type="checkbox" />Angular</label>
+                            <label>
+                                <input type="checkbox" />C#</label>
+                        </div>
+                    </div>
+                    <div class="org"> <label>Hobbys: </label><input type="text"></div>
+                    <div class="org"><label>Projects: </label><input type="text"></div>
+                    <button type="submit">Add Person</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="forms">
+        <h3>Project</h3>
+        <hr>
+        <div id="projectHolder">
+            <fa-icon [icon]="drop" (click)="show('projectHolder')" class="drop"></fa-icon>
+            <fa-icon [icon]="exit" (click)="show('projectHolder')" class="exit hidden"></fa-icon>
+            <form action="projectForm" id="projectForm">
+                <div class="org">
+                    <label>Name: </label><input type="text">
+                </div>
+                <div class="multiselect">
+                    <div class="hold org">
+
+                        <label>Technologies: </label>
+                        <div class="selectBox" (click)="showCheckboxes('projectCheckbox')">
+                            <select>
+                                <option>Select an technology</option>
+                            </select>
+                            <div class="overSelect"></div>
+                        </div>
+                    </div>
+                    <div class="checkboxes" id="projectCheckbox">
+                        <label>
+                            <input type="checkbox" />Node.js</label>
+                        <label>
+                            <input type="checkbox" />Angular</label>
+                        <label>
+                            <input type="checkbox" />C#</label>
+                    </div>
+                </div>
+                <button type="submit">Add Project</button>
+            </form>
+        </div>
+    </div>
+    <div class="forms">
+        <h3>Technologies</h3>
+        <hr>
+        <div id="technologiesHolder">
+            <fa-icon [icon]="drop" (click)="show('technologiesHolder')" class="drop"></fa-icon>
+            <fa-icon [icon]="exit" (click)="show('technologiesHolder')" class="exit hidden"></fa-icon>
+            <form action="technologiesForm" id="technologiesForm">
+                <div class="org">
+                    <label>Name: </label><input type="text">
+                </div>
+                <button type="submit">Add Technology</button>
+            </form>
+        </div>
+    </div>
+</div>

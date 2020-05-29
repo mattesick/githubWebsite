@@ -8,6 +8,7 @@ import { ProjectComponent } from './project/project.component';
 import { AllProjectsComponent } from './all-projects/all-projects.component';
 import { SearchComponent } from './search/search.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AdminComponent } from './admin/admin.component';
 import {LoginComponent} from "./login/login.component";
 import {AboutComponent} from "./about/about.component";
 
@@ -21,9 +22,11 @@ const routes: Routes = [
   { path: 'Person/:id', component: PersonComponent },
   { path: 'Search/:query', component: SearchComponent },
   { path: 'Search', component: SearchComponent },
+  { path: 'Admin', component: AdminComponent },
   { path: 'login', component: LoginComponent },
   { path: 'about', component: AboutComponent },
   { path: '**', component: PageNotFoundComponent }
+  
   
 
 ];

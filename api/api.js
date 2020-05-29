@@ -103,5 +103,5 @@ app.get("/Search/:query", (req, res) => {
 const port = 8000;
 
 app.listen(port, () => {
-  console.log(port);
+  console.log("listining on port " + port + ", http://localhost:" + port);
 });

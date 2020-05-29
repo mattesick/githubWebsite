@@ -8,6 +8,9 @@ body{
     box-sizing: border-box;
     font-family: sans-serif;
 }
+*:focus{
+    outline: none;
+}
 main{
     min-height: 100vh;
     position: relative;

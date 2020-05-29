@@ -11,7 +11,7 @@ import { Project } from '../models/projects.model';
 export class HomeComponent implements OnInit {
 
   constructor(private projectService: ProjectService) { }
-
+  expanded = false;
   faChevronDown = faChevronDown;
   showProjects: Project[] = [];
   ngOnInit(): void {
@@ -35,6 +35,17 @@ export class HomeComponent implements OnInit {
       x.style.display = "flex";
     }
   }
-
-
+  popUp() {
+    let overlay = document.getElementById("visit");
+    let box = document.getElementById("pop");
+    if (!this.expanded) {
+      box.style.maxHeight = "700px";
+      overlay.style.display = "block";
+      this.expanded = true;
+    } else {
+      box.style.maxHeight = "0px";
+      overlay.style.display = "none";
+      this.expanded = false;
+    }
+  }
 }
