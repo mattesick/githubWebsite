@@ -20,6 +20,9 @@ html, body{
     cursor: pointer;
 }
 .project img{
+    filter:grey;
+    transition: 200ms all ease-in-out;
+    -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
     width: 100%;
     height: 300px;
 }
@@ -42,6 +45,10 @@ span{
 .project:hover{
     background-color: rgb(230, 230, 230);
     transition: ease-in-out 50ms;
+}
+.project:hover img{
+    filter:none;
+    -webkit-filter: grayscale(0); /* Webkit Nightlies & Chrome Canary */
 }
 #title{
     text-align: center;

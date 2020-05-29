@@ -13,7 +13,6 @@ export class AppComponent implements OnInit{
   }
   ngOnInit(): void {
     this.router.events.subscribe((UrlData:any) => {
-      console.log(UrlData)
       if(this.cookieService.get("Admin") != "true" && !UrlData.url.includes("login")){
         this.router.navigate(['/login']);
         //window.location.href = "http://localhost:4200/login";

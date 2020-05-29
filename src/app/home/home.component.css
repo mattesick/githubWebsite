@@ -43,12 +43,13 @@ h2{
 }
 .project-desc:hover h5 span{
     opacity: 1;
-    height:100px;
+    height:auto;
 }
 .project-desc:hover h5{
     background-color:rgba(0,0,0,0) !important;
 }
 .project-desc h5{
+    margin:0;
     width:100%;
     font-size:2em;
     color:rgb(255,255,255);
@@ -84,6 +85,7 @@ h2{
     grid-area: sidetwo;
 }
 .content-image:nth-child(4){
+
     background-image:url("../../assets/images/work4.jpg");
     grid-area: sidethree;
 }
@@ -92,9 +94,16 @@ h2{
     grid-area: sidefour;
 }
 .content-image{
+    filter:grey;
+    transition: 200ms all ease-in-out;
+    -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+.content-image:hover{
+    filter:none;
+    -webkit-filter: grayscale(0); /* Webkit Nightlies & Chrome Canary */
 }
 .drop-down div{
 
@@ -221,11 +230,20 @@ h3{
     height: 400px;
     background-color: red;
 }
-.about-section{
-    height:90vh;
-    background:url("../../assets/images/work5.jpg");
+.about-section .background{
+    z-index: -1;
+    height:100%;
+    width:100%;
+    position: absolute;
+    filter:grey;
+    -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+    background:url("../../assets/images/dxcgalway.jpg");
     background-position: center;
     background-size:cover;
+}
+.about-section{
+    position: relative;
+    height:90vh;
     display:flex;
     align-items: center;
     justify-content: flex-end;
@@ -278,7 +296,12 @@ h3{
       background:black;
       color:white;
   }
-  @media screen and (max-width: 800px) {
+
+  @media screen and (max-width: 1200px) {
+    .about-text{
+        width:65%;
+    }
+  }  @media screen and (max-width: 800px) {
     .about-text{
         width:100%;
         border-radius: 0%;

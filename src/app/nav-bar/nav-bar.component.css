@@ -27,7 +27,7 @@ header .icon:hover{
     color:grey;
 }
 header img{
-    width: 15%;
+    min-width:250px !important;
     cursor: pointer;
     float: left;
     min-width: 140px;
@@ -76,7 +76,7 @@ header h2{
     position: absolute;
     width:0%;
     padding:0;
-    border-bottom:2px solid dodgerblue;
+    border-bottom:2px solid cyan;
 }
 
 #nav-bar{
@@ -166,7 +166,7 @@ header h2{
 .search-bar button:hover{
     color:yellow;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .search-bar button, .search-bar input{
         padding: 1px 3px;
         float:right;

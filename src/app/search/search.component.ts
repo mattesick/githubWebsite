@@ -16,7 +16,8 @@ export class SearchComponent implements OnInit {
   faSearch = faSearch;
   result:any = {"projects":[]};
   init:Function;
-  query = decodeURIComponent(this.route.snapshot.paramMap.get('query'));
+  query = this.route.snapshot.paramMap.get('query') ? decodeURIComponent(this.route.snapshot.paramMap.get('query')) : "";
+  
   constructor(private route: ActivatedRoute, private searchService: SearchService,private formBuilder: FormBuilder) {
     this.searchForm = this.formBuilder.group({
       query: this.query

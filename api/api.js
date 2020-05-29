@@ -95,8 +95,12 @@ app.get("/getTechnologyById/:id", (req, res) => {
 app.get("/getPersonRolebyPersonId:id",(req,res) => {
   res.send(DB.getPersonRolebyPersonId(req.params.id));
 })
+
 app.get("/Search/:query", (req, res) => {
   res.send(DB.search(req.params.query));
+});
+app.get("/Search", (req, res) => {
+  res.send([]);
 });
 
 //Config things
