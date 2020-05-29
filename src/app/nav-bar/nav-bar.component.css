@@ -150,17 +150,15 @@ header h2{
     border-left:1px solid grey;
 }
 .search-bar button{
-    
     height:100%;
-    
-  background: black;
-  color:grey;
-  font-size: 17px;
-  border: none;
-  border-right:1px solid grey;
-  cursor: pointer;
-  transition: 100ms all ease-in-out;
-  padding:15px !important;
+    background: black;
+    color:grey;
+    font-size: 17px;
+    border: none;
+    border-right:1px solid grey;
+    cursor: pointer;
+    transition: 100ms all ease-in-out;
+    padding:15px !important;
 }
 .search-bar{
     height:100%;
