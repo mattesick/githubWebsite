@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  API_URL:"https://210a1da8325f.ngrok.io ",
+  API_URL:"https://210a1da8325f.ngrok.io/",
   WEBSITE_URL:"https://mattesick.github.io/githubWebsite/"
 };
 
