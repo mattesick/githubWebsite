@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { ProjectService } from '../service/project.service';
 import { Project } from '../models/projects.model';
+import { FormBuilder } from '@angular/forms';
+import { MessageService } from '../service/message.service';
 
 @Component({
   selector: 'app-home',
@@ -9,11 +11,18 @@ import { Project } from '../models/projects.model';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor(private projectService: ProjectService) { }
   expanded = false;
   faChevronDown = faChevronDown;
   showProjects: Project[] = [];
+  mailForm;
+  constructor(private messageService:MessageService, private formBuilder: FormBuilder,private projectService: ProjectService) {
+    this.mailForm = this.formBuilder.group({
+      mail:"",
+      name:"",
+      phone:""
+    });
+   }
+
   ngOnInit(): void {
     this.loadProjects();
   }
@@ -23,6 +32,9 @@ export class HomeComponent implements OnInit {
       this.showProjects.push(new Project(project));
     });
 
+  }
+  sendMessage(body){
+    this.messageService.sendMessage(body)
   }
   dropDown() {
     let y = document.getElementById("container");

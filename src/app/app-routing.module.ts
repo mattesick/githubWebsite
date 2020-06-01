@@ -11,6 +11,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AdminComponent } from './admin/admin.component';
 import {LoginComponent} from "./login/login.component";
 import {AboutComponent} from "./about/about.component";
+import {SitemapComponent} from "./sitemap/sitemap.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'Admin', component: AdminComponent },
   { path: 'login', component: LoginComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'sitemap', component: SitemapComponent },
   { path: '**', component: PageNotFoundComponent }
   
   

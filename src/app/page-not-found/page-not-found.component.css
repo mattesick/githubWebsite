@@ -45,9 +45,10 @@ body{
         font-size:2em;
     }
     }
-@media screen and (max-width: 800px) {
-.content{
-    font-size:1.5em;
-}
-}
-
+    @media screen and (max-width: 800px) {
+        .content{
+            font-size:1.5em;
+        }
+        }
+        
+        

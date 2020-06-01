@@ -4,14 +4,20 @@ h2{
 }
 .content{
     padding:4em;
-    display:grid;
+    /* display:grid;
     grid-template-areas: 
     "main main sideone sidetwo"
     "main main sidethree sidefour";
-    height:70vh;
+    grid-template-rows: repeat(2, 3fr); */
     grid-gap: 5px;
-    grid-template-rows: repeat(2, 3fr);
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
+.content video{
+    width:60%;
+}
+
 @media screen and (max-width: 1000px) {
     .content{
         grid-template-rows: repeat(3, 3fr);
@@ -119,6 +125,7 @@ h2{
     display: flex;
     flex-direction: column;
     transition: 400ms ease-in-out;
+    padding-bottom:1em;
 }
 #container div{
     width:100%;
@@ -199,25 +206,25 @@ h3{
     margin-top: 2%;
 }
 #pop-form button{
-    padding: 10px 10px;
-    background-color: white;
+    padding: 14px 18px;
+    background-color: yellow;
+    color:black;
+    font-weight: bold;
     font-size: 17px;
     cursor: pointer;
     transition: 100ms all ease-in-out;
-    border: 1px gray solid;
-    border-radius: 20px;
+    border: 1px yellow solid;
     margin-top: 5%;
 }
 #pop-form input{
     padding: 15px;
     font-size: 17px;
     border: 1px gray solid;
-    border-radius: 20px;
     width: 65%;
     margin-top: 1%;
 }
 #pop-form button:hover{
-    background-color: lightgray;
+    background-color: white;
 }
 #pop-text{
     padding-top: 5%;
@@ -237,7 +244,7 @@ h3{
     position: absolute;
     filter:grey;
     -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
-    background:url("../../assets/images/dxcgalway.jpg");
+    background:url("../../assets/images/work5.jpg");
     background-position: center;
     background-size:cover;
 }
@@ -250,7 +257,7 @@ h3{
 }
 .about-text p {
     margin-right:10%;
-    text-align: justify;
+    text-align: left;
 }
 .about-text h2{
     margin:0;
@@ -264,7 +271,7 @@ h3{
     color:white;
     width:40%;
     float:right;
-    background:black;
+    background:black; 
     height:70vh;
     padding-left:10%;
     border-top-left-radius: 100%;
@@ -280,17 +287,16 @@ h3{
     font-size: 16px;
     border:1px solid yellow;
     transition: 200ms all ease-in-out;
-    border-radius: 5px;
+    font-weight: bold;
   }
-  /* #book-visit:hover{
-    background:transparent;
+   #book-visit:hover{
+    background:white;
     color:black;
   }
   #book-visit{
-      border:3px solid yellow;
-    margin:0 10%;
-    padding:3em 6em;
-  } */
+      background:white;
+      border:1px solid white;
+  } 
 
   .about-section button:hover{
       background:black;

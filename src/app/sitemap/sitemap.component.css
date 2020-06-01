@@ -1,0 +1,15 @@
+.sitemap-image{
+    height:90vh;
+    position: fixed;
+    padding-top:10px;
+    padding-bottom:40px;
+    width:100%;
+}
+#image{
+    background-image:url("../../assets/images/galway-floorplan.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    height:100%;
+}

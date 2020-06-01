@@ -6,12 +6,12 @@
             <h3>Book a visit to the DXC Galway facility today!</h3>
         </div>
         <div>
-            <form action="" id="pop-form">
-                <input placeholder="Name@example.com" type="email">
-                <input placeholder="Full name" type="text">
-                <input placeholder="Phone number" type="tel">
+            <form [formGroup]="mailForm" (ngSubmit)="sendMessage(mailForm.value)"action="" id="pop-form" >
+                <input placeholder="Name@example.com" type="email" formControlName="mail">
+                <input placeholder="Full name" type="text" formControlName="name">
+                <input placeholder="Phone number" type="tel" formControlName="phone">
                 <br>
-                <button type="submit">Submit</button>
+                <button type="submit">SUBMIT</button>
             </form>
         </div>
     </div>
@@ -31,17 +31,22 @@
             reprehenderit eum tenetur natus. Quam, cum? Maiores, nulla! Culpa ut iure pariatur obcaecati, amet
             officiis dolore eius laudantium sequi alias unde.
         </p>
-        <button routerLink="/about">Read More</button>
-        <button id="book-visit" (click)="popUp()">Book a visit</button>
+        <button routerLink="/about">READ MORE</button>
+        <button id="book-visit" (click)="popUp()">BOOK A VISIT</button>
     </div>
 </div>
 <div class="content">
-    <div *ngFor="let project of showProjects" routerLink="/Project/{{project.id}}" class="content-image">
+    <video width="800" controls>
+        <source src="assets/videos/DXCTechnology.mp4" type="video/mp4">
+        <source src="assets/videos/mov_bbb.ogg" type="video/ogg">
+        Your browser does not support HTML video.
+      </video>
+    <!-- <div *ngFor="let project of showProjects" routerLink="/Project/{{project.id}}" class="content-image">
         <div class="project-desc">
             <div class="cool-hover"></div>
             <h5>{{project.name}}<span>{{project.desc}}</span></h5>
         </div>
-    </div>
+    </div> -->
 </div>
 <div id="container">
     <div id="text" (click)="dropDown()">

@@ -7,6 +7,7 @@ const Storage = require("./storage");
 const bodyParser = require("body-parser");
 const cookieSession = require("cookie-session");
 const fs = require("fs");
+const nodemailer = require('nodemailer');
 
 
 //Cookie secret
@@ -14,20 +15,29 @@ app.use(cookieSession({
   secret: "adjsoaiuhdiaphfisdhfiosdahfisadhifhasdifhasdpiufhasoih"
 }));
 app.use(bodyParser.json())
-
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'mattiasdxcspam@gmail.com',
+    pass: 'x8ZVcFB2ebtH'
+  }
+});
 const cors = require('cors')
 
 var corsOptions = {
-  origin: 'http://localhost:4200/',
+  origin: '*',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204 
 }
 
 app.use(cors(corsOptions))
-app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+// app.use(function (req, res, next) {
+//   res.setHeader('Access-Control-Allow-Origin', '*');
+//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+//   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
+//   res.setHeader('Access-Control-Allow-Credentials', true);
+//   next();
+// });
+
 
 let DB;
 fs.readFile('data.json', (err, data) => {
@@ -102,6 +112,24 @@ app.get("/Search/:query", (req, res) => {
 app.get("/Search", (req, res) => {
   res.send([]);
 });
+app.post("/sendMail",(req, res) => {
+
+  var mailOptions = {
+    from: 'mattiasdxcspam@gmail.com',
+    to: 'mattiasdxcspam@gmail.com',
+    subject: 'Book a visit',
+    text: `${req.body.name} Wants to book a visit for DTC Galway!
+    Phone Number: ${req.body.phone} 
+    Mail: ${req.body.mail}`
+  };
+  transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  });
+})
 
 //Config things
 const port = 8000;
