@@ -200,3 +200,8 @@ header h2{
         display:none;
     }
     }
+    @media screen and (min-width: 1001px) {
+#nav-bar{
+    max-height:0px !important;
+}
+        }
