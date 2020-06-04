@@ -7,9 +7,9 @@
         </div>
         <div>
             <form [formGroup]="mailForm" (ngSubmit)="sendMessage(mailForm.value)"action="" id="pop-form" >
-                <input placeholder="Name@example.com" type="email" formControlName="mail">
-                <input placeholder="Full name" type="text" formControlName="name">
-                <input placeholder="Phone number" type="tel" formControlName="phone">
+                <input placeholder="Name@example.com" type="email" formControlName="mail" required>
+                <input placeholder="Full name" type="text" formControlName="name" required>
+                <input placeholder="Phone number" type="tel" formControlName="phone" required>
                 <br>
                 <button type="submit">SUBMIT</button>
             </form>

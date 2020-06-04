@@ -35,6 +35,7 @@ export class HomeComponent implements OnInit {
   }
   sendMessage(body){
     this.messageService.sendMessage(body)
+    this.popUp();
   }
   dropDown() {
     let y = document.getElementById("container");
