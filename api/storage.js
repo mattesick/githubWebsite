@@ -197,6 +197,16 @@ class Database {
     }
     return result;
   }
+  getFullObject(object){
+    for(const prop in object){
+      if (typeof object[prop] == "object"){
+        if(typeof object[prop][0] != "number") continue;
+        let obj = Object.assign({}, object[prop]);
+        obj = this.getPropertyByArrayOfIds(prop, obj);
+        object = obj;
+      }
+    }
+  }
   /**
    * 
    * @param {Array} checks 
@@ -204,11 +214,10 @@ class Database {
    * @param {Array} result 
    * @param {Object} element 
    */
-  checkIncludes(checks, query, result, element) {
+  checkIncludes(checks, query, element, prop) {
     for (const checking of checks) {
       for (const key in checking) {
         if (typeof checking[key] == "string" && checking[key].toLowerCase().includes(query.toLowerCase())) {
-          result.push(element);
           return true
         }
       }
@@ -220,10 +229,12 @@ class Database {
    * @param {string} query Search query
    */
   search(query) {
+    console.log("Searching",query)
     let result = {};
-    for (const key in this.JSONdata) {
+    let data = Object.assign({},this.JSONdata);
+    for (const key in data) {
       result[key] = [];
-      const element = this.JSONdata[key];
+      const element = data[key];
       for (const a in element) {
         for (const prop in element[a]) {
           if (typeof element[a][prop] == "string" && element[a][prop].toLowerCase().includes(query.toLowerCase())) {
@@ -231,7 +242,10 @@ class Database {
             break;
           } else if(typeof element[a][prop] == "object"){
             let property = this.getPropertyByArrayOfIds(prop, element[a][prop]);
-            if(this.checkIncludes(property, query, result[key], element[a])) break;
+            if(this.checkIncludes(property, query, element[a], prop)) {
+              result[key].push(element[a])
+              break;
+            }
           }
         }
       }
